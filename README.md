@@ -1,4 +1,3 @@
-# Food-blog
- yes
+# Food @ MMU
 
 https://lordjunn.github.io/Food-MMU/
