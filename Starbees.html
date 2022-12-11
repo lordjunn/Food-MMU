@@ -1,33 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<style>
-  body {
-  background-image: url(https://cdn.discordapp.com/attachments/1025584528695242812/1040237727855157288/image.png)
-}
-h1 {
-  text-align: center;
-  font-size: 300px;
-  color: rgb(0, 16, 31);
-}
-p {
-  text-align: center;
-  font-size: 30px;
-  color: rgb(0, 16, 31);
-}
-</style>
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
   <title>Starbees</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="Food.css">
+
+  <style>
+    .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5em;
+}
+  
+  ul#navMenu {
+    padding:0px;
+    margin:0px;
+    width:420px;
+    list-style:none;
+    position:relative
+}
+
+ul#navMenu ul {
+    position:absolute;
+    left:0;
+    top:100%;
+    display:none;
+    padding:0px;
+    margin:0px
+}
+
+ul#navMenu li {
+    display:inline;
+    float:left;
+    position:relative
+}
+
+ul#navMenu a {
+    text-decoration:none;
+    padding:10px 0px;
+    width:100px;
+    background:#666666;
+    color:#ffffff;
+    float:left;
+    text-align:center;
+    border:1px solid #ffffff;
+}
+
+ul#navMenu a:hover {
+    background:#cccccc;
+    color:#333333
+}
+
+ul#navMenu li:hover ul {
+    display:block;
+}
+
+ul#navMenu ul a {
+    width:150px;
+}
+
+ul#navMenu ul li {
+    display:block;
+    margin:0px
+}</style>
+
 </head>
 
 <body>
+  <main>
     <div class="container">
         <ul id="navMenu">
             <li><a href="index.html">Index</a></li>
@@ -41,9 +85,44 @@ p {
             </li>
         </ul></div>
 
-        <h1>Soon!</h1>
-        <p>Honestly it's too far from me. And quite costly.</p>
-      
+        <section class="about" id="about">
+          <h1 class="title">Starbees</h1>
+          <div class="about_banner">
+              <img src="https://www.mmu.edu.my/wp-content/uploads/2021/04/ebee-1.jpg" alt="">
+          </div><br>
+        </section>
+
+
+        <h1 id="food">Menu</h1>
+
+        <section class="gallery">
+            <div class="img_gallery">
+
+              <div class="card">
+                <div class="image">
+                    <a href="Hirup Mee Kopitiam.html" target="_blank"><img src="https://cdn.discordapp.com/attachments/1025584528695242812/1049312536278876240/image.png" alt=""></a> 
+                </div>
+                <div class="caption">
+                    <h3>Hirup Mee Kopitiam</h3>
+                    <p></p>
+                </div> 
+            </div> 
+
+            <div class="card">
+              <div class="image">
+                  <a href="Pak Ngah.html" target="_blank"><img src="https://cdn.discordapp.com/attachments/1006172127063441480/1050256495691960332/IMG_20221208_114154.jpg" alt=""></a> 
+              </div>
+              <div class="caption">
+                  <h3>Pak Ngah Nismillah</h3>
+                  <p></p>
+              </div> 
+          </div> 
+
+
+
+          
+          
+</main>
 </body>
 
 </html>
