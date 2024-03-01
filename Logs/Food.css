@@ -119,6 +119,11 @@ hr {
   font-size: 25px;
 }
 
+.meal-type {
+  margin-right: 1.5em;
+  font-size: 25px;
+}
+
 .menu-item-description {
   line-height: 1.6;
 }
