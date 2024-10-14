@@ -1,4 +1,5 @@
 # Food-blog
- yes
+It's a food blog that describes what I ate and my opinions on them.  
+Also acts like a mini blog/diary.
 
-https://lordjunn.github.io/Food-MMU/
+Site: https://lordjunn.github.io/Food-MMU/
