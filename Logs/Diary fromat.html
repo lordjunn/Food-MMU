@@ -12,44 +12,19 @@
 </head>
 
 <body>
-  <div class="container">
-      <ul id="navMenu">
-          <li><a href="../index.html">Index</a></li>
-          <li><a>Food</a>
-              <ul>
-                <li><a href="../Starbees.html">Starbees</a></li>
-                <li><a href="../HTC.html">HTC</a></li>
-                <li><a href="../Dapo Sahang.html">Dapo Sahang</a></li>
-                <li><a href="../Deens.html">Deens Cafe</a></li>
-              </ul>
-          </li>
-      </ul></div>
-
-      <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            Food Archive - 2024
-          </h2>
-          <br>
-          <p>Days in MMU:  days<br>
-            Reasons:
-            <ul>
-              <li></li>
-            </ul>
-          </p>      
-      </div>
-    </div>
-
-    <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-             2024
-          </h2>
-          <br>
-          <p><br>
-          </p>      
-        </div>
-
+  <body>
+    <div id="header-config"
+    data-year=""
+    data-month=""
+    data-days=""
+    data-reasons=""
+    data-text="
+    Now dynamically generated!<br>
+    Spam reduced!
+    ">
+</div>
+<!-- This will hold the dynamically generated header -->
+<div id="header-container"></div>
 
 <!-- 
 
@@ -118,20 +93,18 @@
 -->
 
 <div class="menu">
-  <h2 class="menu-group-heading">
-    2024 Spendings
-  </h2>
+  <div id="footer-container"></div>
   <div class="menu-group">
 
-    <div class="menu-item">
-      <img class="menu-item-image" src="">
-      <div class="menu-item-text">
-        <h3 class="menu-item-heading">
-          <span class="menu-item-name"></span>
-          <span class="menu-item-price">RM </span>
-      </h3>
-        <p class="menu-item-description">
-         <br>
+  <div class="menu-item">
+    <img class="menu-item-image" src="">
+    <div class="menu-item-text">
+      <h3 class="menu-item-heading">
+        <span class="menu-item-name"></span>
+        <span class="menu-item-price">RM </span>
+    </h3>
+      <p class="menu-item-description">
+       <br>
          
          <br>
       <ul>
@@ -145,7 +118,7 @@
           <li>Average cost per day - RM </li> 
           <li>Etc. Expenses - RM  </li>
           <li>Rental - RM 350.00 </li>
-          <li>Utilities - RM  </li> <!-- elec , water , wifi 166.36  -->
+          <li>Utilities - RM  </li> <!-- elec , water , wifi 147.34 -->
           <li>Petrol - RM 0.00 </li>
       </ul>
 
@@ -157,7 +130,9 @@
   </div>
   </div>
 
-
+  <canvas id="mealChart" width="400" height="200"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="text/javascript" src="months.js"></script>
 
 </div>
 </body>
