@@ -35,10 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
             <li><a href="../index.html">Index</a></li>
             <li><a href="#">Food</a>
                 <ul>
-                  <li><a href="../Starbees.html">Starbees</a></li>
-                  <li><a href="../HTC.html">HTC</a></li>
-                  <li><a href="../Dapo Sahang.html">Dapo Sahang</a></li>
-                  <li><a href="../Deens.html">Deens Cafe</a></li>
+                  <li><a href="../Foods/Starbees.html">Starbees</a></li>
+                  <li><a href="../Foods/HTC.html">HTC</a></li>
+                  <li><a href="../Foods/Dapo Sahang.html">Dapo Sahang</a></li>
+                  <li><a href="../Foods/Deens.html">Deens Cafe</a></li>
                 </ul>
             </li>
         </ul>
