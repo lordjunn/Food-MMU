@@ -175,44 +175,62 @@ document.addEventListener('DOMContentLoaded', function() {
     const mealData = extractMealData();
     const ctx = document.getElementById('mealChart').getContext('2d');
 
+    // Initialize dataset array
+    const datasets = [
+        {
+            label: 'Total Meal Costs (RM)',
+            data: mealData.dailyCosts,
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',  // Bar color
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            type: 'bar'  // This is the bar chart dataset
+        }
+    ];
+
+    // Only add breakfast costs dataset if there's data
+    if (mealData.breakfastCosts.some(cost => cost > 0)) {
+      datasets.push({
+          label: 'Breakfast Costs (RM)',
+          data: mealData.breakfastCosts,
+          fill: false,
+          borderColor: 'rgba(255, 99, 132, 1)', // Line color for breakfast
+          tension: 0.1,
+          type: 'line' // This is the line chart dataset
+      });
+    }
+    
+    // Only add lunch costs dataset if there's data
+    if (mealData.lunchCosts.some(cost => cost > 0)) {
+        datasets.push({
+            label: 'Lunch Costs (RM)',
+            data: mealData.lunchCosts,
+            fill: false,  // Do not fill the area under the line
+            borderColor: 'rgba(255, 159, 64, 1)', // Line color for lunch
+            tension: 0.1, // Smooth curve
+            type: 'line' // This is the line chart dataset
+        });
+    }
+
+    // Only add dinner costs dataset if there's data
+    if (mealData.dinnerCosts.some(cost => cost > 0)) {
+        datasets.push({
+            label: 'Dinner Costs (RM)',
+            data: mealData.dinnerCosts,
+            fill: false,
+            borderColor: 'rgba(153, 102, 255, 1)', // Line color for dinner
+            tension: 0.1,
+            type: 'line' // This is the line chart dataset
+        });
+    }
+
+
+
+    // Create the chart
     new Chart(ctx, {
         type: 'bar', // Set the base chart type to 'bar' for the bar chart
         data: {
             labels: mealData.days,
-            datasets: [
-                {
-                    label: 'Total Meal Costs (RM)',
-                    data: mealData.dailyCosts,
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',  // Bar color
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    borderWidth: 1,
-                    type: 'bar'  // This is the bar chart dataset
-                },
-                {
-                    label: 'Lunch Costs (RM)',
-                    data: mealData.lunchCosts,
-                    fill: false,  // Do not fill the area under the line
-                    borderColor: 'rgba(255, 159, 64, 1)', // Line color for lunch
-                    tension: 0.1, // Smooth curve
-                    type: 'line' // This is the line chart dataset
-                },
-                {
-                    label: 'Dinner Costs (RM)',
-                    data: mealData.dinnerCosts,
-                    fill: false,
-                    borderColor: 'rgba(153, 102, 255, 1)', // Line color for dinner
-                    tension: 0.1,
-                    type: 'line' // This is the line chart dataset
-                },
-                {
-                    label: 'Breakfast Costs (RM)',
-                    data: mealData.breakfastCosts,
-                    fill: false,
-                    borderColor: 'rgba(255, 99, 132, 1)', // Line color for breakfast
-                    tension: 0.1,
-                    type: 'line' // This is the line chart dataset
-                }
-            ]
+            datasets: datasets // Use the dynamically populated datasets
         },
         options: {
             responsive: true,
@@ -237,6 +255,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 }
+
 
 
   // Run the chart generation after the page loads
