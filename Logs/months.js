@@ -27,6 +27,32 @@ document.addEventListener('DOMContentLoaded', function() {
   const footerContainer = document.getElementById('footer-container');
   const iframeContainer = document.getElementById('iframe-container');
 
+  // Get the current month and year from the attributes
+  const currentMonth = monthShort;
+  const currentYear = parseInt(year);
+
+  // Get the previous and next month, considering the year change
+  function getPreviousMonth(month, year) {
+    const months = ["Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov"];
+    const monthIndex = months.indexOf(month);
+    const prevMonthIndex = (monthIndex === 0) ? 11 : monthIndex - 1;
+    const prevMonth = months[prevMonthIndex];
+    const prevYear = (monthIndex === 1) ? year - 1 : year;
+    return { prevMonth, prevYear };
+  }
+
+  function getNextMonth(month, year) {
+    const months = ["Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov"];
+    const monthIndex = months.indexOf(month);
+    const nextMonthIndex = (monthIndex === 11) ? 0 : monthIndex + 1;
+    const nextMonth = months[nextMonthIndex];
+    const nextYear = (monthIndex === 0) ? year + 1 : year;
+    return { nextMonth, nextYear };
+  }
+
+  const { prevMonth, prevYear } = getPreviousMonth(currentMonth, currentYear);
+  const { nextMonth, nextYear } = getNextMonth(currentMonth, currentYear);
+
   // If the header container exists, create the dynamically generated header HTML
   if (headerContainer) {
     const headerHTML = `
@@ -39,6 +65,12 @@ document.addEventListener('DOMContentLoaded', function() {
                   <li><a href="../Foods/HTC.html">HTC</a></li>
                   <li><a href="../Foods/Dapo Sahang.html">Dapo Sahang</a></li>
                   <li><a href="../Foods/Deens.html">Deens Cafe</a></li>
+                </ul>
+            </li>
+            <li><a href="Food Archives.html">Archives</a>
+                <ul>
+                  <li><a href="${prevMonth} ${prevYear.toString().slice(-2)}.html">${monthMap[prevMonth]} ${prevYear}</a></li>
+                  <li><a href="${nextMonth} ${nextYear.toString().slice(-2)}.html">${monthMap[nextMonth]} ${nextYear}</a></li>
                 </ul>
             </li>
         </ul>
