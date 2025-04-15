@@ -1,4 +1,5 @@
-*{
+/* Global styles */
+* {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
@@ -6,27 +7,31 @@
     list-style-type: none;
 }
 
-html{
+html {
     font-size: 16px;
     scroll-behavior: smooth;
 }
 
-main{
+body {
+    padding-top: 0;
+}
+
+main {
     width: 95%;
     max-width: 1200px;
     margin: auto;
 }
 
-
-/* Header Styles */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;  /* Slightly reduce the header height */
+    height: 70px;
 }
 
-header .menu {
+.menu {
+    display: none;
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -38,214 +43,275 @@ header h1 {
     margin-left: 10px;
 }
 
-/* Navigation adjustments */
-nav{
+/* Navigation - default (desktop) */
+nav {
+    display: flex;
     position: fixed;
-    left: 0;
     top: 0;
-    bottom: 0;
-    max-width: 50%;
+    left: 0;
+    right: 0;
+    height: 60px;
     background-color: white;
-    display: none;
+    z-index: 1000;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid lightgray;
+    padding: 0 2rem;
+}
+
+.nav-left, .nav-center, .nav-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-left {
+    justify-content: flex-start;
+}
+
+.nav-right {
+    justify-content: flex-end;
+}
+
+.nav-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
 }
 
 nav ul li {
-    font-size: 1.8rem; /* Smaller font size on mobile */
-    padding: 1em;
+    font-size: 1rem;
 }
 
-nav ul li a{
+nav ul li a {
     color: black;
 }
 
-nav ul li:hover{
+nav ul li:hover {
     background-color: lightgray;
+    cursor: pointer;
 }
 
+nav ul li.show_hide {
+    display: none;
+}
 
+.last-updated {
+    position: static;
+    font-size: 1rem;
+    font-weight: lighter;
+    border-radius: 8px;
+}
+
+/* Last Updated for mobile */
+.last-updated-mobile {
+    display: none; /* Hide it by default */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.3rem;
+    font-weight: lighter;
+    padding: 5px 10px;
+    border-radius: 8px;
+    z-index: 1100;
+}
+
+/* Title styles */
 h1 {
     margin: 20px;
     text-align: center;
 }
 
-#food{
+#food {
     font-size: 100px;
 }
 
-
-.gallery{
+.gallery {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-bottom: apx solid lightgrey;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, auto));
+    grid-gap: 2rem;
+    align-items: center;
+    margin-top: 5rem;
     padding-bottom: 5em;
-    display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(340px, auto));
-	grid-gap: 2rem;
-	align-items: center;
-	margin-top: 5rem;
+    border-bottom: 1px solid lightgrey;
 }
 
-.gallery .img_gallery{
+.img_gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 15px;
-    position: relative;
 }
 
-.gallery .img_gallery .card{
+.card {
     max-height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
 
-.gallery .img_gallery .card .image{
+.image {
     max-width: 100%;
     max-height: 400px;
 }
 
-.gallery .img_gallery .card .image img{
+.image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-	border-radius: 15px;
-	filter: brightness(80%);
-	transition: all .3s cubic-bezier(.495,.05,.55,.95);
-	will-change: filter;
+    border-radius: 15px;
+    filter: brightness(80%);
+    transition: all .3s ease;
 }
 
-.gallery .img_gallery .card .image img:hover{
-	filter: brightness(100%) hue-rotate(45deg);
-	transform: scale(1.04);
-	cursor: pointer;
+.image img:hover {
+    filter: brightness(100%) hue-rotate(45deg);
+    transform: scale(1.04);
+    cursor: pointer;
 }
 
-
-.gallery .img_gallery .card .caption{
-  width: 100%;
-  height: 400px;
-  margin-top: 1.5em;
-}
-
-.gallery .img_gallery .card .caption h3{
+.caption {
+    margin-top: 1.5em;
     text-align: center;
+}
+
+.caption h3 {
     font-weight: 300;
     font-size: 1.5rem;
-    line-height: 1.5rem;
 }
 
-
-.gallery .img_gallery .card .caption p{
-    text-align: center;
+.caption p {
     font-size: .9rem;
     margin-top: 1em;
 }
 
-
-section.gallery .pagination{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100px;
-}
-
-.pagination ul{
-    display: flex;
-}
-
-.pagination ul li{
-    margin-right: 30px;
-    color: black;
-    font-weight: 300;
-    padding: 8px;
-    cursor: pointer;
-}
-
-.pagination ul li.active{
-    background-color: black;
-    color: white;
-}
-
-.about{
+.about {
     text-align: center;
-    padding-top: 1em;
-    padding-bottom: 5em;
+    padding: 2em 0 5em;
     border-bottom: 1px solid lightgray;
 }
 
-.about .title{
-    margin: 2em;
-    font-weight: lighter;
-}
-
-.about .about_banner{
+.about_banner {
     max-width: 800px;
     max-height: 800px;
     margin: 10px auto;
 }
 
-.about .about_banner img{
+.about_banner img {
     width: 100%;
     height: 100%;
 }
 
-.about .caption, em, p{
+.about .caption, em, p {
     margin: 20px;
 }
 
-.about p{
+.about p {
     font-size: 1rem;
     line-height: 1.2em;
 }
 
-
-
-@media only screen and (max-width:600px) {
-    html{
+/* ========== Responsive Styles ========== */
+@media only screen and (max-width: 768px) {
+    html {
         font-size: 14px;
     }
 
-    main{
-        width: 78%;
-        max-width: 1200px;
-        margin: auto;
+    main {
+        width: 90%;
     }
 
-    #food{
+    #food {
         font-size: 50px;
     }
 
-    nav{
-        width: 70%
+    .menu {
+        display: block;
     }
 
-    .show_hide {
-        max-width: 100%;
-        height: auto;  
+    .nav-left .nav-title {
+        display: none; /* Hide "Dine" on mobile */
     }
 
-    .gallery .img_gallery{
-        grid-template-columns: 1fr;
-        max-width: 90%;  /* Makes sure the image doesn't exceed the container width */
-        height: auto;     /* Maintains the image's aspect ratio */        
+    /* Mobile navbar adjustments */
+    nav {
+        flex-direction: column;
+        width: 100%; /* Ensure it takes full width but doesn't overflow */
+        max-width: 100%; /* Limit the width to 100% */
+        height: auto; /* Set height to auto to wrap around its contents */
+        display: none;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1001; /* Ensure the menu appears above other content */
+        border-bottom: 1px solid lightgray;
     }
 
-    footer{
+    /* Add an overlay to darken the background */
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        z-index: 1000;
+        display: none;
+    }
+
+    .nav-left, .nav-center, .nav-right {
+        justify-content: center;
         flex-direction: column;
     }
-    
-    footer >div{
-        max-width: 100%;
-        margin-bottom: 50px;
+
+    .nav-left {
+        justify-content: flex-start;
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        font-size: 1.5rem;
+        padding: 1em;
+        text-align: center;
+        border-bottom: 1px solid lightgray; /* Optional: Add a separator between items */
+    }
+
+    nav ul li.show_hide {
+        display: block;
+    }
+
+    .last-updated-mobile {
+        display: block; /* Show it on mobile */
+    }
+
+    .last-updated {
+        display: none; /* Hide desktop version of Last Updated */
+    }
+
+    .img_gallery {
+        grid-template-columns: 1fr;
     }
 }
 
-@media only screen and (max-width:399px) {
-    main{
-        width: 95%;
-    }
+.last-updated {
+    position: fixed;
+    right: 20px;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    z-index: 1100;
+    border-radius: 8px;
 }

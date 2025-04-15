@@ -5,28 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
-    <title>Dine with Junn</title> 
+    <title>Dine with Junn</title>
 </head>
 <body>
     
 <main>
+
     <header>
         <div class="menu">
             <img class="show_hide" onclick="menu_show()" src="Icons/3 bar black.png" alt="">
         </div>
-
-        <h1>Last updated: 12 Apr 2025</h1>
-
-        <nav id="nav">
-           <ul>
-               <li class="show_hide" onclick="menu_exit()" >Close Menu</li>
-               <li><a href="#about">Who am I?</a></li>
-               <li><a href="#food">Food</a></li>
-           </ul>
-        </nav>
     </header>
-
     
+    <!-- Overlay div -->
+    <div class="menu-overlay" onclick="menu_exit()"></div>
+
+    <nav id="nav">
+        <div class="nav-left">
+            <h2 class="nav-title">Dine</h2>
+        </div>
+        <div class="nav-center">
+            <ul>
+                <li class="show_hide" onclick="menu_exit()">Close Menu</li>
+                <li onclick="menu_exit()"><a href="#about">Who am I?</a></li>
+                <li onclick="menu_exit()"><a href="#food">Food</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <h1 class="last-updated">Last updated: 15 Apr 2025</h1>
+        </div>
+    </nav>
+
+    <div class="last-updated-mobile">Last updated: 15 Apr 2025</div>
+
     <section class="about">
         <h1 class="title">About Me, The Food Man</h1>
         <div class="about_banner">
@@ -72,7 +83,6 @@
                 </div> 
             </div> 
 
-            
             <div class="card">
                 <div class="image">
                     <a href="Foods/Deens.html" target="_blank"><img src="img/Deens.png" alt=""></a> 
@@ -92,18 +102,6 @@
                     <p>Rehat dan Rawat</p>
                 </div> 
             </div>
-
-            <!--  
-               <div class="card">
-                <div class="image">
-                    <a href="" target="_blank"><img src="" alt=""></a> 
-                </div>
-                <div class="caption">
-                    <h3></h3>
-                    <p></p>
-                </div> 
-            </div> 
-            -->
 
         </div>
     </section>
@@ -136,7 +134,6 @@
             <div class="card">
                 <div class="image">
                     <a href="Logs/Food Archives.html" target="_blank"><img src="img/Archives.png" alt=""></a> 
-                    
                 </div>
                 <div class="caption">
                     <h3>Food Archives</h3>
@@ -147,29 +144,44 @@
             <div class="card">
                 <div class="image">
                     <a href="https://lordjunn.github.io/Study-With-Junn/index.html" target="_blank"><img src="img/Clownpiece.png" alt=""></a> 
-                    
                 </div>
                 <div class="caption">
                     <h3>Study with Junn</h3>
                     <p>Not only you want to increase your appetite, but now your knowledge as well?</p>
                 </div> 
             </div> 
-
-            </div>
-            </section>
-
+        </div>
+    </section>
 </main>
 
 <script>
     var nav = document.getElementById("nav");
-
-    function menu_show(){
-        nav.style.display="block";
+    var overlay = document.querySelector(".menu-overlay");
+    
+    function menu_show() {
+        nav.style.display = "flex"; // Show the nav
+        overlay.style.display = "block"; // Show the overlay
+        document.querySelector('.last-updated-mobile').style.display = "none";  // Hide the "Last updated" mobile element
     }
-
-    function menu_exit(){
-        nav.style.display="none";
+    
+    function menu_exit() {
+        // Hide the nav and overlay
+        nav.style.display = "none";
+        overlay.style.display = "none";
+        document.querySelector('.last-updated-mobile').style.display = "block";  // Hide the "Last updated" mobile element
     }
+    
+    // Function to handle screen size checks
+    function checkScreenSize() {
+        if (window.innerWidth > 768) {
+            // If screen is large (desktop), ensure the navbar is visible
+            nav.style.display = "flex"; // Show the navbar
+            document.querySelector('.last-updated-mobile').style.display = "none";  // Hide the "Last updated" mobile element
+        }
+    }
+    
+    // Continuously check screen size every second (1000 ms)
+    setInterval(checkScreenSize, 1000);
 </script>
 
 </body>
