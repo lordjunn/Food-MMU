@@ -32,11 +32,11 @@
             </ul>
         </div>
         <div class="nav-right">
-            <h1 class="last-updated">Last updated: 15 Apr 2025</h1>
+            <h1 class="last-updated"></h1>
         </div>
     </nav>
 
-    <div class="last-updated-mobile">Last updated: 15 Apr 2025</div>
+    <div class="last-updated-mobile"></div>
 
     <section class="about">
         <h1 class="title">About Me, The Food Man</h1>
@@ -157,6 +157,10 @@
 <script>
     var nav = document.getElementById("nav");
     var overlay = document.querySelector(".menu-overlay");
+    const lastUpdated = "16 Apr 2025";
+
+    document.querySelector(".last-updated").textContent = "Last updated: " + lastUpdated;
+    document.querySelector(".last-updated-mobile").textContent = "Last updated: " + lastUpdated;
     
     function menu_show() {
         nav.style.display = "flex"; // Show the nav
@@ -166,7 +170,9 @@
     
     function menu_exit() {
         // Hide the nav and overlay
-        nav.style.display = "none";
+        if (window.innerWidth <= 768) {
+            nav.style.display = "none";
+        }
         overlay.style.display = "none";
         document.querySelector('.last-updated-mobile').style.display = "block";  // Hide the "Last updated" mobile element
     }
