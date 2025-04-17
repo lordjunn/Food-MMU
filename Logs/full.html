@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Food Archive - Full</title>
+  <link rel="stylesheet" href="full.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  
+<!-- Fixed search bar -->
+<div class="search-container">
+  <input type="text" id="searchBox" placeholder="Search food or restaurant..." />
+  <div class="sort-dropdown">
+    <select id="sortDropdown">
+      <option value="date-asc">Sort by Date (Earliest)</option>
+      <option value="date-desc">Sort by Date (Latest)</option>
+      <option value="price-asc">Sort by Price (Lowest)</option>
+      <option value="price-desc">Sort by Price (Highest)</option>
+    </select>
+    <span id="resultCount">0 results found</span> <!-- This will show the number of results -->
+  </div>
+</div>
+
+  <div class="container">
+    <div class="menu">
+      <h2 class="menu-group-heading">All Food Logs</h2>
+      <div class="menu-group" id="menu-group"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <script src="full.js"></script>
+</body>
+</html>
