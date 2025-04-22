@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
     items.forEach(item => {
       const imageUrl = item.image && item.image !== 'No image' ? item.image : defaultImage;
       const price = item.price ? item.price : 'N/A';
-      const description = item.description ? item.description : 'No description available';
+      const description = item.description ? item.description.replace(/\n/g, '<br>') : 'No description available';
 
       const html = `
         <div class="menu-item">
