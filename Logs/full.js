@@ -5,6 +5,15 @@ document.addEventListener('DOMContentLoaded', function () {
   const resultCountText = document.getElementById('resultCount');
   const defaultImage = 'https://lordjunn.github.io/Study-With-Junn/img/Sumire.png';
 
+  // Debounce function
+  function debounce(fn, delay) {
+    let timeoutID;
+    return function (...args) {
+      clearTimeout(timeoutID);
+      timeoutID = setTimeout(() => fn.apply(this, args), delay);
+    };
+  }
+
   Papa.parse('menu_items2.csv', {
     download: true,
     header: true,
@@ -14,12 +23,12 @@ document.addEventListener('DOMContentLoaded', function () {
       renderItems(items);
       updateResultCount(items.length);
 
-      // Search functionality
-      searchBox.addEventListener('input', function () {
+      // Debounced search functionality
+      searchBox.addEventListener('input', debounce(function () {
         const filtered = applySearchAndSort();
         renderItems(filtered);
         updateResultCount(filtered.length);
-      });
+      }, 300)); // Adjust delay if needed
 
       // Sorting functionality
       sortDropdown.addEventListener('change', function () {
@@ -33,11 +42,10 @@ document.addEventListener('DOMContentLoaded', function () {
   function parsePrice(price) {
     if (!price) return 0.00;
     if (isPriceFree(price)) return 0.00;
-  
-    // Remove any currency symbols or non-numeric characters except dot and comma
+
     const numericString = price.replace(/[^0-9.]/g, '');
     const numericPrice = parseFloat(numericString);
-  
+
     return isNaN(numericPrice) ? 0.00 : numericPrice;
   }
 
@@ -45,32 +53,43 @@ document.addEventListener('DOMContentLoaded', function () {
     return ['free', 'free!'].includes(price.toLowerCase().trim());
   }
 
-  // Shared logic to filter and sort
   function applySearchAndSort() {
-    const keyword = searchBox.value.toLowerCase();
-    const keywordIsNumber = !isNaN(keyword) && keyword.trim() !== '';
-
-    // Filter first
+    const keyword = searchBox.value.toLowerCase().trim();
+    const keywordIsNumber = !isNaN(keyword) && keyword !== '';
+  
+    // --- Quoted phrase and word extraction ---
+    const quotedRegex = /"([^"]+)"|\S+/g;
+    let matches;
+    const searchTerms = [];
+  
+    while ((matches = quotedRegex.exec(keyword)) !== null) {
+      const term = matches[1] || matches[0]; // quoted or unquoted
+      searchTerms.push(term.trim());
+    }
+  
     let filteredItems = window.allFoodItems.filter(item => {
-      const keywordLower = keyword.toLowerCase();
       const priceNumeric = parsePrice(item.price);
       const priceIsFree = isPriceFree(item.price);
-
-      const matchesKeyword = (
-        item.dish_name.toLowerCase().includes(keywordLower) ||
-        item.restaurant_name.toLowerCase().includes(keywordLower) ||
-        item.date.toLowerCase().includes(keywordLower) ||
-        item.description.toLowerCase().includes(keywordLower) ||
-        item.price.replace('$', '').toLowerCase().includes(keywordLower)
+  
+      const fieldsToSearch = [
+        item.dish_name.toLowerCase(),
+        item.restaurant_name.toLowerCase(),
+        item.date.toLowerCase(),
+        item.description.toLowerCase(),
+        item.price.toLowerCase()
+      ];
+  
+      // All terms (quoted or not) must match somewhere
+      const matchesAllTerms = searchTerms.every(term =>
+        fieldsToSearch.some(field => field.includes(term))
       );
-
-      const matchesFree = keywordLower === 'free' && priceIsFree;
+  
+      const matchesFree = keyword === 'free' && priceIsFree;
       const matchesPrice = keywordIsNumber && !isNaN(priceNumeric) && priceNumeric === parseFloat(keyword);
-
-      return matchesKeyword || matchesFree || matchesPrice;
+  
+      return matchesAllTerms || matchesFree || matchesPrice;
     });
 
-    // Then sort
     const sortBy = sortDropdown.value;
     let sortedItems = [...filteredItems];
 
@@ -88,19 +107,17 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function renderItems(items) {
-    menuGroup.innerHTML = '';
-
     if (items.length === 0) {
       menuGroup.innerHTML = '<p>No items found.</p>';
       return;
     }
 
-    items.forEach(item => {
+    const html = items.map(item => {
       const imageUrl = item.image && item.image !== 'No image' ? item.image : defaultImage;
       const price = item.price ? item.price : 'N/A';
       const description = item.description ? item.description.replace(/\n/g, '<br>') : 'No description available';
 
-      const html = `
+      return `
         <div class="menu-item">
           <img class="menu-item-image" src="${imageUrl}" alt="${item.dish_name}">
           <div class="menu-item-text">
@@ -116,9 +133,9 @@ document.addEventListener('DOMContentLoaded', function () {
           </div>
         </div>
       `;
+    }).join('');
 
-      menuGroup.insertAdjacentHTML('beforeend', html);
-    });
+    menuGroup.innerHTML = html;
   }
 
   function updateResultCount(count) {
