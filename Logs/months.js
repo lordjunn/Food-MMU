@@ -71,6 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <ul>
                   <li><a href="${prevMonth} ${prevYear.toString().slice(-2)}.html">${monthMap[prevMonth]} ${prevYear}</a></li>
                   <li><a href="${nextMonth} ${nextYear.toString().slice(-2)}.html">${monthMap[nextMonth]} ${nextYear}</a></li>
+                  <li><a href="full.html">Full Archive</a></li>
                 </ul>
             </li>
         </ul>
@@ -135,73 +136,93 @@ document.addEventListener('DOMContentLoaded', function() {
       let lunchCosts = [];
       let dinnerCosts = [];
       let breakfastCosts = [];
-  
+    
       let menuItems = document.querySelectorAll('.menu');
       menuItems.forEach((menu, index) => {
-          let dayHeading = menu.querySelector('.menu-group-heading');
-          let dateText = dayHeading ? dayHeading.innerText : 'Unknown Date';
-          
-          // Create a Date object using the dateText (assuming it's in a recognizable format)
-          let date = new Date(dateText);
-          
-          // If the date is valid, format it to "DD (Mon)"
-          if (!isNaN(date)) {
-              let day = date.getDate().toString().padStart(2, '0'); // Get day (e.g., 02)
-              let dayOfWeek = date.toLocaleString('en-US', { weekday: 'short' }); // Get short weekday (e.g., Mon)
-              date = `${day} (${dayOfWeek})`; // Combine day and weekday abbreviation
-          } else {
-              date = 'Unknown Date'; // Fallback in case the date is not valid
-          }
-  
-          let mealPrices = Array.from(menu.querySelectorAll('.menu-item-price')).map(price => parseFloat(price.innerText.replace('RM ', '').trim()) || 0);
-  
-          let totalCost = mealPrices.reduce((sum, price) => sum + price, 0);
-  
-          // Initialize costs for each meal type for this day
-          let lunchTotal = 0;
-          let dinnerTotal = 0;
-          let breakfastTotal = 0;
-  
-          // Loop through all menu items for the day
-          let mealItems = menu.querySelectorAll('.menu-item');
-          mealItems.forEach(meal => {
-              let mealType = meal.querySelector('.meal-type');
-              let priceElement = meal.querySelector('.menu-item-price');
-              let price = parseFloat(priceElement.innerText.replace('RM ', '').trim()) || 0;
-              
-              if (mealType) {
-                  let mealText = mealType.innerText.trim().toLowerCase();
-                  if (mealText.includes('lunch')) {
-                      lunchTotal += price;
-                  } else if (mealText.includes('dinner')) {
-                      dinnerTotal += price;
-                  } else if (mealText.includes('breakfast')) {
-                      breakfastTotal += price;
-                  }
+        let dayHeading = menu.querySelector('.menu-group-heading');
+        let dateText = dayHeading ? dayHeading.innerText : 'Unknown Date';
+    
+        // Create a Date object using the dateText (assuming it's in a recognizable format)
+        let date = new Date(dateText);
+    
+        // If the date is valid, format it to "DD (Mon)"
+        if (!isNaN(date)) {
+          let day = date.getDate().toString().padStart(2, '0'); // Get day (e.g., 02)
+          let dayOfWeek = date.toLocaleString('en-US', { weekday: 'short' }); // Get short weekday (e.g., Mon)
+          date = `${day} (${dayOfWeek})`; // Combine day and weekday abbreviation
+        } else {
+          date = 'Unknown Date'; // Fallback in case the date is not valid
+        }
+    
+        // Initialize costs for each meal type for this day
+        let totalCost = 0;
+        let lunchTotal = 0;
+        let dinnerTotal = 0;
+        let breakfastTotal = 0;
+
+        // Loop through all menu items for the day
+        let mealItems = menu.querySelectorAll('.menu-item');
+        mealItems.forEach(meal => {
+          let mealType = meal.querySelector('.meal-type');
+          let priceElement = meal.querySelector('.menu-item-price');
+    
+          let price = 0;
+    
+          if (priceElement) {
+            // Check if it contains a <s> element
+            const strike = priceElement.querySelector('s');
+    
+            if (strike) {
+              // If struck-through, check for any non-struck text nodes (e.g., "Free", "RM 0.00")
+              const textNodes = Array.from(priceElement.childNodes).filter(n => n.nodeType === 3); // Text only
+              textNodes.forEach(node => {
+                const cleaned = node.textContent.replace(/RM|\s|Free/gi, '').trim();
+                const parsed = parseFloat(cleaned);
+                if (!isNaN(parsed)) {
+                  price += parsed;
+                }
+              });
+            } else {
+              // No strike-through, parse normally
+              const cleaned = priceElement.innerText.replace(/RM|\s/gi, '').trim();
+              const parsed = parseFloat(cleaned);
+              if (!isNaN(parsed)) {
+                price = parsed;
               }
-          });
-  
-          // Push extracted data into arrays
-          days.push(date);
-  
-          breakfastCosts.push(breakfastTotal);
-          lunchCosts.push(lunchTotal);
-          dinnerCosts.push(dinnerTotal);
-          
-          dailyCosts.push(totalCost);
+            }
+          }
+    
+          if (mealType) {
+            let mealText = mealType.innerText.trim().toLowerCase();
+            if (mealText.includes('lunch')) {
+              lunchTotal += price;
+            } else if (mealText.includes('dinner')) {
+              dinnerTotal += price;
+            } else if (mealText.includes('breakfast')) {
+              breakfastTotal += price;
+            }
+          }
+    
+          totalCost += price;
+        });
+
+        // Push extracted data into arrays
+        days.push(date);
+        breakfastCosts.push(breakfastTotal);
+        lunchCosts.push(lunchTotal);
+        dinnerCosts.push(dinnerTotal);
+        dailyCosts.push(totalCost);
       });
-  
-      // Remove the last item from both days and dailyCosts arrays
-      days = days.slice(2, -1);  // Exclude the last entry
-  
+    
+      // Remove extra/filler menu block at the end
+      days = days.slice(2, -1);
       lunchCosts = lunchCosts.slice(2, -1);
       dinnerCosts = dinnerCosts.slice(2, -1);
       breakfastCosts = breakfastCosts.slice(2, -1);
-  
-      dailyCosts = dailyCosts.slice(2, -1);  // Exclude the last entry
-  
+      dailyCosts = dailyCosts.slice(2, -1);
+    
       return { days, dailyCosts, lunchCosts, dinnerCosts, breakfastCosts };
-  }
+    }    
   
   function generateChart() {
     const mealData = extractMealData();
@@ -288,7 +309,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 }
 
-
-
-  // Run the chart generation after the page loads
-  window.onload = generateChart;
+// Run the chart generation after the page loads
+window.onload = generateChart;
