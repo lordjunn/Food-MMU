@@ -14,14 +14,18 @@
 <div class="search-container">
   <input type="text" id="searchBox" placeholder="Search food or restaurant..." />
   <div class="sort-dropdown">
-    <select id="sortDropdown">
-      <option value="date-asc">Sort by Date (Earliest)</option>
-      <option value="date-desc">Sort by Date (Latest)</option>
-      <option value="price-asc">Sort by Price (Lowest)</option>
-      <option value="price-desc">Sort by Price (Highest)</option>
-    </select>
-    <span id="resultCount">0 results found, maybe the CSV isn't loaded?</span> <!-- This will show the number of results -->
-  </div>
+    <div class="sort-actions">
+      <select id="sortDropdown">
+        <option value="date-asc">Sort by Date (Earliest)</option>
+        <option value="date-desc">Sort by Date (Latest)</option>
+        <option value="price-asc">Sort by Price (Lowest)</option>
+        <option value="price-desc">Sort by Price (Highest)</option>
+      </select>
+      
+      <button id="backHomeButton">Back to Home</button>
+    </div>
+    <span id="resultCount">0 results found, maybe the CSV isn't loaded?</span>
+  </div>  
 </div>
 
   <div class="container">

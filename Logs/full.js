@@ -142,3 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
     resultCountText.textContent = `${count} results found`;
   }
 });
+
+document.getElementById('backHomeButton').addEventListener('click', () => {
+  window.location.href = '../index.html'; // Change this to your actual home page path
+});

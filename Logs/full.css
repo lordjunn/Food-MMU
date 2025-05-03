@@ -142,4 +142,41 @@
       margin-bottom: 1em;
     }
   }
+
+  .sort-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    align-items: center;
+  }
+  
+  #backHomeButton {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #8c00ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+  }
+  
+  #backHomeButton:hover {
+    background-color: #5e009e;
+  }
+  
+  @media (max-width: 768px) {
+    .sort-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    #backHomeButton,
+    .sort-dropdown select {
+      width: 100%;
+    }
+  }
+  
+  
   
