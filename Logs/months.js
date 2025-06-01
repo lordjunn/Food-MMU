@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
               Food Archive - ${fullMonth} ${year}
             </h2>
             <br>
-            <p>Days in MMU: ${days} days<br>
+            <p>Nom nom days: ${days} days<br>
               Reasons:
               <ul>
                 ${reasonList.map(reason => `<li>${reason}</li>`).join('')}
