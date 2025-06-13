@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const filtered = applySearchAndSort();
         renderItems(filtered);
         updateResultCount(filtered.length);
-      }, 300)); // Adjust delay if needed
+      }, 300));
 
       // Sorting functionality
       sortDropdown.addEventListener('change', function () {
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       return `
         <div class="menu-item">
-          <img class="menu-item-image" src="${imageUrl}" alt="${item.dish_name}">
+          <img class="menu-item-image" src="${imageUrl}" alt="${item.dish_name}" loading="lazy">
           <div class="menu-item-text">
             <h3 class="menu-item-heading">
               <span class="menu-item-name">${item.dish_name}</span>
@@ -144,5 +144,5 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.getElementById('backHomeButton').addEventListener('click', () => {
-  window.location.href = '../index.html'; // Change this to your actual home page path
+  window.location.href = '../index.html';
 });
