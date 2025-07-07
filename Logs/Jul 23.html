@@ -12,43 +12,18 @@
 </head>
 
 <body>
-  <div class="container">
-      <ul id="navMenu">
-          <li><a href="index.html">Index</a></li>
-          <li><a>Food</a>
-              <ul>
-                <li><a href="Starbees.html">Starbees</a></li>
-                <li><a href="HTC.html">HTC</a></li>
-                <li><a href="Dapo Sahang.html">Dapo Sahang</a></li>
-                <li><a href="Deens.html">Deens Cafe</a></li>
-              </ul>
-          </li>
-      </ul></div>
-
-      <div class="container">
-        <div class="menu">  
-          <h2 class="menu-group-heading">
-            Food Archive - July 2023
-          </h2>
-          <br>
-          <p>Days in MMU: 3 days<br>
-            Reasons:
-            <ul>
-              <li>Trimester Break: 6/7 - 6/8</li>
-            </ul>
-          </p>      
-      </div>
-    </div>
-
-    <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            July 2023
-          </h2>
-          <br>
-          <p><br>
-          </p>      
-        </div>
+  <body>
+    <div id="header-config"
+    data-year="2023"
+    data-month="Jul"
+    data-days="3"
+    data-reasons="
+    Trimester Break: 6/7 - 6/8"
+    data-text="">
+</div>
+<!-- This will hold the dynamically generated header -->
+<div id="header-container"></div>
+<div class="container">  
 
         <div class="menu">
             <h2 class="menu-group-heading">
@@ -64,7 +39,7 @@
                     <span class="menu-item-price">RM 8.80</span>
                   </h3>
                   <h3> 
-                    <span class="menu-item-name">(Lunch)</span>
+                    <span class="meal-type">(Lunch)</span>
                   </h3>
                   <p class="menu-item-description">
                     Did they just take away my plate when I just went to refill tea?<br>
@@ -74,15 +49,14 @@
               </div>  
           
               <div class="menu-item">
-                <a href="2023/July/2023, July, image 2h.png"  target="_blank">
-                  <img class="menu-item-image" src="2023/July/2023, July, image 2.png"></a>
+                <img class="menu-item-image" src="2023/July/2023, July, image 2h.png">
                 <div class="menu-item-text">
                   <h3 class="menu-item-heading">
                     <span class="menu-item-name">Creamy Butter Pork Rice [Hinz Kitchen]</span>
                     <span class="menu-item-price">RM 14.90</span> <!-- paid by transfer -->
                   </h3>
                   <h3> 
-                    <span class="menu-item-name">(Dinner)</span>
+                    <span class="meal-type">(Dinner)</span>
                   </h3>
                   <p class="menu-item-description">
                     Price breakdown:
@@ -110,7 +84,7 @@
                     <span class="menu-item-price">RM 16.95</span> <!-- paid by e belia -->
                   </h3>
                   <h3> 
-                    <span class="menu-item-name">(Lunch)</span>
+                    <span class="meal-type">(Lunch)</span>
                   </h3>
                   <p class="menu-item-description">
                     Me thinking if fast food was cheap or I just ordered "deluxe".
@@ -126,7 +100,7 @@
                     <span class="menu-item-price">RM 7.00</span>
                   </h3>
                   <h3> 
-                    <span class="menu-item-name">(Dinner)</span>
+                    <span class="meal-type">(Dinner)</span>
                   </h3>
                   <p class="menu-item-description">
                     Glugged down half a bottle for no reason, ends up cant finish it.
@@ -164,9 +138,7 @@
           </div>
 
 <div class="menu">
-  <h2 class="menu-group-heading">
-   July 2023 Spendings
-  </h2>
+  <div id="footer-container"></div>
   <div class="menu-group">
 
     <div class="menu-item">
@@ -199,7 +171,9 @@
   </div>
   </div>
 
-
+  <canvas id="mealChart" width="400" height="200"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="text/javascript" src="months.js"></script>
 
 </div>
 </body>

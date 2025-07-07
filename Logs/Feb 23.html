@@ -13,44 +13,21 @@
 </head>
 
 <body>
-  <div class="container">
-      <ul id="navMenu">
-          <li><a href="index.html">Index</a></li>
-          <li><a>Food</a>
-              <ul>
-                <li><a href="Starbees.html">Starbees</a></li>
-                <li><a href="HTC.html">HTC</a></li>
-                <li><a href="Komatra.html">Komatra</a></li>
-                <li><a href="Deens.html">Deens Cafe</a></li>
-              </ul>
-          </li>
-      </ul></div>
-
-      <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            Food Archive - February 2023
-          </h2>
-          <br>
-          <p>Days in MMU: 6 days<br>
-            Reasons:
-            <ul>
-              <li>Study week: 6 - 10 (somehow still has classes even though it should've been over)</li>
-              <li>SEMESTER BREAK: 17/2 - 19/3 (WOOOOOOOOO)</li>
-            </ul>
-          </p>      
-      </div>
-    </div>
-
-    <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            February 2023
-          </h2>
-          <br>
-          <p><br>
-          </p>      
-        </div>
+  <body>
+    <div id="header-config"
+    data-year="2023"
+    data-month="Feb"
+    data-days="6"
+    data-reasons="
+    Study week: 6/2 - 10/2
+    (somehow still has classes even though it should've been over),
+    SEMESTER BREAK: 17/2 - 19/3 
+    (WOOOOOOOOO)"
+    data-text="">
+</div>
+<!-- This will hold the dynamically generated header -->
+<div id="header-container"></div>
+<div class="container">  
 
         <div class="menu">
           <h2 class="menu-group-heading">
@@ -65,7 +42,7 @@
                   <span class="menu-item-name">Nasi Campur [Royal Tandoori]</span>
                   <span class="menu-item-price">RM 8.00</span>
               </h3><h3> 
-                  <span class="menu-item-name">(Lunch)</span>
+                  <span class="meal-type">(Lunch)</span>
                 </h3>
                 <p class="menu-item-description">
                   Was thinking wat to eat, this seems the most "economical".
@@ -86,7 +63,7 @@
                   <span class="menu-item-name">NGK + TD [Komatra]</span>
                   <span class="menu-item-price">RM 7.00</span>
               </h3><h3> 
-                  <span class="menu-item-name">(Dinner)</span>
+                  <span class="meal-type">(Dinner)</span>
                 </h3>
                 <p class="menu-item-description">
                   <a src="https://discord.com/channels/1006168228839555132/1006172127063441480/1070292570720182302">MY ANIME ARC NOOOOO</a> (It's a discord link)<br>
@@ -114,7 +91,7 @@
             <span class="menu-item-name">Nasi Ayam [Komatra]</span>
             <span class="menu-item-price">RM 6.50</span>
         </h3><h3> 
-            <span class="menu-item-name">(Lunch)</span>
+            <span class="meal-type">(Lunch)</span>
           </h3>
           <p class="menu-item-description">
             Ordered too early, they were just SETTING UP FOR 20+ MINUTES HOW<br><br>
@@ -132,7 +109,7 @@
             <span class="menu-item-name">NGK + TM [Komatra]</span>
             <span class="menu-item-price">RM 7.00</span>
         </h3><h3> 
-            <span class="menu-item-name">(Dinner)</span>
+            <span class="meal-type">(Dinner)</span>
           </h3>
           <p class="menu-item-description">
             lets be honest here<br>
@@ -161,7 +138,7 @@
           <span class="menu-item-name">Nasi Campur [Komatra]</span>
           <span class="menu-item-price">RM 7.80</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           Cats are dumb, the one time I want to give them food, they ignore me.<br>
@@ -185,7 +162,7 @@
           <span class="menu-item-name">NGK + TM [Komatra]</span>
           <span class="menu-item-price">RM 7.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           Said to come late to fetch me, immediately texts after I ordered.<br>
@@ -214,7 +191,7 @@
           <span class="menu-item-name">Nasi Campur [Komatra]</span>
           <span class="menu-item-price">RM 8.60</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           The return of them charging me extra nasi.<br>
@@ -238,7 +215,7 @@
           <span class="menu-item-name">NGK + TM [Komatra]</span>
           <span class="menu-item-price">RM 7.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           On god komatra quality improving?<br>
@@ -267,7 +244,7 @@
           <span class="menu-item-name">Nasi Campur [Komatra]</span>
           <span class="menu-item-price">RM 7.80</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           The vegetable a little ahh goofy to me, along with the seeds.<br><br>
@@ -290,7 +267,7 @@
           <span class="menu-item-name">NGK + TM [Komatra]</span>
           <span class="menu-item-price">RM 7.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           I take it back. It just changed again.<br>
@@ -318,7 +295,7 @@
           <span class="menu-item-name">Nasi Campur [Komatra]</span>
           <span class="menu-item-price">RM 8.60</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           It is said to be kicap vegetable.<br><br>
@@ -339,11 +316,9 @@
 </div>
 
 <div class="menu">
-  <h2 class="menu-group-heading">
-    February 2023 Spendings
-  </h2>
+  <div id="footer-container"></div>
   <div class="menu-group">
-
+    
     <div class="menu-item">
       <img class="menu-item-image" src="2023/February/2023, February, image 12.png">
       <div class="menu-item-text">
@@ -376,7 +351,9 @@
   </div>
   </div>
 
-
+  <canvas id="mealChart" width="400" height="200"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="text/javascript" src="months.js"></script>
 
 </div>
 </body>

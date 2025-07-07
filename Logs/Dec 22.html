@@ -12,45 +12,19 @@
 </head>
 
 <body>
-  <div class="container">
-      <ul id="navMenu">
-          <li><a href="index.html">Index</a></li>
-          <li><a>Food</a>
-              <ul>
-                <li><a href="Starbees.html">Starbees</a></li>
-                <li><a href="HTC.html">HTC</a></li>
-                <li><a href="Komatra.html">Komatra</a></li>
-                <li><a href="Deens.html">Deens Cafe</a></li>
-              </ul>
-          </li>
-      </ul></div>
-
-      <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            Food Archive - December 2022
-          </h2>
-          <br>
-          <p>Days in MMU: 12 days.<br>
-            Reasons:
-            <ul>
-              <li>Tuberculosis break: 19 - 23</li>
-              <li>Christmas break: 26 - 30</li>
-            </ul>
-            Classes just converted to online mode.
-          </p>      
-      </div>
-    </div>
-
-    <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            December 2022
-          </h2>
-          <br>
-          <p>Projects, assignments, deadlines.<br>
-          </p>      
-        </div>
+  <body>
+    <div id="header-config"
+    data-year="2022"
+    data-month="Dec"
+    data-days="12"
+    data-reasons="
+    Tuberculosis break: 19/12 - 23/12,
+    Christmas break: 26/12 - 30/12"
+    data-text="Projects, assignments, deadlines.">
+</div>
+<!-- This will hold the dynamically generated header -->
+<div id="header-container"></div>
+<div class="container">  
 
         <div class="menu">
             <h2 class="menu-group-heading">
@@ -65,7 +39,7 @@
                     <span class="menu-item-name">Maggi Goreng + Telur Dadar [HTC]</span>
                     <span class="menu-item-price">RM 6.00</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Lunch)</span>
+                    <span class="meal-type">(Lunch)</span>
                   </h3>
                   <p class="menu-item-description">
                     11:53
@@ -86,7 +60,7 @@
                     <span class="menu-item-name">NGK + TM [Komatra]</span>
                     <span class="menu-item-price">RM 6.50</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Dinner)</span>
+                    <span class="meal-type">(Dinner)</span>
                   </h3>
                   <p class="menu-item-description">
                     The lone kangkung be like.<br>
@@ -117,7 +91,7 @@
                 <span class="menu-item-name">Nasi Ayam [Komatra]</span>
                 <span class="menu-item-price">RM 6.00</span>
             </h3><h3> 
-                <span class="menu-item-name">(Lunch)</span>
+                <span class="meal-type">(Lunch)</span>
               </h3>
               <p class="menu-item-description">
                 Receipt has been found.<br>
@@ -143,7 +117,7 @@
             <span class="menu-item-name">Breakfast [Komatra]</span>
             <span class="menu-item-price">RM 3.50</span>
         </h3><h3> 
-            <span class="menu-item-name">(Lunch 1)</span>
+            <span class="meal-type">(Lunch 1)</span>
           </h3>
           <p class="menu-item-description">
             Price raised once again, +50 cents.<br>
@@ -160,7 +134,7 @@
             <span class="menu-item-name">Nasi Lemak [Hirup Mee Kopitiam]</span>
             <span class="menu-item-price">RM 2.00</span>
         </h3><h3> 
-            <span class="menu-item-name">(Lunch 2)</span>
+            <span class="meal-type">(Lunch 2)</span>
           </h3>
           <p class="menu-item-description">
             How often can you find cheap food?<br>
@@ -176,7 +150,7 @@
             <span class="menu-item-name">NGK + TM [Komatra]</span>
             <span class="menu-item-price">RM 7.00</span>
         </h3><h3> 
-            <span class="menu-item-name">(Dinner)</span>
+            <span class="meal-type">(Dinner)</span>
           </h3>
           <p class="menu-item-description">
             PRICE RAISE REEEE<br>
@@ -207,7 +181,7 @@
             <span class="menu-item-name">Nasi Campur [Komatra]</span>
             <span class="menu-item-price">RM 8.60</span>
         </h3><h3> 
-            <span class="menu-item-name">(Lunch)</span>
+            <span class="meal-type">(Lunch)</span>
           </h3>
           <p class="menu-item-description">
             Raise my sword<br>
@@ -233,7 +207,7 @@
             <span class="menu-item-name">Nasi Goreng Kampung [Komatra]</span>
             <span class="menu-item-price">RM 6.00</span>
         </h3><h3> 
-            <span class="menu-item-name">(Dinner)</span>
+            <span class="meal-type">(Dinner)</span>
           </h3>
           <p class="menu-item-description">
             So I guess everything raised by 50 cents.<br>
@@ -259,7 +233,7 @@
             <span class="menu-item-name">Nasi Ayam [Komatra]</span>
             <span class="menu-item-price">RM 6.50</span>
         </h3><h3> 
-            <span class="menu-item-name">(Lunch)</span>
+            <span class="meal-type">(Lunch)</span>
           </h3>
           <p class="menu-item-description">
             Nothing is spared from inflation.<br>
@@ -277,7 +251,7 @@
             <span class="menu-item-name">Nasi Goreng Kampung [Komatra]</span>
             <span class="menu-item-price">RM 6.00</span>
         </h3><h3> 
-            <span class="menu-item-name">(Dinner)</span>
+            <span class="meal-type">(Dinner)</span>
           </h3>
           <p class="menu-item-description">
             You should ki** yourself, NOW!<br>
@@ -303,7 +277,7 @@
             <span class="menu-item-name">Ayam Buttermilk [Pak Ngah]</span>
             <span class="menu-item-price">RM 9.00</span>
         </h3><h3> 
-            <span class="menu-item-name">(Lunch)</span>
+            <span class="meal-type">(Lunch)</span>
           </h3>
           <p class="menu-item-description">
             The pain will make me grow stronger, but not my wallet.<br>
@@ -320,7 +294,7 @@
             <span class="menu-item-name">NGK + TD [Komatra]</span>
             <span class="menu-item-price">RM 7.00</span>
         </h3><h3> 
-            <span class="menu-item-name">(Dinner)</span>
+            <span class="meal-type">(Dinner)</span>
           </h3>
           <p class="menu-item-description">
             POS061146<br>
@@ -350,7 +324,7 @@
           <span class="menu-item-name">Nasi Campur [Komatra]</span>
           <span class="menu-item-price">RM 8.60</span>
         </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           Now since I have kalmed, time to list the price increases.<br>
@@ -388,7 +362,7 @@
           <span class="menu-item-name">Nasi Campur [Komatra]</span>
           <span class="menu-item-price">RM 6.80</span>
         </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           I bless the typo king.<br>
@@ -412,7 +386,7 @@
           <span class="menu-item-name">NGK + TM [Komatra]</span>
           <span class="menu-item-price">RM 7.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           Shily oil.<br>
@@ -442,7 +416,7 @@
           <span class="menu-item-name">Nasi Ayam [Komatra]</span>
           <span class="menu-item-price">RM 6.50</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           Receipt.png has been found.<br>
@@ -459,7 +433,7 @@
           <span class="menu-item-name">NGK + TD [Komatra]</span>
           <span class="menu-item-price">RM 7.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           POS062459<br>
@@ -489,7 +463,7 @@
           <span class="menu-item-name">Nasi Campur [Royal Tandoori]</span>
           <span class="menu-item-price">RM 8.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           No price list, so I'll gauge it based on my estimates.<br>
@@ -518,7 +492,7 @@
           <span class="menu-item-name">Maggi Goreng [Tuah Anas]</span>
           <span class="menu-item-price">RM 5.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           11:19
@@ -534,7 +508,7 @@
           <span class="menu-item-name">NGK + Lebih Nasi [Komatra]</span>
           <span class="menu-item-price">RM 6.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           So this doesn't charge you extra?<br>
@@ -560,7 +534,7 @@
           <span class="menu-item-name">Nasi Goreng Kampung [Tuah Anas]</span>
           <span class="menu-item-price">RM 6.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           They have free stuff for me to "self service".<br>
@@ -575,10 +549,8 @@
 </div>
 
 <div class="menu">
-    <h2 class="menu-group-heading">
-     December 2022 Spendings
-    </h2>
-    <div class="menu-group">
+  <div id="footer-container"></div>
+  <div class="menu-group">
   
       <div class="menu-item">
         <img class="menu-item-image" src="2022/December/2022, December, image 22.png">
@@ -606,3 +578,12 @@
       
     </div>
     </div>
+
+  <canvas id="mealChart" width="400" height="200"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="text/javascript" src="months.js"></script>
+
+</div>
+</body>
+
+</html> 

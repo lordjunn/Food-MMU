@@ -12,45 +12,22 @@
 </head>
 
 <body>
-  <div class="container">
-      <ul id="navMenu">
-          <li><a href="index.html">Index</a></li>
-          <li><a>Food</a>
-              <ul>
-                <li><a href="Starbees.html">Starbees</a></li>
-                <li><a href="HTC.html">HTC</a></li>
-                <li><a href="Komatra.html">Komatra</a></li>
-                <li><a href="Deens.html">Deens Cafe</a></li>
-              </ul>
-          </li>
-      </ul></div>
-
-      <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            Food Archive - January 2023
-          </h2>
-          <br>
-          <p>Days in MMU: 14 days<br>
-            Reasons:
-            <ul>
-              <li>New year replacement: 2</li>
-              <li>Storm: 18 - 20 (I was supposed to be gone at 16, but I stayed for Fruitizen)</li>
-              <li>Chinese New Year: 23 - 27 (Online T&L)</li>
-            </ul>
-          </p>      
-      </div>
-    </div>
-
-    <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            January 2023
-          </h2>
-          <br>
-          <p>2020, 3.<br>
-          </p>      
-        </div>
+  <body>
+    <div id="header-config"
+    data-year="2023"
+    data-month="Jan"
+    data-days="14"
+    data-reasons="
+    New year replacement: 2/1,
+    Storm: 18/1 - 20/1 
+    (I was supposed to be gone at 16，but I stayed for Fruitizen),
+    Chinese New Year: 23/1 - 27/1 
+    (Online T&L)"
+    data-text="2020, 3.">
+</div>
+<!-- This will hold the dynamically generated header -->
+<div id="header-container"></div>
+<div class="container">  
 
         <div class="menu">
             <h2 class="menu-group-heading">
@@ -65,7 +42,7 @@
                     <span class="menu-item-name">Nasi Ayam [Komatra]</span>
                     <span class="menu-item-price">RM 6.50</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Lunch)</span>
+                    <span class="meal-type">(Lunch)</span>
                   </h3>
                   <p class="menu-item-description">
                     Point of sales is actually dying?<br>
@@ -82,7 +59,7 @@
                     <span class="menu-item-name">NGC + TD [Komatra]</span>
                     <span class="menu-item-price">RM 7.00</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Dinner)</span>
+                    <span class="meal-type">(Dinner)</span>
                   </h3>
                   <p class="menu-item-description">
                     Who in the right mind would put pepper sauce on cina?<br>
@@ -115,7 +92,7 @@
                 <span class="menu-item-name">Nasi Goreng Ikan Masin [Tuah Anas]</span>
                 <span class="menu-item-price">RM 6.00</span>
             </h3><h3> 
-                <span class="menu-item-name">(Lunch)</span>
+                <span class="meal-type">(Lunch)</span>
               </h3>
               <p class="menu-item-description">
                 They somehow have a numbering system now.<br>
@@ -138,7 +115,7 @@
                 <span class="menu-item-name">Nasi Goreng Ayam [HTC]</span>
                 <span class="menu-item-price">RM 8.00</span>
             </h3><h3> 
-                <span class="menu-item-name">(Dinner)</span>
+                <span class="meal-type">(Dinner)</span>
               </h3>
               <p class="menu-item-description">
                 Rats, rats, we are the rats.<br>
@@ -164,7 +141,7 @@
           <span class="menu-item-name">Nasi Campur [HTC]</span>
           <span class="menu-item-price">RM 8.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           First time trying, if I were to refer to the menu for how they price, it's correct.<br>
@@ -187,7 +164,7 @@
           <span class="menu-item-name">NGK + TD [Komatra]</span>
           <span class="menu-item-price">RM 7.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           UwU, 001. Also the omlette is a little salty if paired without rice.<br>
@@ -221,7 +198,7 @@
           <span class="menu-item-name">Nasi Goreng Tomyam [Tuah Anas]</span>
           <span class="menu-item-price">RM 8.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           What the lemongrass doing here?<br>
@@ -248,7 +225,7 @@
           <span class="menu-item-name">Roti Telur [HTC]</span>
           <span class="menu-item-price">RM 2.50</span>
       </h3><h3> 
-          <span class="menu-item-name">(Breakfast)</span>
+          <span class="meal-type">(Breakfast)</span>
         </h3>
         <p class="menu-item-description">
           First time trying it.<br>
@@ -264,7 +241,7 @@
           <span class="menu-item-name">Yee Mee [HSH]</span>
           <span class="menu-item-price">RM 6.50</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           Got told to eat less heaty stuff, so here I am.
@@ -279,7 +256,7 @@
           <span class="menu-item-name">NGC + TM [Komatra]</span>
           <span class="menu-item-price">RM 7.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           POS065580<br>
@@ -308,7 +285,7 @@
           <span class="menu-item-name">Nasi Campur [Komatra]</span>
           <span class="menu-item-price">RM 7.80</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           I can never escape the black spice taste.<br>
@@ -330,7 +307,7 @@
             <span class="menu-item-name">NGK + TM [Komatra]</span>
             <span class="menu-item-price">RM 7.00</span>
         </h3><h3> 
-            <span class="menu-item-name">(Dinner)</span>
+            <span class="meal-type">(Dinner)</span>
           </h3>
           <p class="menu-item-description">
             Man, undercooked yolk.<br>
@@ -357,7 +334,7 @@
           <span class="menu-item-name">Spiced fried chicken rice [HSH]</span>
           <span class="menu-item-price">RM 7.50</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           Seemed more popular vs wanton mee, besides the no waiting time.
@@ -372,7 +349,7 @@
           <span class="menu-item-name">NGK + TD [Komatra]</span>
           <span class="menu-item-price">RM 7.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           This is safer vs fried egg.<br>
@@ -400,7 +377,7 @@
           <span class="menu-item-name">Nasi Ayam [Komatra]</span>
           <span class="menu-item-price">RM 6.50</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           The previous duo that mans the chicken rice stall isn't here.<br>
@@ -426,7 +403,7 @@
           <span class="menu-item-name">Nasi Goreng Pattaya [HTC]</span>
           <span class="menu-item-price">RM 6.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           FREE FOR ALLLLLL, also known as take whatever is yours, within reason.<br>
@@ -453,7 +430,7 @@
           <span class="menu-item-name">Braised Chicken Rice [HSH]</span>
           <span class="menu-item-price">RM 7.50</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch, food)</span>
+          <span class="meal-type">(Lunch, food)</span>
         </h3>
         <p class="menu-item-description">
           Good.
@@ -468,7 +445,7 @@
           <span class="menu-item-name">3 Layer Tea [BBC]</span>
           <span class="menu-item-price"><s>RM 4.00</s> Free</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch, drink)</span>
+          <span class="meal-type">(Lunch, drink)</span>
         </h3>
         <p class="menu-item-description">
           Much love to <s>Seen</s> Herrscher of Procrastination for the treat.
@@ -493,7 +470,7 @@
               <span class="menu-item-name">Mixed Rice [Mama Homecook Mixed Rice]</span>
               <span class="menu-item-price">RM 7.30</span>
           </h3><h3> 
-              <span class="menu-item-name">(Lunch)</span>
+              <span class="meal-type">(Lunch)</span>
             </h3>
             <p class="menu-item-description">
               Free chinese tea? Good.<br>
@@ -509,7 +486,7 @@
               <span class="menu-item-name">NGK + TD [Komatra]</span>
               <span class="menu-item-price">RM 7.00</span>
           </h3><h3> 
-              <span class="menu-item-name">(Dinner)</span>
+              <span class="meal-type">(Dinner)</span>
             </h3>
             <p class="menu-item-description">
               CAN CATS STOP RAIDING ME??<br><br>
@@ -537,7 +514,7 @@
           <span class="menu-item-name">Nasi Campur [Komatra]</span>
           <span class="menu-item-price">RM 7.80</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           POS066767<br>
@@ -558,7 +535,7 @@
           <span class="menu-item-name">Nasi Goreng Cili Padi [Komatra]</span>
           <span class="menu-item-price">RM 6.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner 1)</span>
+          <span class="meal-type">(Dinner 1)</span>
         </h3>
         <p class="menu-item-description">
           🖕<br>
@@ -575,7 +552,7 @@
           <span class="menu-item-name">Ayam Goreng [Komatra]</span>
           <span class="menu-item-price">RM 4.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner 2)</span>
+          <span class="meal-type">(Dinner 2)</span>
         </h3>
         <p class="menu-item-description">
           ITS SO SADDENING<br>
@@ -604,7 +581,7 @@
           <span class="menu-item-name">Nasi Ayam [Komatra]</span>
           <span class="menu-item-price">RM 6.50</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           Today is quiet, no cats to be found.<br><br>
@@ -631,7 +608,7 @@
               <span class="menu-item-name">Dry Wantan Noodles (Add 1/2 noodles) [HSH]</span>
               <span class="menu-item-price">RM 8.00</span>
           </h3><h3> 
-              <span class="menu-item-name">(Lunch)</span>
+              <span class="meal-type">(Lunch)</span>
             </h3>
             <p class="menu-item-description">
               Maybe I was too hungry, adding noodles didn't do my stomach justice.<br>
@@ -649,7 +626,7 @@
               <span class="menu-item-name">Nasi Goreng Kampung [HTC]</span>
               <span class="menu-item-price">RM 6.00</span>
           </h3><h3> 
-              <span class="menu-item-name">(Dinner)</span>
+              <span class="meal-type">(Dinner)</span>
             </h3>
             <p class="menu-item-description">
               Hearing Komatra still on holiday, I forced myself to lepak out of hostel.<br>
@@ -677,7 +654,7 @@
           <span class="menu-item-name">Nasi Campur [HTC]</span>
           <span class="menu-item-price">RM 9.50</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           What the price?<br>
@@ -701,7 +678,7 @@
           <span class="menu-item-name">Fries [Glaze Eatery]</span>
           <span class="menu-item-price"><s>RM 8.00</s> Free</span>
       </h3><h3> 
-          <span class="menu-item-name">(Snack 1)</span>
+          <span class="meal-type">(Snack 1)</span>
         </h3>
         <p class="menu-item-description">
           Freeloading, part 1<br>
@@ -720,7 +697,7 @@
           <span class="menu-item-name">Stoner Fries [Glaze Eatery]</span>
           <span class="menu-item-price"><s>RM 16.00</s> Free</span>
       </h3><h3> 
-          <span class="menu-item-name">(Snack 2)</span>
+          <span class="meal-type">(Snack 2)</span>
         </h3>
         <p class="menu-item-description">
           Freeloading, part 2<br>
@@ -747,7 +724,7 @@
           <span class="menu-item-name">Chicken Chop Rice (Thai Mayo) [Hinz Kitchen]</span>
           <span class="menu-item-price">RM 19.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           KOMATRA WHY YOU CLOSE SO LONG??<br>
@@ -763,10 +740,8 @@
 </div>
 
 <div class="menu">
-    <h2 class="menu-group-heading">
-     January 2023 Spendings
-    </h2>
-    <div class="menu-group">
+  <div id="footer-container"></div>
+  <div class="menu-group">
   
       <div class="menu-item">
         <img class="menu-item-image" src="2023/January/2023, January, image 31.png">
@@ -801,7 +776,9 @@
     </div>
     </div>
 
-
+  <canvas id="mealChart" width="400" height="200"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="text/javascript" src="months.js"></script>
 
 </div>
 </body>

@@ -3,11 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const configDiv = document.getElementById('header-config');
   if (!configDiv) return; // If no config div is found, exit the script
   
-  const year = configDiv.getAttribute('data-year');  // Get the year
-  const monthShort = configDiv.getAttribute('data-month');  // Get the month abbreviation
-  const days = configDiv.getAttribute('data-days');
-  const reasons = configDiv.getAttribute('data-reasons');  // Get the reasons for the month
-  const monthlyText = configDiv.getAttribute('data-text');
+const { year, month: monthShort, days, reasons, text: monthlyText } = configDiv.dataset;
 
   // Define a mapping of month abbreviations to full month names (capitalized)
   const monthMap = {
@@ -20,7 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const fullMonth = monthMap[monthShort] || "Unknown Month";
 
   // Split the reasons into an array, using the comma as the delimiter
-  const reasonList = reasons.split(',').map(reason => reason.trim());
+  const reasonList = reasons
+    .split(',')
+    .map(reason => reason.trim())
+    .filter(reason => reason.length > 0);
 
   // Check if header and footer containers exist before inserting content
   const headerContainer = document.getElementById('header-container');
@@ -30,10 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Get the current month and year from the attributes
   const currentMonth = monthShort;
   const currentYear = parseInt(year);
+  const months = ["Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov"];
 
   // Get the previous and next month, considering the year change
   function getPreviousMonth(month, year) {
-    const months = ["Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov"];
     const monthIndex = months.indexOf(month);
     const prevMonthIndex = (monthIndex === 0) ? 11 : monthIndex - 1;
     const prevMonth = months[prevMonthIndex];
@@ -42,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function getNextMonth(month, year) {
-    const months = ["Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov"];
     const monthIndex = months.indexOf(month);
     const nextMonthIndex = (monthIndex === 11) ? 0 : monthIndex + 1;
     const nextMonth = months[nextMonthIndex];
@@ -54,55 +52,87 @@ document.addEventListener('DOMContentLoaded', function() {
   const { nextMonth, nextYear } = getNextMonth(currentMonth, currentYear);
 
   // If the header container exists, create the dynamically generated header HTML
-  if (headerContainer) {
-    const headerHTML = `
-      <div class="container">
-        <ul id="navMenu">
-            <li><a href="../index.html">Index</a></li>
-            <li><a href="#">Food</a>
-                <ul>
-                  <li><a href="../Foods/Starbees.html">Starbees</a></li>
-                  <li><a href="../Foods/HTC.html">HTC</a></li>
-                  <li><a href="../Foods/Dapo Sahang.html">Dapo Sahang</a></li>
-                  <li><a href="../Foods/Deens.html">Deens Cafe</a></li>
-                </ul>
-            </li>
-            <li><a href="Food Archives.html">Archives</a>
-                <ul>
-                  <li><a href="${prevMonth} ${prevYear.toString().slice(-2)}.html">${monthMap[prevMonth]} ${prevYear}</a></li>
-                  <li><a href="${nextMonth} ${nextYear.toString().slice(-2)}.html">${monthMap[nextMonth]} ${nextYear}</a></li>
-                  <li><a href="full.html">Full Archive</a></li>
-                </ul>
-            </li>
-        </ul>
-      </div>
+if (headerContainer) {
+  const isOldRange = (() => {
+    const oldStart = new Date('2022-08-01');
+    const oldEnd = new Date('2023-02-28');
+    const currentDate = new Date(`${monthMap[monthShort]} 1, ${year}`);
+    return currentDate >= oldStart && currentDate <= oldEnd;
+  })();
 
-      <div class="container">
-          <div class="menu">
-            <h2 class="menu-group-heading">
-              Food Archive - ${fullMonth} ${year}
-            </h2>
-            <br>
-            <p>Nom nom days: ${days} days<br>
+  // Food menu section
+  const foodVendors = isOldRange 
+    ? ['Starbees', 'HTC', 'Komatra', 'Deens Cafe']
+    : ['Starbees', 'HTC', 'Dapo Sahang', 'Deens Cafe'];
+
+  const foodMenuHTML = `
+    <li><a href="#">Food</a>
+      <ul>
+        ${foodVendors.map(vendor => `<li><a href="${isOldRange ? '' : '../Foods/'}${vendor}.html">${vendor}</a></li>`).join('')}
+      </ul>
+    </li>
+  `;
+
+  // Build the archive submenu links dynamically, skipping July 2022
+  let archiveLinks = '';
+  if (!(prevMonth === "Jul" && prevYear === 2022)) {
+    archiveLinks += `
+      <li><a href="${prevMonth} ${prevYear.toString().slice(-2)}.html">
+        ${monthMap[prevMonth]} ${prevYear}
+      </a></li>`;
+  }
+  if (!(nextMonth === "Jul" && nextYear === 2022)) {
+    archiveLinks += `
+      <li><a href="${nextMonth} ${nextYear.toString().slice(-2)}.html">
+        ${monthMap[nextMonth]} ${nextYear}
+      </a></li>`;
+  }
+  archiveLinks += `<li><a href="full.html">Full Archive</a></li>`;
+
+  const navMenuHTML = `
+    <div class="container">
+      <ul id="navMenu">
+        <li><a href="${isOldRange ? 'index.html' : '../index.html'}">Index</a></li>
+        ${foodMenuHTML}
+        <li><a href="Food Archives.html">Archives</a>
+          <ul>
+            ${archiveLinks}
+          </ul>
+        </li>
+      </ul>
+    </div>
+  `;
+
+  const headerHTML = `
+    ${navMenuHTML}
+    <div class="container">
+        <div class="menu">
+          <h2 class="menu-group-heading">
+            Food Archive - ${fullMonth} ${year}
+          </h2>
+          <br>
+          <p>Nom nom days: ${days} days<br>
+            ${reasonList.length > 0 ? `
               Reasons:
               <ul>
                 ${reasonList.map(reason => `<li>${reason}</li>`).join('')}
               </ul>
-            </p>      
-          </div>
-      </div>
+            ` : ''}
+          </p>   
+        </div>
+    </div>
 
-      <div class="container">
-          <div class="menu">
-            <h2 class="menu-group-heading">
-              ${fullMonth} ${year}
-            </h2>
-            <br>
-            <p>${monthlyText}</p> 
-          </div>   
-    `;
-    headerContainer.innerHTML = headerHTML;
-  }
+    <div class="container">
+        <div class="menu">
+          <h2 class="menu-group-heading">
+            ${fullMonth} ${year}
+          </h2>
+          <br>
+          <p>${monthlyText}</p> 
+        </div>   
+  `;
+  headerContainer.innerHTML = headerHTML;
+}
 
   // If the footer container exists, create the dynamically generated footer HTML
   if (footerContainer) {

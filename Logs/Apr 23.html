@@ -12,44 +12,19 @@
 </head>
 
 <body>
-  <div class="container">
-      <ul id="navMenu">
-          <li><a href="index.html">Index</a></li>
-          <li><a>Food</a>
-              <ul>
-                <li><a href="Starbees.html">Starbees</a></li>
-                <li><a href="HTC.html">HTC</a></li>
-                <li><a href="Dapo Sahang.html">Dapo Sahang</a></li>
-                <li><a href="Deens.html">Deens Cafe</a></li>
-              </ul>
-          </li>
-      </ul></div>
-
-      <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            Food Archive - April 2023
-          </h2>
-          <br>
-          <p>Days in MMU: 9 days<br><br>
-            Reasons:            
-            <ul>
-              <li>Scammed to uni: +1 day</li>
-              <li>Hari raya holidays: 15 - 30 </li>
-            </ul>
-          </p>      
-      </div>
-    </div>
-
-    <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-             April 2023
-          </h2>
-          <br>
-          <p><br>
-          </p>      
-        </div>
+  <body>
+    <div id="header-config"
+    data-year="2023"
+    data-month="Apr"
+    data-days="9"
+    data-reasons="
+    Scammed to uni: 10/4,
+    Hari raya holidays: 15/4 - 30/4"
+    data-text="">
+</div>
+<!-- This will hold the dynamically generated header -->
+<div id="header-container"></div>
+<div class="container">  
 
 
         <div class="menu">
@@ -65,7 +40,7 @@
                     <span class="menu-item-name">Nasi Campur [HTC]</span>
                     <span class="menu-item-price">RM 8.00</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Lunch)</span>
+                    <span class="meal-type">(Lunch)</span>
                   </h3>
                   <p class="menu-item-description">
                     Price, is back to normal.
@@ -85,7 +60,7 @@
                     <span class="menu-item-name">Nasi Goreng Cina [Dapo Sahang]</span>
                     <span class="menu-item-price">RM 6.00</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Dinner)</span>
+                    <span class="meal-type">(Dinner)</span>
                   </h3>
                   <p class="menu-item-description">
                     It seems they may be cooking 2 plates in 1 go, when the situation arrises.
@@ -110,7 +85,7 @@
                 <span class="menu-item-name">Curry Wanton Noodles [HSH]</span>
                 <span class="menu-item-price">RM 8.50</span>
             </h3><h3> 
-                <span class="menu-item-name">(Lunch)</span>
+                <span class="meal-type">(Lunch)</span>
               </h3>
               <p class="menu-item-description">
                 Worth? Depends.<br>
@@ -126,7 +101,7 @@
                 <span class="menu-item-name">Nasi Campur [Dapo Sahang]</span>
                 <span class="menu-item-price">RM 5.50</span>
             </h3><h3> 
-                <span class="menu-item-name">(Dinner)</span>
+                <span class="meal-type">(Dinner)</span>
               </h3>
               <p class="menu-item-description">
                 "Ada ambil ayam buttermilk tak"<br>
@@ -156,7 +131,7 @@
             <span class="menu-item-name">Indomie x2 (Perisa Asli)</span>
             <span class="menu-item-price">"Free"</span>
         </h3><h3> 
-            <span class="menu-item-name">(Lunch)</span>
+            <span class="meal-type">(Lunch)</span>
           </h3>
           <p class="menu-item-description">
             "Emergency food" as I literally do not have class until 4pm.<br>
@@ -175,7 +150,7 @@
             <span class="menu-item-name">Nasi Goreng Seafood [Dapo Sahang]</span>
             <span class="menu-item-price">RM 8.00</span>
         </h3><h3> 
-            <span class="menu-item-name">(Dinner)</span>
+            <span class="meal-type">(Dinner)</span>
           </h3>
           <p class="menu-item-description">
             Feeling a little atas, decided to try this.<br>
@@ -200,7 +175,7 @@
             <span class="menu-item-name">Braised Chicken Rice [HSH]</span>
             <span class="menu-item-price">RM 7.50</span>
         </h3><h3> 
-            <span class="menu-item-name">(Lunch)</span>
+            <span class="meal-type">(Lunch)</span>
           </h3>
           <p class="menu-item-description">
             Their cabbages are easier to eat, compared to malay styled ones.<br>
@@ -225,7 +200,7 @@
           <span class="menu-item-name">Nissin Japanese Ramen Uma-Kara Spicy</span>
           <span class="menu-item-price">"Free"</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           I got scammed to come to uni, I'm not going out.<br>
@@ -243,7 +218,7 @@
           <span class="menu-item-name">Nasi Goreng Kampung Tambah Nasi [Dapo Sahang]</span>
           <span class="menu-item-price">RM 7.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           FatBod. FatBod.<br>
@@ -269,7 +244,7 @@
           <span class="menu-item-name">Nasi Campur [HTC]</span>
           <span class="menu-item-price">RM 8.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           Briyani or whatever the other rice is, is best for me to not take too much of it.<br>
@@ -291,7 +266,7 @@
           <span class="menu-item-name">Nasi Campur [Dapo Sahang]</span>
           <span class="menu-item-price">RM 4.50</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner 1)</span>
+          <span class="meal-type">(Dinner 1)</span>
         </h3>
         <p class="menu-item-description">
           This... isn't that good as expected.<br>
@@ -310,7 +285,7 @@
           <span class="menu-item-name">Burger Ayam Biasa [Criss Burger]</span>
           <span class="menu-item-price">RM 4.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner 2)</span>
+          <span class="meal-type">(Dinner 2)</span>
         </h3>
         <p class="menu-item-description">
           I was scared I'd wake up hungry in the middle of the night, so this is more like insurance.<br>
@@ -335,7 +310,7 @@
           <span class="menu-item-name">Braised Chicken Rice [HSH]</span>
           <span class="menu-item-price">RM 7.50</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           Didn't know I can choose chicken parts.<br>
@@ -355,7 +330,7 @@
           <span class="menu-item-name">Kuey Teow Goreng Ayam [Dapo Sahang]</span>
           <span class="menu-item-price">RM 7.50</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           They took quite a while to cook this.<br>
@@ -382,7 +357,7 @@
           <span class="menu-item-name">Nasi Campur [HTC]</span>
           <span class="menu-item-price">RM 7.80</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           That is a slightly cheaper pricing, maybe cuz I took less rice?<br>
@@ -406,7 +381,7 @@
           <span class="menu-item-name">Chicken Shawarma Large [?]</span>
           <span class="menu-item-price">RM 10.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           Wait time is less now.<br>
@@ -432,7 +407,7 @@
           <span class="menu-item-name">Nasi Campur [HTC]</span>
           <span class="menu-item-price">RM 8.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           The little yellow inside the white is the briyani.<br>
@@ -451,9 +426,7 @@
 </div>
 
 <div class="menu">
-  <h2 class="menu-group-heading">
-    April 2023 Spendings
-  </h2>
+  <div id="footer-container"></div>
   <div class="menu-group">
 
     <div class="menu-item">
@@ -489,7 +462,9 @@
   </div>
   </div>
 
-
+  <canvas id="mealChart" width="400" height="200"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="text/javascript" src="months.js"></script>
 
 </div>
 </body>
