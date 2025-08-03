@@ -150,7 +150,7 @@
     align-items: center;
   }
   
-  #backHomeButton {
+  #backHomeButton, #toggleSourceButton {
     padding: 10px 15px;
     font-size: 16px;
     background-color: #8c00ff;
@@ -165,7 +165,10 @@
   #backHomeButton:hover {
     background-color: #5e009e;
   }
-  
+  #toggleSourceButton:hover {
+    background-color: #ac2fff;
+  }
+
   @media (max-width: 768px) {
     .sort-actions {
       flex-direction: column;
