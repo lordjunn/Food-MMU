@@ -129,3 +129,55 @@ hr {
 }
 
 
+/* Add media query for mobile styles */
+@media (max-width: 768px) {
+    ul#navMenu {
+      flex-direction: column; /* Stack items vertically */
+      width: 100%; /* Full width */
+    }
+
+    ul#navMenu li {
+      display: block; /* Stack items */
+      text-align: center;
+    }
+
+    ul#navMenu a {
+      width:100px;
+    }
+
+  .menu-group {
+    display: block; /* Stack items vertically */
+  }
+
+  .menu-item {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center align content */
+  }
+
+  .menu-item-image {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Adjust height automatically */
+    max-width: 400px; /* Limit the maximum width */
+    max-height: 400px; /* Limit the maximum height */
+    margin-bottom: 1em; /* Add spacing below the image */
+  }
+
+  .menu-item-text {
+    text-align: center; /* Center align text */
+  }
+
+  .menu-item-heading {
+    flex-direction: column; /* Stack heading elements vertically */
+    align-items: center; /* Center align heading */
+  }
+
+  .menu-item-name,
+  .meal-type {
+    font-size: 20px; /* Adjust font size for mobile */
+  }
+
+  .menu-item-description {
+    font-size: 16px; /* Adjust font size for readability */
+    line-height: 1.4; /* Adjust line height */
+  }
+}
