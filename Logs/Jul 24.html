@@ -14,47 +14,21 @@
 <meta name="google-site-verification" content="s-MPDPoVPIU9iicIHALxroA0TTWWzcqlZTF_O-P4TcE" />
 
 <body>
-  <div class="container">
-      <ul id="navMenu">
-          <li><a href="../index.html">Index</a></li>
-          <li><a>Food</a>
-              <ul>
-                <li><a href="../Starbees.html">Starbees</a></li>
-                <li><a href="../HTC.html">HTC</a></li>
-                <li><a href="../Dapo Sahang.html">Dapo Sahang</a></li>
-                <li><a href="../Deens.html">Deens Cafe</a></li>
-              </ul>
-          </li>
-      </ul></div>
-
-      <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            Food Archive - July 2024
-          </h2>
-          <br>
-          <p>Days in MMU:  days<br>
-            Reasons:
-            <ul>
-              <li>(1) Yes</li>
-              <li>Trimester Break: 12/7 - 22/7</li>
-              <li>(23) MUET Speaking</li>
-              <li>Trimester Break: 12/7 - 31/7</li>
-            </ul>
-          </p>      
-      </div>
-    </div>
-
-    <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            July 2024
-          </h2>
-          <br>
-          <p><br>
-          </p>      
-        </div>
-
+  <body>
+    <div id="header-config"
+    data-year="2024"
+    data-month="Jul"
+    data-days="4"
+    data-reasons="
+    Yes: 1/7,
+    Trimester Break: 12/7 - 22/7,
+    MUET Speaking: 23/7,
+    Trimester Break: 12/7 - 31/7,"
+    data-text="">
+</div>
+<!-- This will hold the dynamically generated header -->
+<div id="header-container"></div>
+<div class="container">  
             
         <div class="menu">
             <h2 class="menu-group-heading">
@@ -157,7 +131,7 @@
                 <img class="menu-item-image" src="2024/July/2024, July, image 5.png">
                 <div class="menu-item-text">
                   <h3 class="menu-item-heading">
-                    <span class="menu-item-name">Small Chicken Shawarma [Sky Malaysia]</span>
+                    <span class="menu-item-name">Large Chicken Shawarma [Sky Malaysia]</span>
                     <span class="menu-item-price">RM 12.00</span>
                 </h3><h3> 
                     <span class="meal-type">(Dinner)</span>
@@ -228,9 +202,7 @@
      </div>
      
 <div class="menu">
-  <h2 class="menu-group-heading">
-   July 2024 Spendings
-  </h2>
+  <div id="footer-container"></div>
   <div class="menu-group">
 
     <div class="menu-item">
@@ -279,7 +251,9 @@
   </div>
   </div>
 
-
+  <canvas id="mealChart" width="400" height="200"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="text/javascript" src="months.js"></script>
 
 </div>
 </body>
