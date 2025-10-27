@@ -12,44 +12,19 @@
 </head>
 
 <body>
-  <div class="container">
-      <ul id="navMenu">
-          <li><a href="../index.html">Index</a></li>
-          <li><a>Food</a>
-              <ul>
-                <li><a href="../Starbees.html">Starbees</a></li>
-                <li><a href="../HTC.html">HTC</a></li>
-                <li><a href="../Dapo Sahang.html">Dapo Sahang</a></li>
-                <li><a href="../Deens.html">Deens Cafe</a></li>
-              </ul>
-          </li>
-      </ul></div>
-
-      <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            Food Archive - March 2024
-          </h2>
-          <br>
-          <p>Days in MMU: 0 days<br>
-            Reasons:
-            <ul>
-              <li>Trimester break - 23/2 - 24/3</li>
-              <li>Online class - 25/3 - 15/4</li>
-            </ul>
-          </p>      
-      </div>
-    </div>
-
-    <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            March 2024
-          </h2>
-          <br>
-          <p><br>
-          </p>      
-        </div>
+  <body>
+    <div id="header-config"
+    data-year="2024"
+    data-month="Mar"
+    data-days="0"
+    data-reasons="    
+    Trimester break: 23/2 - 24/3,
+    Online class: 25/3 - 15/4"
+    data-text="">
+</div>
+<!-- This will hold the dynamically generated header -->
+<div id="header-container"></div>
+<div class="container">  
           
         <h1>
           This is oddly silent.<br>
@@ -58,9 +33,7 @@
         <br><br><br>
 
 <div class="menu">
-  <h2 class="menu-group-heading">
-   Mar 2024 Spendings
-  </h2>
+  <div id="footer-container"></div>
   <div class="menu-group">
 
     <div class="menu-item">
@@ -99,7 +72,7 @@
   </div>
   </div>
 
-
+  <script type="text/javascript" src="months.js"></script>
 
 </div>
 </body>

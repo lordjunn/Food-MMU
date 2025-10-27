@@ -12,43 +12,18 @@
 </head>
 
 <body>
-  <div class="container">
-      <ul id="navMenu">
-          <li><a href="index.html">Index</a></li>
-          <li><a>Food</a>
-              <ul>
-                <li><a href="Starbees.html">Starbees</a></li>
-                <li><a href="HTC.html">HTC</a></li>
-                <li><a href="Dapo Sahang.html">Dapo Sahang</a></li>
-                <li><a href="Deens.html">Deens Cafe</a></li>
-              </ul>
-          </li>
-      </ul></div>
-
-      <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            Food Archive - October 2023
-          </h2>
-          <br>
-          <p>Days in MMU: 3 days<br>
-            Reasons: 
-            <ul>
-              <li>Trimester Break: 3 - 29</li>
-            </ul>
-          </p>      
-      </div>
-    </div>
-
-    <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            October 2023
-          </h2>
-          <br>
-          <p><br>
-          </p>      
-        </div>
+  <body>
+    <div id="header-config"
+    data-year="2023"
+    data-month="Oct"
+    data-days="3"
+    data-reasons="
+    Trimester Break: 3/10 - 29/10"
+    data-text="">
+</div>
+<!-- This will hold the dynamically generated header -->
+<div id="header-container"></div>
+<div class="container">  
 
         <div class="menu">
             <h2 class="menu-group-heading">
@@ -63,7 +38,7 @@
                     <span class="menu-item-name">Nasi Campur [Dapo Sahang]</span>
                     <span class="menu-item-price">RM 5.50</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Lunch)</span>
+                    <span class="meal-type">(Lunch)</span>
                   </h3>
                   <p class="menu-item-description">
                     Meal before exam.<br><br>
@@ -80,7 +55,7 @@
                     <span class="menu-item-name">Stir Fried Holy Basil Minced Chicken With Steamed Rice [Thai Luck]</span>
                     <span class="menu-item-price">RM 13.90</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Dinner)</span>
+                    <span class="meal-type">(Dinner)</span>
                   </h3>
                   <p class="menu-item-description">
                     Meal after exam.<br>
@@ -108,7 +83,7 @@
               <span class="menu-item-name">Nasi Campur [Dapo Sahang]</span>
               <span class="menu-item-price">RM 6.50</span>
           </h3><h3> 
-              <span class="menu-item-name">(Lunch)</span>
+              <span class="meal-type">(Lunch)</span>
             </h3>
             <p class="menu-item-description">
               Man why must the rice always be ketupat-styled flat ahh.<br>
@@ -124,7 +99,7 @@
               <span class="menu-item-name">Nasi Goreng Kampung [Restoran Al Bidayah]</span>
               <span class="menu-item-price">RM 7.00</span>
           </h3><h3> 
-              <span class="menu-item-name">(Dinner)</span>
+              <span class="meal-type">(Dinner)</span>
             </h3>
             <p class="menu-item-description">
               Imagine getting clamped.<br><br>
@@ -150,7 +125,7 @@
           <span class="menu-item-name">Mixed Rice [Mama Homecook Mixed Rice]</span>
           <span class="menu-item-price">RM 11.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           Compared with 22 June, wow price raised.<br>
@@ -166,7 +141,7 @@
           <span class="menu-item-name">Nasi Pak Di [Macdonalds]</span>
           <span class="menu-item-price">RM 10.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           Chicken is small ish compared to the usual big ones.<br>
@@ -182,9 +157,7 @@
 </div>
 
 <div class="menu">
-  <h2 class="menu-group-heading">
-    Oct 2023 Spendings
-  </h2>
+  <div id="footer-container"></div>
   <div class="menu-group">
 
     <div class="menu-item">
@@ -224,7 +197,9 @@
   </div>
   </div>
 
-
+  <canvas id="mealChart" width="400" height="200"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="text/javascript" src="months.js"></script>
 
 </div>
 </body>

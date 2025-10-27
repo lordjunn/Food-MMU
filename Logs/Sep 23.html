@@ -5,45 +5,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food - Sept 23</title>
+  <title>Food - Sep 23</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="Food.css">
 </head>
 
 <body>
-  <div class="container">
-      <ul id="navMenu">
-          <li><a href="index.html">Index</a></li>
-          <li><a>Food</a>
-              <ul>
-                <li><a href="Starbees.html">Starbees</a></li>
-                <li><a href="HTC.html">HTC</a></li>
-                <li><a href="Dapo Sahang.html">Dapo Sahang</a></li>
-                <li><a href="Deens.html">Deens Cafe</a></li>
-              </ul>
-          </li>
-      </ul></div>
-
-      <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            Food Archive - Sept 2023
-          </h2>
-          <br>
-          <p>Days in MMU: 14 days</p>      
-      </div>
-    </div>
-
-    <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            Sept 2023
-          </h2>
-          <br>
-          <p><br>
-          </p>      
-        </div>
+  <body>
+    <div id="header-config"
+    data-year="2023"
+    data-month="Sep"
+    data-days="14"
+    data-reasons=""
+    data-text="">
+</div>
+<!-- This will hold the dynamically generated header -->
+<div id="header-container"></div>
+<div class="container">  
 
           <div class="menu">
             <h2 class="menu-group-heading">
@@ -58,7 +37,7 @@
                     <span class="menu-item-name">Classic Nasi Lemak [Rasa Shiokkk]</span>
                     <span class="menu-item-price">RM 5.00</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Lunch)</span>
+                    <span class="meal-type">(Lunch)</span>
                   </h3>
                   <p class="menu-item-description">
                     "pretty good stuff" - Blethz<br>
@@ -76,7 +55,7 @@
                     <span class="menu-item-name">Nasi Goreng Kampung Tambah Nasi [Dapo Sahang]</span>
                     <span class="menu-item-price">RM 7.00</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Dinner)</span>
+                    <span class="meal-type">(Dinner)</span>
                   </h3>
                   <p class="menu-item-description">
                     Apparently they don't do double maggi gorengs, as they say they would charge me for 2 plates.<br><br>
@@ -102,7 +81,7 @@
                     <span class="menu-item-name">Nasi Campur [Dapo Sahang]</span>
                     <span class="menu-item-price">RM 5.50</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Lunch)</span>
+                    <span class="meal-type">(Lunch)</span>
                   </h3>
                   <p class="menu-item-description">
                     Veges was almost out & I was debating between the white one or sapu-ing this one.
@@ -118,7 +97,7 @@
                     <span class="menu-item-name">Nasi Goreng Biasa [Restoran Al Bidayah]</span>
                     <span class="menu-item-price">RM 6.50</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Dinner)</span>
+                    <span class="meal-type">(Dinner)</span>
                   </h3>
                   <p class="menu-item-description">
                     Tastes better than Dapo, but +RM 1.5?
@@ -142,7 +121,7 @@
                     <span class="menu-item-name">Nasi Campur [Deens Cafe]</span>
                     <span class="menu-item-price">RM 9.00</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Lunch)</span>
+                    <span class="meal-type">(Lunch)</span>
                   </h3>
                   <p class="menu-item-description">
                     No way Junn in deens?!?!?!?<br>
@@ -159,7 +138,7 @@
                     <span class="menu-item-name">Kuey Teow Goreng Biasa [Restoran Al Bidayah]</span>
                     <span class="menu-item-price">RM 6.50</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Dinner)</span>
+                    <span class="meal-type">(Dinner)</span>
                   </h3>
                   <p class="menu-item-description">
                     The maggi goreng seems mid.
@@ -183,7 +162,7 @@
                     <span class="menu-item-name">Dry Kuey Tiao (spicy) [Home Sweet Home]</span>
                     <span class="menu-item-price">RM 7.00</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Lunch)</span>
+                    <span class="meal-type">(Lunch)</span>
                   </h3>
                   <p class="menu-item-description">
                     It's... not spicy??
@@ -198,7 +177,7 @@
                     <span class="menu-item-name">Nasi Goreng Pattaya [Restoran Al Bidayah]</span>
                     <span class="menu-item-price">RM 9.00</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Dinner)</span>
+                    <span class="meal-type">(Dinner)</span>
                   </h3>
                   <p class="menu-item-description">
                     ...Nasi goreng cina wrapped with egg.    
@@ -247,7 +226,7 @@
               <span class="menu-item-name">Roasted Chicken Rice [Food District - Amin Chicken]</span>
               <span class="menu-item-price">RM 12.00</span> <!-- 2/1/2025 edit: changed from 41 to 12 -->
           </h3><h3> 
-              <span class="menu-item-name">(Lunch)</span>
+              <span class="meal-type">(Lunch)</span>
             </h3>
             <p class="menu-item-description">
               Hangout with some fresh faces, and 2 known ones.
@@ -294,7 +273,7 @@
                     <span class="menu-item-name">Nasi Campur [Dapo Sahang]</span>
                     <span class="menu-item-price">RM 6.00</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Lunch)</span>
+                    <span class="meal-type">(Lunch)</span>
                   </h3>
                   <p class="menu-item-description">
                     Ew. Do not take the bottoms of the rice barrel, wait for new rice.<br>
@@ -312,7 +291,7 @@
                     <span class="menu-item-name">Fried Rice 3 Pax [Mr Dakgalbi]</span>
                     <span class="menu-item-price">RM 39.31</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Dinner)</span>
+                    <span class="meal-type">(Dinner)</span>
                   </h3>
                   <p class="menu-item-description">
                     Night ride with housemates, add in shopping.<br>
@@ -344,7 +323,7 @@
                     <span class="menu-item-name">In-house cook</span>
                     <span class="menu-item-price">"Prepaid"</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Lunch)</span>
+                    <span class="meal-type">(Lunch)</span>
                   </h3>
                   <p class="menu-item-description">
                     Chicken defrosting took too long as we were kinda last minute.
@@ -367,7 +346,7 @@
                     <span class="menu-item-name">In-house cook</span>
                     <span class="menu-item-price">"Prepaid"</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Dinner)</span>
+                    <span class="meal-type">(Dinner)</span>
                   </h3>
                   <p class="menu-item-description">
                     Which smart one decided it was a great idea to put actual pepper balls instead of pepper flakes?
@@ -398,7 +377,7 @@
                     <span class="menu-item-name">Char Kuey Teow Ayam</span>
                     <span class="menu-item-price">RM 8.00</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Lunch)</span>
+                    <span class="meal-type">(Lunch)</span>
                   </h3>
                   <p class="menu-item-description">
                     What the...<br><br>
@@ -415,7 +394,7 @@
                     <span class="menu-item-name">Maggi Goreng Telur [Self made]</span>
                     <span class="menu-item-price">"Free"</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Dinner)</span>
+                    <span class="meal-type">(Dinner)</span>
                   </h3>
                   <p class="menu-item-description">                   
                     <ul>
@@ -451,7 +430,7 @@
                     <span class="menu-item-name">Teriyaki Chicken Don [DONDON BREAK]</span>
                     <span class="menu-item-price">RM 10.00</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Lunch)</span>
+                    <span class="meal-type">(Lunch)</span>
                   </h3>
                   <p class="menu-item-description">
                     Quite alot of mayo and meat, could probably order extra rice.
@@ -467,7 +446,7 @@
                     <span class="menu-item-name">Double BBQ Beefacon®(?) [Burger King]</span>
                     <span class="menu-item-price">RM 15.00</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Dinner)</span>
+                    <span class="meal-type">(Dinner)</span>
                   </h3>
                   <p class="menu-item-description">
                     Panda why did you not delivery my original order...<br>
@@ -494,7 +473,7 @@
                     <span class="menu-item-name">In-house cook</span>
                     <span class="menu-item-price">RM 5.60</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Lunch)</span>
+                    <span class="meal-type">(Lunch)</span>
                   </h3>
                   <p class="menu-item-description">
                     Xenon: Junn we're out of veges<br>
@@ -520,7 +499,7 @@
                     <span class="menu-item-name">In-house cook</span>
                     <span class="menu-item-price">"Prepaid"</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Dinner)</span>
+                    <span class="meal-type">(Dinner)</span>
                   </h3>
                   <p class="menu-item-description">
                     Refer 12 Sept, that's more or less the same ingredients.<br>
@@ -545,7 +524,7 @@
                     <span class="menu-item-name">Nasi Campur [Dapo Sahang]</span>
                     <span class="menu-item-price">RM 3.00</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Lunch)</span>
+                    <span class="meal-type">(Lunch)</span>
                   </h3>
                   <p class="menu-item-description">
                     None of my red chicken, very small pieces of black chicken, ended up having an egg.<br>
@@ -564,7 +543,7 @@
                     <span class="menu-item-name">In-house cook</span>
                     <span class="menu-item-price">RM 4.50</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Dinner)</span>
+                    <span class="meal-type">(Dinner)</span>
                   </h3>
                   <p class="menu-item-description">
                     Somehow somehow I gotta pay for this drink <small>Astaghfirullah haram</small> I thought would be belanja-ed.<br>
@@ -592,7 +571,7 @@
                     <span class="menu-item-name">Aroii Thai [Food delivery]</span>
                     <span class="menu-item-price">RM 9.60</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Lunch)</span>
+                    <span class="meal-type">(Lunch)</span>
                   </h3>
                   <p class="menu-item-description">
                     Long beans are extras, honestly edible, now for the mains.<br><br>
@@ -613,7 +592,7 @@
                     <span class="menu-item-name">Nasi Goreng Ayam [Dapo Sahang]</span>
                     <span class="menu-item-price">RM 7.50</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Dinner)</span>
+                    <span class="meal-type">(Dinner)</span>
                   </h3>
                   <p class="menu-item-description">
                     It fell off. HARD.<br>
@@ -641,7 +620,7 @@
                     <span class="menu-item-name">Nasi Campur [Dapo Sahang]</span>
                     <span class="menu-item-price">RM 6.50</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Lunch)</span>
+                    <span class="meal-type">(Lunch)</span>
                   </h3>
                   <p class="menu-item-description">
                     Oh how I missed you.<br>
@@ -658,7 +637,7 @@
                     <span class="menu-item-name">2 pcs Aroma Chicken Nasi Combo [A & W]</span>
                     <span class="menu-item-price">RM 18.90</span>
                 </h3><h3> 
-                    <span class="menu-item-name">(Dinner)</span>
+                    <span class="meal-type">(Dinner)</span>
                   </h3>
                   <p class="menu-item-description">
                     Kind of expensive, fast food moment.<br>
@@ -671,9 +650,7 @@
      </div>   
 
 <div class="menu">
-  <h2 class="menu-group-heading">
-   Sept 2023 Spendings
-  </h2>
+  <div id="footer-container"></div>
   <div class="menu-group">
 
     <div class="menu-item">
@@ -712,7 +689,9 @@
   </div>
   </div>
 
-
+  <canvas id="mealChart" width="400" height="200"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="text/javascript" src="months.js"></script>
 
 </div>
 </body>

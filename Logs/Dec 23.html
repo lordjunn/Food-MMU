@@ -12,44 +12,21 @@
 </head>
 
 <body>
-  <div class="container">
-      <ul id="navMenu">
-          <li><a href="index.html">Index</a></li>
-          <li><a>Food</a>
-              <ul>
-                <li><a href="Starbees.html">Starbees</a></li>
-                <li><a href="HTC.html">HTC</a></li>
-                <li><a href="Dapo Sahang.html">Dapo Sahang</a></li>
-                <li><a href="Deens.html">Deens Cafe</a></li>
-              </ul>
-          </li>
-      </ul></div>
-
-      <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            Food Archive - December 2023
-          </h2>
-          <br>
-          <p>Days in MMU: 6+2 days<br>
-            Reasons:
-            <ul>
-              <li>Hangout: 3</li>
-              <li>CFn't hangout: 24</li>
-            </ul>
-          </p>      
-      </div>
-    </div>
-
-    <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            Dec 2023
-          </h2>
-          <br>
-          <p><br>
-          </p>      
-        </div>
+  <body>
+    <div id="header-config"
+    data-year="2023"
+    data-month="Dec"
+    data-days="8"
+    data-reasons="
+    Hangout: 3/12,
+    Mid-Term break: 18/12 - 23/12,
+    CFn't hangout: 24/12,
+    Online T&L Week: 25/12 - 31/12"
+    data-text="">
+</div>
+<!-- This will hold the dynamically generated header -->
+<div id="header-container"></div>
+<div class="container">  
 
 <div class="menu">
   <h2 class="menu-group-heading">
@@ -64,7 +41,7 @@
           <span class="menu-item-name">Single Set + Chicken 65 [Bananabro]</span>
           <span class="menu-item-price">RM 25.00</span>
         </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           I never had banana leaf since forever, refill goes stonks.<br>
@@ -87,7 +64,7 @@
           <span class="menu-item-name">Char Kuey Teow Big <br>[Restoran D.U. Cafe (新百乐茶餐室)]</span>
           <span class="menu-item-price">RM 11.00</span>
         </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           Huh, never thought it'd be THAT expensive, since the ones I usually order costs like 9.<br>
@@ -159,7 +136,7 @@
           <span class="menu-item-name">Nasi Goreng Kampung [Famous Bistro Cafe]</span>
           <span class="menu-item-price">RM 8.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           Wait, it was RM 6.50 a month ago.<br>
@@ -185,7 +162,7 @@
           <span class="menu-item-name">Butter Chicken [Glaze Eatery]</span>
           <span class="menu-item-price">RM 14.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           aaaaa M40 meal.<br>
@@ -201,7 +178,7 @@
           <span class="menu-item-name">Sambal Fried Rice [Fu Jee Ulu Yam Loh Mee]</span>
           <span class="menu-item-price">RM 9.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           Is the spice still good? Not sure.
@@ -226,7 +203,7 @@
           <span class="menu-item-name">Nasi Lemak McD [McD Edusphere]</span>
           <span class="menu-item-price">RM 12.95</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           Oh wtf it raised by RM 2, AND I DIDNT EVEN ORDER A DRINK??<br><br>
@@ -245,7 +222,7 @@
           <span class="menu-item-name">Boneless Chicken Fried Rice [Hinz Kitchen]</span>
           <span class="menu-item-price">RM 10.50</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           The meat is slightly on the drier? side.<br>
@@ -270,7 +247,7 @@
           <span class="menu-item-name">Mixed Rice [Mama Homecook Mixed Rice]</span>
           <span class="menu-item-price">RM 6.50</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           That's odd, you're not supposed to be this cheap.
@@ -285,7 +262,7 @@
           <span class="menu-item-name">Spicy Crispy Chicken Burger Deal [McD Edusphere]</span>
           <span class="menu-item-price">RM 11.95</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           Original price was said to be RM 14.20, so I guess.<br>
@@ -313,7 +290,7 @@
           <span class="menu-item-name">Mixed Rice [Mama Homecook Mixed Rice]</span>
           <span class="menu-item-price">RM 6.40</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           How are you even cheaper than yesterday??
@@ -335,7 +312,7 @@
   <span class="menu-item-name">Nasi Goreng Biasa Tambah Nasi [Famous Bistro Cafe]</span>
           <span class="menu-item-price">RM 7.00</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           Quite filling, just a few minor complaints.
@@ -405,7 +382,7 @@
           <span class="menu-item-name">Roasted Pork Fried Rice, Upsized [Hinz Kitchen]</span>
           <span class="menu-item-price">RM 13.50</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           Okay maybe that is too much rice.<br>
@@ -432,7 +409,7 @@
           <span class="menu-item-name">Chicken Katsu Bento [Isetan KLCC]</span>
           <span class="menu-item-price">RM 15.70</span>
       </h3><h3> 
-          <span class="menu-item-name">(Lunch)</span>
+          <span class="meal-type">(Lunch)</span>
         </h3>
         <p class="menu-item-description">
           This food is cold, should've asked to microwave it.<br>
@@ -453,7 +430,7 @@
           <span class="menu-item-name">Chicken Katsu Don L [Sukiya]</span>
           <span class="menu-item-price">RM 19.60</span>
       </h3><h3> 
-          <span class="menu-item-name">(Dinner)</span>
+          <span class="meal-type">(Dinner)</span>
         </h3>
         <p class="menu-item-description">
           Egg is cold? Everything else was decently warm though.
@@ -470,11 +447,8 @@
 </div>
 
 <div class="menu">
-  <h2 class="menu-group-heading">
-   Dec 2023 Spendings
-  </h2>
+  <div id="footer-container"></div>
   <div class="menu-group">
-
     <div class="menu-item">
       <img class="menu-item-image" src="2023/December/2023, December, image 19.png">
       <div class="menu-item-text">
@@ -518,7 +492,9 @@
   </div>
   </div>
 
-
+  <canvas id="mealChart" width="400" height="200"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="text/javascript" src="months.js"></script>
 
 </div>
 </body>
