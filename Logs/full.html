@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Food Archive - Full</title>
   <link rel="stylesheet" href="full.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
 
 <!-- Fixed search bar -->
@@ -25,19 +25,26 @@
       <button id="toggleSourceButton">Show Monthly Summaries</button>
       <button id="backHomeButton">Back to Home</button>
     </div>
-    <span id="resultCount">0 results found, maybe the CSV isn't loaded?</span>
+    <span id="resultCount">0 results found</span>
   </div>
 </div>
 
-<div class="container">
-  <div class="menu">
-    <h2 class="menu-group-heading">All Food Logs</h2>
-    <div class="menu-group" id="menu-group"></div>
+<!-- OUTER scroll area (goes full-width, scrollbar on far right) -->
+<div id="scrollArea" class="page-scroll-area">
+
+  <div class="container">
+    <div class="menu">
+      <h2 class="menu-group-heading">All Food Logs</h2>
+
+      <div id="menu-group" class="menu-group clusterize-content"></div>
+    </div>
   </div>
+
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clusterize.js@0.18.1/clusterize.min.js"></script>
 <script src="full.js"></script>
+
 </body>
 </html>
