@@ -123,4 +123,9 @@ hr {
   line-height: 1.6;
 }
 
-
+.hero-image {
+  width: 100%;
+  max-width: 100vw;
+  height: auto;
+  display: block;
+}
