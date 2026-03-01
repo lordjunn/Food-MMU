@@ -339,5 +339,135 @@ if (headerContainer) {
     });
 }
 
-// Run the chart generation after the page loads
-window.onload = generateChart;
+// ...existing code...
+
+// --- autofill spending summary ---
+function formatRM(n){ return Number(n || 0).toFixed(2); }
+
+function fillSpendingSummary(){
+  const mealData = extractMealData();
+  if(!mealData) return;
+
+  const totalFood = (mealData.dailyCosts || []).reduce((s,v)=> s + (v||0), 0);
+  const totalBreakfast = (mealData.breakfastCosts || []).reduce((s,v)=> s + (v||0), 0);
+  const totalLunch = (mealData.lunchCosts || []).reduce((s,v)=> s + (v||0), 0);
+  const totalDinner = (mealData.dinnerCosts || []).reduce((s,v)=> s + (v||0), 0);
+
+  const breakfastCount = (mealData.breakfastCosts || []).filter(v => v > 0).length || 0;
+  const lunchCount = (mealData.lunchCosts || []).filter(v => v > 0).length || 0;
+  const dinnerCount = (mealData.dinnerCosts || []).filter(v => v > 0).length || 0;
+  const daysCount = (mealData.days || []).length || 0;
+
+  const avgBreakfast = breakfastCount ? totalBreakfast / breakfastCount : 0;
+  const avgLunch = lunchCount ? totalLunch / lunchCount : 0;
+  const avgDinner = dinnerCount ? totalDinner / dinnerCount : 0;
+  const avgPerDay = daysCount ? totalFood / daysCount : 0;
+
+  // find the summary UL (assumes the last .menu .menu-item-description ul is the summary block)
+  const uls = document.querySelectorAll('.menu .menu-item-description ul');
+  if(!uls.length) return;
+  const summaryUl = uls[uls.length - 1];
+
+  // top-level LI nodes (direct children)
+  const topLis = Array.from(summaryUl.querySelectorAll(':scope > li'));
+
+  function findLiByLabel(label){
+    label = label.toLowerCase();
+    return topLis.find(li => li.textContent.trim().toLowerCase().startsWith(label));
+  }
+
+  // Update Pure food total
+  const liPure = findLiByLabel('Purely food expenses');
+  if(liPure) liPure.textContent = `Purely food expenses - RM ${formatRM(totalFood)}`;
+
+  // Breakfast / Lunch / Dinner lines (preserve inner <br> for per-meal note)
+  const liB = topLis.find(li => li.textContent.toLowerCase().includes('breakfast -'));
+  if(liB) liB.innerHTML = `Breakfast - RM ${formatRM(totalBreakfast)}<br>(~RM ${formatRM(avgBreakfast)} per meal)`;
+
+  const liL = topLis.find(li => li.textContent.toLowerCase().includes('lunch -'));
+  if(liL) liL.innerHTML = `Lunch - RM ${formatRM(totalLunch)}<br>(~RM ${formatRM(avgLunch)} per meal)`;
+
+  const liD = topLis.find(li => li.textContent.toLowerCase().includes('dinner -'));
+  if(liD) liD.innerHTML = `Dinner - RM ${formatRM(totalDinner)}<br>(~RM ${formatRM(avgDinner)} per meal)`;
+
+  // Average per day
+  const liAvg = findLiByLabel('Average cost per day');
+  if(liAvg) liAvg.textContent = `Average cost per day - RM ${formatRM(avgPerDay)}`;
+
+  // Compute "etc" total by summing numbers inside the nested etc list plus rental/utilities/petrol lines (if present)
+  let etcTotal = 0;
+
+  // find the 'Etc. Expenses' li and collect its nested numbers
+  const etcLi = topLis.find(li => li.textContent.toLowerCase().includes('etc.'));
+  if(etcLi){
+    const nestedLis = etcLi.querySelectorAll('li');
+    nestedLis.forEach(li => {
+      const m = li.textContent.match(/[-+]?\d*\.?\d+/g);
+      if(m) m.forEach(n => etcTotal += parseFloat(n));
+    });
+  }
+
+  // parse rental/utilities/petrol from remaining top-level lis
+  const rentalLi = topLis.find(li => li.textContent.toLowerCase().includes('rental'));
+  if(rentalLi){
+    const m = rentalLi.textContent.match(/[-+]?\d*\.?\d+/g);
+    if(m) m.forEach(n => etcTotal += parseFloat(n));
+  }
+  const utilitiesLi = topLis.find(li => li.textContent.toLowerCase().includes('utilities'));
+  if(utilitiesLi){
+    const m = utilitiesLi.textContent.match(/[-+]?\d*\.?\d+/g);
+    if(m) m.forEach(n => etcTotal += parseFloat(n));
+  }
+  const petrolLi = topLis.find(li => li.textContent.toLowerCase().includes('petrol'));
+  if(petrolLi){
+    const m = petrolLi.textContent.match(/[-+]?\d*\.?\d+/g);
+    if(m) m.forEach(n => etcTotal += parseFloat(n));
+  }
+
+  // Update Etc. Expenses line
+  const liEtc = findLiByLabel('Etc. Expenses');
+  if(liEtc) liEtc.textContent = `Etc. Expenses - RM ${formatRM(etcTotal)}`;
+}
+
+// --- Collapsible long descriptions ---
+function initCollapsibleDescriptions() {
+  const COLLAPSE_THRESHOLD = 350; // px
+
+  document.querySelectorAll('.menu-item-description').forEach(desc => {
+    // Check if the next sibling <ul> is the spending breakdown
+    // (browsers auto-close <p> when they hit <ul>, so the expense list
+    //  becomes a sibling, not a child of the <p>)
+    const nextUl = desc.nextElementSibling;
+    if (nextUl && nextUl.tagName === 'UL' &&
+        (nextUl.textContent.includes('Purely food expenses') ||
+         nextUl.textContent.includes('Average cost per day'))) {
+      // Turn the prose <p> into a scroll box
+      desc.classList.add('description-scrollbox');
+      return;
+    }
+
+    // Regular long descriptions: collapse with read more
+    if (desc.scrollHeight > COLLAPSE_THRESHOLD) {
+      desc.classList.add('is-collapsible');
+
+      const btn = document.createElement('button');
+      btn.className = 'description-toggle';
+      btn.textContent = 'Read more \u25BC';
+      desc.parentElement.appendChild(btn);
+
+      btn.addEventListener('click', () => {
+        const expanded = desc.classList.toggle('is-expanded');
+        btn.textContent = expanded ? 'Show less \u25B2' : 'Read more \u25BC';
+      });
+    }
+  });
+}
+
+// splitSpendingSummary no longer needed — browser already separates prose from <ul>
+
+// Run everything after the page loads
+window.onload = function() {
+  try { generateChart(); } catch(e) { /* ignore */ }
+  try { fillSpendingSummary(); } catch(e) { /* ignore */ }
+  try { initCollapsibleDescriptions(); } catch(e) { /* ignore */ }
+};

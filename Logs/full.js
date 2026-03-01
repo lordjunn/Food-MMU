@@ -29,9 +29,21 @@ document.addEventListener('DOMContentLoaded', function () {
   function applySearchAndSort() {
     const keyword = searchBox.value.toLowerCase().trim();
     const keywordIsNumber = !isNaN(keyword) && keyword !== "";
+
+    // Extract price filters like >rm4, <rm9, >=rm5.50, <=rm10, =rm3
+    const priceFilterRegex = /(>=?|<=?|=)\s*r?m?\s*(\d+\.?\d*)/gi;
+    const priceFilters = [];
+    let pf;
+    while ((pf = priceFilterRegex.exec(keyword)) !== null) {
+      priceFilters.push({ op: pf[1], value: parseFloat(pf[2]) });
+    }
+
+    // Remove price filter tokens from the keyword to get remaining search terms
+    const cleanedKeyword = keyword.replace(/(>=?|<=?|=)\s*r?m?\s*\d+\.?\d*/gi, '').trim();
+
     const quotedRegex = /"([^"]+)"|\S+/g;
     let m, terms = [];
-    while ((m = quotedRegex.exec(keyword)) !== null)
+    while ((m = quotedRegex.exec(cleanedKeyword)) !== null)
       terms.push((m[1] || m[0]).trim());
 
     let filtered = window.allFoodItems.filter(item => {
@@ -43,12 +55,34 @@ document.addEventListener('DOMContentLoaded', function () {
         (item.price || "").toLowerCase(),
       ];
 
-      const matchesTerms = terms.every(t => fields.some(f => f.includes(t)));
+      // Check price filters
+      if (priceFilters.length > 0) {
+        const priceNum = parsePrice(item.price || "");
+        const passesPrice = priceFilters.every(f => {
+          switch (f.op) {
+            case '>':  return priceNum > f.value;
+            case '>=': return priceNum >= f.value;
+            case '<':  return priceNum < f.value;
+            case '<=': return priceNum <= f.value;
+            case '=':  return priceNum === f.value;
+            default:   return true;
+          }
+        });
+        if (!passesPrice) return false;
+        // If only price filters and no text terms, pass
+        if (terms.length === 0) return true;
+      }
+
+      const matchesTerms = terms.length > 0
+        ? terms.every(t => fields.some(f => f.includes(t)))
+        : true;
       const free = ["free", "free!"].includes((item.price || "").toLowerCase());
       const priceNum = parsePrice(item.price || "");
 
+      if (terms.length === 0 && priceFilters.length === 0) return true;
+
       return matchesTerms ||
-             (keyword === "free" && free) ||
+             (cleanedKeyword === "free" && free) ||
              (keywordIsNumber && priceNum === parseFloat(keyword));
     });
 
