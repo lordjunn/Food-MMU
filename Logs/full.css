@@ -58,6 +58,7 @@ body {
 }
 
 #toggleSourceButton,
+#showInsightButton,
 #backHomeButton {
   padding: 10px 15px;
   font-size: 16px;
@@ -71,7 +72,22 @@ body {
 }
 
 #toggleSourceButton:hover { background-color: #ac2fff; }
+#showInsightButton:hover { background-color: #ac2fff; }
 #backHomeButton:hover { background-color: #5e009e; }
+
+.insights-controls {
+  display: flex;
+  gap: 0.6em;
+  align-items: center;
+}
+
+.insights-controls select {
+  min-width: 220px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
 
 /* PAGE LAYOUT */
 .container {
@@ -155,6 +171,43 @@ body {
   border-bottom: 2px solid #8c00ff;
 }
 
+.insights-panel {
+  background: #fff;
+  border: 1px solid #e2d5ef;
+  border-left: 4px solid #8c00ff;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin: 0 0 18px 0;
+}
+
+.insights-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #24003e;
+}
+
+.insights-subtext {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.insights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.insights-list li {
+  padding: 6px 0;
+  border-bottom: 1px dashed #ece2f6;
+}
+
+.insights-list li:last-child {
+  border-bottom: none;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .menu-item {
@@ -173,7 +226,72 @@ body {
     width: 100%;
   }
 
-  #backHomeButton, .sort-dropdown select {
+  .insights-controls {
+    flex-direction: column;
     width: 100%;
   }
+
+  #backHomeButton, .sort-dropdown select, .insights-controls select, #showInsightButton {
+    width: 100%;
+  }
+}
+
+/* SUMMARY STYLES */
+.summary-item {
+  flex-direction: column;
+}
+
+.summary-text-box {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 12px 16px;
+  background-color: #fafafa;
+  margin: 1em 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.summary-expenses {
+  margin-top: 1em;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #333;
+}
+
+.summary-expenses ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.summary-expenses > ul {
+  padding-left: 2px;
+}
+
+.summary-expenses li {
+  margin-bottom: 0.2em;
+}
+
+.summary-expenses ul ul {
+  margin-left: 1.8em;
+}
+
+.summary-text-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.summary-text-box::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 3px;
+}
+
+.summary-text-box::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border-radius: 3px;
+}
+
+.summary-text-box::-webkit-scrollbar-thumb:hover {
+  background: #999;
 }
