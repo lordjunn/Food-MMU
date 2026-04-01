@@ -1,829 +1,946 @@
 month_url,title,price,description,image
 August 2022,Initial bar,RM 183.30,"Somehow I either calculated wrong, or I'm pepega.
-      
-Breakfast - Rm 1.90
-Lunch -RM 107.40 
-Dinner - RM 74.00
-Average cost per day - RM 10.78","2022/August/2022, August, image 35.png"
-September 2022,+29% vs August 2022,RM 237.70,"Price hike: exists
+      <ul>
+<li>Breakfast - Rm 1.90</li>
+<li>Lunch -RM 107.40 </li>
+<li>Dinner - RM 74.00</li>
+<li>Average cost per day - RM 10.78</li>
+</ul>","2022/August/2022, August, image 35.png"
+September 2022,+29% vs August 2022,RM 237.70,"Price hike: exists<br/>
               My spendings: pakiu
-          
-Breakfast - Rm 7.50 
-                (3.95x higher)
-Lunch - RM 129.70 
-                (21% higher)
-Dinner - RM 100.50 
-                (36% higher)
-Average cost per day - RM 11.32 
-                (5% higher)","2022/September/2022, September, image 42.png"
-October 2022,11.83x lower vs August 22,RM 15.50,"1 meal a month.
+          <ul>
+<li>Breakfast - Rm 7.50 <br/>
+                (3.95x higher)</li>
+<li>Lunch - RM 129.70 <br/>
+                (21% higher)</li>
+<li>Dinner - RM 100.50 <br/>
+                (36% higher)</li>
+<li>Average cost per day - RM 11.32 <br/>
+                (5% higher)</li>
+</ul>","2022/September/2022, September, image 42.png"
+October 2022,11.83x lower vs August 22,RM 15.50,"1 meal a month.<br/>
            Cost per day counted as 1 day instead of 2 because it is literally 3 meals that can be considered within 24 hours.
-        
-Breakfast - Rm 1.50 
-                (21% lower)
-Lunch - RM 7.50 
-                (14.32x lower)
-Dinner - RM 6.50 
-                (11.38x lower)
-Average cost per day - RM 15.50 
-                (44% higher)","2022/October/2022, October, image 4.png"
-November 2022,+9% vs August 2022,RM 199.10,"Almost 200. Wow.
+        <ul>
+<li>Breakfast - Rm 1.50 <br/>
+                (21% lower)</li>
+<li>Lunch - RM 7.50 <br/>
+                (14.32x lower)</li>
+<li>Dinner - RM 6.50 <br/>
+                (11.38x lower)</li>
+<li>Average cost per day - RM 15.50 <br/>
+                (44% higher)</li>
+</ul>","2022/October/2022, October, image 4.png"
+November 2022,+9% vs August 2022,RM 199.10,"Almost 200. Wow.<br/>
+<ul>
+<li>Breakfast - RM 6.00 <br/>
+                (3.16x higher)</li>
+<li>Lunch - RM 95.30 <br/>
+                (12% lower)</li>
+<li>Dinner - RM 97.80 <br/>
+                (32% higher)</li>
+<li>Average cost per day - RM 11.72 <br/>
+                (8.7% higher)</li>
+</ul>","2022/November/2022, November, image 33.png"
+December 2022,26% lower vs August 2022,RM 135.00,"Huh, perfect round number.<br/>
+<ul>
+<li>Breakfast - RM 0.00 <br/>
+                (infinitely lower)</li>
+<li>Lunch - RM 82.50 <br/>
+                (23% lower)</li>
+<li>Dinner - RM 52.50 <br/>
+                (29% lower)</li>
+<li>Average cost per day - RM 11.25 <br/>
+                (4.4% higher)</li>
+</ul>","2022/December/2022, December, image 22.png"
+January 2023,+10.64% vs August 2022,RM 202.80,"Imagine having some days off, and spendings go brr.<br/>
+           But having fun is all that matters, right?<br/>
+<ul>
+<li>Purely food expenses - RM 196.90 </li>
+<li>Breakfast - RM 2.50 <br/>
+                (32% higher)</li>
+<li>Lunch - RM 103.40 <br/>
+                (3.87% lower)</li>
+<li>Dinner - RM 91.00 <br/>
+                (23% higher)</li>
+<li>Average cost per day - RM 14.49 <br/>
+                (26% higher)</li>
+<li>Etc. Expenses - RM 5.90 </li>
+<li>Cash Damage - RM 255.80 </li>
+</ul>
 
-Breakfast - RM 6.00 
-                (3.16x higher)
-Lunch - RM 95.30 
-                (12% lower)
-Dinner - RM 97.80 
-                (32% higher)
-Average cost per day - RM 11.72 
-                (8.7% higher)","2022/November/2022, November, image 33.png"
-December 2022,26% lower vs August 2022,RM 135.00,"Huh, perfect round number.
-
-Breakfast - RM 0.00 
-                (infinitely lower)
-Lunch - RM 82.50 
-                (23% lower)
-Dinner - RM 52.50 
-                (29% lower)
-Average cost per day - RM 11.25 
-                (4.4% higher)","2022/December/2022, December, image 22.png"
-January 2023,+10.64% vs August 2022,RM 202.80,"Imagine having some days off, and spendings go brr.
-           But having fun is all that matters, right?
-
-Purely food expenses - RM 196.90 
-Breakfast - RM 2.50 
-                (32% higher)
-Lunch - RM 103.40 
-                (3.87% lower)
-Dinner - RM 91.00 
-                (23% higher)
-Average cost per day - RM 14.49 
-                (26% higher)
-Etc. Expenses - RM 5.90 
-Cash Damage - RM 255.80 
-
-
-        New tabs above to show extra information.
+        New tabs above to show extra information.<br/>
         I have to prayge the ATM works in case of Glaze Eatery incident v2.","2023/January/2023, January, image 31.png"
-February 2023,-55.10% vs August 2022,RM 82.30,"Now that's the end of Trimester 2215.
-         Now to prepare myself for Trimester 2220.
-
-Purely food expenses - RM 82.30
-Breakfast - RM 0.00
-              (infinitely lower)
-Lunch - RM 40.30
-              (62.48% lower)
-Dinner - RM 42.00
-              (43.42% lower)
-Average cost per day - RM 13.72
-              (27.28% higher)
-Etc. Expenses - RM 0.00
-Cash Damage - RM 82.30","2023/February/2023, February, image 12.png"
-March 2023,-38.35% vs August 2022,RM 293.00,"Purely food expenses - RM 113.00 
-Breakfast - RM 0.00 
-              (Infinitely lower)
-Lunch - RM 70.50 
-              (34.36% lower)
-Dinner - RM 42.50 
-              (42.57% lower)
-Average cost per day - RM 12.56 
-              (14.17% higher)
-Etc. Expenses - RM 180.00 
-
-(6) Homuhomu - RM 180.00","2023/March/2023, March, image 18.png"
-April 2023,-30.91% vs August 2022,RM 126.65,"All hail raya holidays.
-         I feel inflation is coming, don't you think?
+February 2023,-55.10% vs August 2022,RM 82.30,"Now that's the end of Trimester 2215.<br/>
+         Now to prepare myself for Trimester 2220.<br/>
+<ul>
+<li>Purely food expenses - RM 82.30</li>
+<li>Breakfast - RM 0.00<br/>
+              (infinitely lower)</li>
+<li>Lunch - RM 40.30<br/>
+              (62.48% lower)</li>
+<li>Dinner - RM 42.00<br/>
+              (43.42% lower)</li>
+<li>Average cost per day - RM 13.72<br/>
+              (27.28% higher)</li>
+<li>Etc. Expenses - RM 0.00</li>
+<li>Cash Damage - RM 82.30</li>
+</ul>","2023/February/2023, February, image 12.png"
+March 2023,-38.35% vs August 2022,RM 293.00,"<br/>
+<br/>
+<ul>
+<li>Purely food expenses - RM 113.00 </li>
+<li>Breakfast - RM 0.00 <br/>
+              (Infinitely lower)</li>
+<li>Lunch - RM 70.50 <br/>
+              (34.36% lower)</li>
+<li>Dinner - RM 42.50 <br/>
+              (42.57% lower)</li>
+<li>Average cost per day - RM 12.56 <br/>
+              (14.17% higher)</li>
+<li>Etc. Expenses - RM 180.00 </li>
+<ul>
+<li>(6) Homuhomu - RM 180.00</li>
+</ul>
+</ul>","2023/March/2023, March, image 18.png"
+April 2023,-30.91% vs August 2022,RM 126.65,"All hail raya holidays.<br/>
+         I feel inflation is coming, don't you think?<br/>
          Or is it lifestyle inflation?
-      
-Purely food expenses - RM 126.65 
-Breakfast - RM 0.00
-Lunch - RM 82.65 
-              (~RM 10.33 per meal)
-Dinner - RM 44.00 
-            (~RM 7.33 per meal)
-Average cost per day - RM 18.09","2023/April/2023, April, image 18.png"
-May 2023,+61.54% vs August 2022,RM 296.10,"JESUS
-         OK granted I did stay more days in MMU, but EATING OUT
+      <ul>
+<li>Purely food expenses - RM 126.65 </li>
+<li>Breakfast - RM 0.00</li>
+<li>Lunch - RM 82.65 <br/>
+              (~RM 10.33 per meal)</li>
+<li>Dinner - RM 44.00 <br/>
+            (~RM 7.33 per meal)</li>
+<li>Average cost per day - RM 18.09</li>
+</ul>","2023/April/2023, April, image 18.png"
+May 2023,+61.54% vs August 2022,RM 296.10,"JESUS<br/>
+         OK granted I did stay more days in MMU, but EATING OUT<br/><br/>
 
          Batu Khan won't be proud of this.
-      
-Purely food expenses - RM 296.10 
-Breakfast - RM 3.00 
-              (57.89% higher)
-Lunch - RM 120.40 
-              (12.1% higher)
-Dinner - RM 172.70 
-              (2.33x higher)
-Average cost per day - RM 12.87 
-              (19.4% higher)
-Etc. Expenses - RM 175.00 
-Cash Damage - RM 296.10 
-Total Damage - RM 471.10 
-
+      <ul>
+<li>Purely food expenses - RM 296.10 </li>
+<li>Breakfast - RM 3.00 <br/>
+              (57.89% higher)</li>
+<li>Lunch - RM 120.40 <br/>
+              (12.1% higher)</li>
+<li>Dinner - RM 172.70 <br/>
+              (2.33x higher)</li>
+<li>Average cost per day - RM 12.87 <br/>
+              (19.4% higher)</li>
+<li>Etc. Expenses - RM 175.00 </li>
+<li>Cash Damage - RM 296.10 </li>
+<li>Total Damage - RM 471.10 </li>
+</ul>
       Etc. Expenses
-      
-Razer Basilisk X HyperSpeed - RM 175.00","2023/May/2023, May, image 46.png"
-June 2023,+15.38% vs August 2022,RM 211.50,"Purely food expenses - RM 186.50 
-Breakfast - RM 0.00 
-Lunch - RM 90.50  
-              (15.74% lower)
-Dinner - RM 96.00 
-              (29.73% higher)
-Average cost per day - RM 10.36 
-              (3.72% lower) 
-Etc. Expenses - RM 25.00  
-Cash Damage - RM 211.50","2023/June/2023, June, image 39.png"
-July 2023,-72.64% vs August 2022,RM 50.15,"Purely food expenses - RM 50.15 
-Breakfast - RM 2.50 
-              (% higher)
-Lunch - RM 25.75 
-              (% lower)
-Dinner - RM 21.90 
-              (% higher)
-Average cost per day - RM 16.71 
-              (% higher)
-Cash Damage - RM 18.30","2023/July/2023, July, image 6.png"
-August 2023,New Baseline,RM 790.69,"I shall be making a new category type thing to text.
+      <ul>
+<li>Razer Basilisk X HyperSpeed - RM 175.00</li>
+</ul>","2023/May/2023, May, image 46.png"
+June 2023,+15.38% vs August 2022,RM 211.50,"<br/>
+<br/>
+<ul>
+<li>Purely food expenses - RM 186.50 </li>
+<li>Breakfast - RM 0.00 <br/></li>
+<li>Lunch - RM 90.50 <br/> <!-- 110.40 if kosh decides to take my money -->
+              (15.74% lower)</li>
+<li>Dinner - RM 96.00 <br/>
+              (29.73% higher)</li>
+<li>Average cost per day - RM 10.36 <br/>
+              (3.72% lower)</li> <!-- wait how tf unless its cuz of the outings -->
+<li>Etc. Expenses - RM 25.00 </li> <!-- uh ticket + water + grab + mrt pass but i think thats all i remember -->
+<li>Cash Damage - RM 211.50</li>
+<!-- ngl im a little lost this sem so f it if i over/undercalc so be it idc anymore -->
+</ul>","2023/June/2023, June, image 39.png"
+July 2023,-72.64% vs August 2022,RM 50.15,"<br/>
+<br/>
+<ul>
+<li>Purely food expenses - RM 50.15 </li>
+<li>Breakfast - RM 2.50 <br/>
+              (% higher)</li>
+<li>Lunch - RM 25.75 <br/>
+              (% lower)</li>
+<li>Dinner - RM 21.90 <br/>
+              (% higher)</li>
+<li>Average cost per day - RM 16.71 <br/>
+              (% higher)</li>
+<li>Cash Damage - RM 18.30 </li>
+</ul>","2023/July/2023, July, image 6.png"
+August 2023,New Baseline,RM 790.69,"I shall be making a new category type thing to text.<br/>
          Hehe 69 sen.
-         
-
-Purely food expenses - RM 232.97 
-Breakfast - RM 0.00 
-              (N/A)
-Lunch - RM 94.50 
-              (~RM 7.27 per meal) 
-Dinner - RM 138.47 
-              (~RM 10.65 per meal)
-Average cost per day - RM 16.64 
-Etc. Expenses - RM 55.00  
-Cash Damage - RM 79.50  
-Rental - RM 450.00 
-Electric bill(s) - RM 48.47  
-Water bill - RM 4.25 
-Petrol - RM 0.00","2023/August/2023, August, image 29.gif"
-September 2023,No title,RM 818.31,"Electricity bill went zoom.
+         <br/>
+<ul>
+<li>Purely food expenses - RM 232.97 </li>
+<li>Breakfast - RM 0.00 <br/>
+              (N/A)</li>
+<li>Lunch - RM 94.50 <br/>
+              (~RM 7.27 per meal)</li> <!-- omaigod wysi !! -->
+<li>Dinner - RM 138.47 <br/>
+              (~RM 10.65 per meal)</li>
+<li>Average cost per day - RM 16.64</li> <!-- divided by 14 days -->
+<li>Etc. Expenses - RM 55.00 </li> <!-- somewhere airasia during thurs rm5, NFC card reload rm50 -->
+<li>Cash Damage - RM 79.50 </li> <!-- 75.3 = e belia, 78.17 = bank -->
+<li>Rental - RM 450.00 </li>
+<li>Electric bill(s) - RM 48.47 </li> <!-- wifi 25, electric 23.47 -->
+<li>Water bill - RM 4.25 </li>
+<li>Petrol - RM 0.00 </li> <!-- for now -->
+</ul>","2023/August/2023, August, image 29.gif"
+September 2023,No title,RM 818.31,"Electricity bill went zoom.<br/><br/>
          
          Just like mood.
-      
-Purely food expenses - RM 213.06 
-Breakfast - RM 11.45 
-              (~RM 3 per meal) 
-Lunch - RM 87.40  
-              (~RM 6.25 per meal)
-Dinner - RM 114.21  
-            (~RM 8.16 per meal)
-Average cost per day - RM 15.22
-Etc. Expenses - RM 36.2  
-Cash Damage - RM  
-Rental - RM 450.00 
-Electric bill(s) - RM 112.50  
-Water bill - RM 6.55  
-Petrol - RM 0.00","2023/September/2023, September, image 28.png"
-October 2023,No title,RM 618.65,"Can't forget the day we met,
-          that girl saw me in ecstacy.
+      <ul>
+<li>Purely food expenses - RM 213.06 </li>
+<li>Breakfast - RM 11.45 <br/>
+              (~RM 3 per meal)</li> <!-- man -->
+<li>Lunch - RM 87.40 <br/> <!-- 41 becomes 12 -->
+              (~RM 6.25 per meal)</li>
+<li>Dinner - RM 114.21 <br/> 
+            (~RM 8.16 per meal)</li>
+<li>Average cost per day - RM 15.22</li>
+<li>Etc. Expenses - RM 36.2 </li> <!-- 29/4 (7.2) for wifi installation, 29 from 10 sept -->
+<li>Cash Damage - RM </li> <!-- total minus 92.91 -->
+<li>Rental - RM 450.00 </li>
+<li>Electric bill(s) - RM 112.50 </li> <!-- wifi 26, electric 345.85/4 (86.5) -->
+<li>Water bill - RM 6.55 </li> <!-- 26.2/4 -->
+<li>Petrol - RM 0.00 </li> <!-- 53.88 covered -->
+</ul>","2023/September/2023, September, image 28.png"
+October 2023,No title,RM 618.65,"Can't forget the day we met,<br/>
+          that girl saw me in ecstacy.<br/><br/>
 
           Emo aside, I shall welcome my Bachelor Degree self.
-         
-
-Purely food expenses - RM 53.90 
-Breakfast - RM 0
-Lunch - RM 23 
-              (~RM 7.67 per meal)
-Dinner - RM 30.90 
-            (~RM 10.30 per meal)
-Average cost per day - RM 17.97
-Etc. Expenses - RM 70.00  
-Cash Damage - RM 24.50 
-Rental - RM 450.00 
-Electric bill(s) - RM 36.25  
-Water bill - RM 8.50  
-Petrol - RM 0.00","2023/October/2023, October, image 7.png"
-November 2023,No title,RM 620.45,"Spent less than last month, mostly cuz of the arrival of Ryan.
-         And of course the Deepavali break.
-
-Purely food expenses - RM 264.75 
-Breakfast - RM 0.00 
-              (~RM 0 per meal)
-Lunch - RM 136.10 
-              (~RM 8.51 per meal)
-Dinner - RM 128.65 
-              (~RM 9.19 per meal)
-Average cost per day - RM 15.58
-Etc. Expenses - RM 2.44  
-Cash Damage - RM 113.70
-Rental - RM 300.00 
-Electric bill(s) - RM 45.40  
-Water bill - RM 7.86
-Petrol - RM 55.51","2023/November/2023, November, image 40.png"
-December 2023,No title,RM 696.93,"Suprisingly, almost on par with Nov 23, even without the wuting.
-         Probably as I may have overspent on food, especially during the outing days.
-
-Purely food expenses - RM 178.60 
-Breakfast - RM 0.00 
-Lunch - RM 88.05 
-              (~RM 12.58 per meal)
-Dinner - RM 90.55 
-            (~RM 11.32 per meal)
-Average cost per day - RM 22.33 
-Etc. Expenses - RM 83.92 
-            
-(3 & 24) MRT Day Pass x2 - RM 10.00
-(23) M10 TWS - RM 4.90
-(31) Thean Hou Temple Fortune Telling - RM 1.00
-(11) PTPTN Pin - RM 5.00
-(13) O3C Wuting - RM 63.02
-
-
-Cash Damage - RM 96.60
-Rental - RM 300.00 
-Electric bill(s) - RM 72.03  
-Water bill - RM 9.43 
-Petrol - RM 52.95","2023/December/2023, December, image 19.png"
-January 2024,+23.64% more vs Dec 2023,RM 871.14,"Suprisingly surpassed the 20 mark.
-         Life is pain.
-         Being in MMU for all these weeks is also pain, savings who?
+         <br/>
+<ul>
+<li>Purely food expenses - RM 53.90 </li>
+<li>Breakfast - RM 0<br/>
+<li>Lunch - RM 23 <br/>
+              (~RM 7.67 per meal)</li>
+<li>Dinner - RM 30.90 <br/>
+            (~RM 10.30 per meal)</li>
+<li>Average cost per day - RM 17.97</li>
+<li>Etc. Expenses - RM 70.00 </li> <!-- plumbing 150/5, parking card 40 -->
+<li>Cash Damage - RM 24.50 </li>
+<li>Rental - RM 450.00 </li>
+<li>Electric bill(s) - RM 36.25 </li> <!-- wifi 26.25, electric 10 -->
+<li>Water bill - RM 8.50 </li> <!-- 34/4 -->
+<li>Petrol - RM 0.00 </li>
+</li></ul>","2023/October/2023, October, image 7.png"
+November 2023,No title,RM 620.45,"Spent less than last month, mostly cuz of the arrival of Ryan.<br/>
+         And of course the Deepavali break.<br/>
+<ul>
+<li>Purely food expenses - RM 264.75 </li>
+<li>Breakfast - RM 0.00 <br/>
+              (~RM 0 per meal)</li>
+<li>Lunch - RM 136.10 <br/>
+              (~RM 8.51 per meal)</li>
+<li>Dinner - RM 128.65 <br/>
+              (~RM 9.19 per meal)</li>
+<li>Average cost per day - RM 15.58</li>
+<li>Etc. Expenses - RM 2.44 </li> <!-- 7,5,24 airasia, 91 klinik (10/11) [ALL CLAIMED BACK], 2.44 @ 3 nov, econsave -->
+<li>Cash Damage - RM 113.70</li>
+<li>Rental - RM 300.00 </li>
+<li>Electric bill(s) - RM 45.40 </li> <!-- wifi 21, electric 24.40 -->
+<li>Water bill - RM 7.86</li>
+<li>Petrol - RM 55.51 </li> <!-- claimed -->
+</ul>","2023/November/2023, November, image 40.png"
+December 2023,No title,RM 696.93,"Suprisingly, almost on par with Nov 23, even without the wuting.<br/>
+         Probably as I may have overspent on food, especially during the outing days.<br/>
+<ul>
+<li>Purely food expenses - RM 178.60 </li>
+<li>Breakfast - RM 0.00 </li>
+<li>Lunch - RM 88.05 <br/>
+              (~RM 12.58 per meal)</li>
+<li>Dinner - RM 90.55 <br/>
+            (~RM 11.32 per meal)</li>
+<li>Average cost per day - RM 22.33 </li>
+<li>Etc. Expenses - RM 83.92 
+            <ul>
+<li>(3 &amp; 24) MRT Day Pass x2 - RM 10.00</li>
+<li>(23) M10 TWS - RM 4.90</li>
+<li>(31) Thean Hou Temple Fortune Telling - RM 1.00</li>
+<li>(11) PTPTN Pin - RM 5.00</li>
+<li>(13) O3C Wuting - RM 63.02</li>
+</ul>
+</li>
+<li>Cash Damage - RM 96.60</li>
+<li>Rental - RM 300.00 </li>
+<li>Electric bill(s) - RM 72.03 </li> <!-- wifi 21?, electric 51.03 -->
+<li>Water bill - RM 9.43 </li>
+<li>Petrol - RM 52.95 </li>
+</ul>","2023/December/2023, December, image 19.png"
+January 2024,+23.64% more vs Dec 2023,RM 871.14,"Suprisingly surpassed the 20 mark.<br/>
+         Life is pain.<br/>
+         Being in MMU for all these weeks is also pain, savings who?<br/>
          Hopefully I can recoup my losses next month.
-      
-Purely food expenses - RM 442.60
-Breakfast - RM 10.45
-              (RM 1.50 per meal)
-Lunch - RM 197.87 
-              (~RM 8.99 per meal)
-Dinner - RM 234.28 
-            (~RM 11.16 per meal)
-Average cost per day - RM 20.12
-Etc. Expenses - RM 16.00 
-
-(2) Summon - RM 10.00 
-(3) ""Business"" - RM 162.30 
-(27) Pipe - RM 6.00 
-
-
-Cash Damage - RM 181.55
-Rental - RM 300.00 
-Electric bill(s) - RM 55.49  
-Water bill - RM 9.43
-Petrol - RM 47.62","2024/January/2024, January, image 47.png"
-February 2024,No title,RM 703.84,"A nice month, with exams over, it is time for the semester break.
+      <ul>
+<li>Purely food expenses - RM 442.60</li>
+<li>Breakfast - RM 10.45<br/>
+              (RM 1.50 per meal)</li>
+<li>Lunch - RM 197.87 <br/>
+              (~RM 8.99 per meal)</li>
+<li>Dinner - RM 234.28 <br/>
+            (~RM 11.16 per meal)</li>
+<li>Average cost per day - RM 20.12</li>
+<li>Etc. Expenses - RM 16.00 </li>
+<ul>
+<li>(2) Summon - RM 10.00</li> <!-- 活该 -->
+<li>(3) ""Business"" - RM 162.30</li> <!-- clsmxing -->
+<li>(27) Pipe - RM 6.00</li> <!-- 30/5 -->
+</ul>
+<!-- summon 10, pipe fix 30/5 -->
+<li>Cash Damage - RM 181.55</li>
+<li>Rental - RM 300.00 </li>
+<li>Electric bill(s) - RM 55.49 </li> <!-- wifi 21, electric 34.49 -->
+<li>Water bill - RM 9.43</li>
+<li>Petrol - RM 47.62 </li>
+</ul>","2024/January/2024, January, image 47.png"
+February 2024,No title,RM 703.84,"A nice month, with exams over, it is time for the semester break.<br/>
          Surely I deserve to splurge a little on myself right?
-      
-Purely food expenses - RM 110.90 
-Breakfast - RM 0.00 
-              (~RM 0.00 per meal)
-Lunch - RM 51.00 
-              (~RM 8.50 per meal)
-Dinner - RM 59.90 
-            (~RM 9.88 per meal) 
-Average cost per day - RM 18.38 
-Etc. Expenses - RM 224.35 
-
-(29) 🅱️illow x2 - RM 224.35 
-
-Cash Damage - RM 81.60 
-Rental - RM 300.00 
-Electric bill(s) - RM 63.17  
-Water bill - RM 5.24
-Petrol - RM 0.00","2024/February/2024, February, image 14.png"
-March 2024,No title,RM 447.34,"Well, that was awkward.
-         Didn't had a single meal.
+      <ul>
+<li>Purely food expenses - RM 110.90 </li>
+<li>Breakfast - RM 0.00 <br/>
+              (~RM 0.00 per meal)</li>
+<li>Lunch - RM 51.00 <br/>
+              (~RM 8.50 per meal)</li>
+<li>Dinner - RM 59.90 <br/>
+            (~RM 9.88 per meal)</li> <!-- removed maggi as its an outlier -->
+<li>Average cost per day - RM 18.38 </li>
+<li>Etc. Expenses - RM 224.35 </li>
+<ul>
+<li>(29) 🅱️illow x2 - RM 224.35 </li>
+</ul>
+<li>Cash Damage - RM 81.60 </li>
+<li>Rental - RM 300.00 </li>
+<li>Electric bill(s) - RM 63.17 </li> <!-- wifi 29.46, electric 33.71 -->
+<li>Water bill - RM 5.24</li>
+<li>Petrol - RM 0.00 </li>
+</ul>","2024/February/2024, February, image 14.png"
+March 2024,No title,RM 447.34,"Well, that was awkward.<br/>
+         Didn't had a single meal.<br/>
          Oh well, better luck next month.
-      
-Purely food expenses - RM 0.00 
-Breakfast - RM 0.00
-Lunch - RM 0.00
-Dinner - RM 0.00
-Average cost per day - RM 0.00 
-Etc. Expenses - RM 112.18 
-
-(3) 🅱️elivery fees - RM 112.18
-
-Cash Damage - RM 0.00 
-Rental - RM 300.00 
-Electric bill(s) - RM 35.16  
-Water bill - RM 
-Petrol - RM 0.00","2024/March/2024, March, image 1.png"
-April 2024,No title,RM 493.06,"That's 1/3 of the year.
+      <ul>
+<li>Purely food expenses - RM 0.00 </li>
+<li>Breakfast - RM 0.00</li>
+<li>Lunch - RM 0.00</li>
+<li>Dinner - RM 0.00</li>
+<li>Average cost per day - RM 0.00 </li>
+<li>Etc. Expenses - RM 112.18 </li>
+<ul>
+<li>(3) 🅱️elivery fees - RM 112.18</li>
+</ul>
+<li>Cash Damage - RM 0.00 </li>
+<li>Rental - RM 300.00 </li>
+<li>Electric bill(s) - RM 35.16 </li> <!-- wifi 29.46, electric 5.70 -->
+<li>Water bill - RM </li>
+<li>Petrol - RM 0.00 </li>
+</ul>","2024/March/2024, March, image 1.png"
+April 2024,No title,RM 493.06,"That's 1/3 of the year.<br/><br/>
 
          Soon, midterms will attack.
-      
-Purely food expenses - RM 147.67 
-Breakfast - RM 0.00 
-              (~RM 0.00 per meal)
-Lunch - RM 62.13 
-              (~RM 6.90 per meal)
-Dinner - RM 85.54 
-              (~RM 10.44 per meal) 
-Average cost per day - RM 16.41
-Etc. Expenses - RM 5.00 
-
-(17) 🅱️ina 🅱️lub Membership - RM 5.00 
-
-Cash Damage - RM  
-Rental - RM 300.00 
-Electric bill(s) - RM 40.39  
-Water bill - RM  
-Petrol - RM 0.00","2024/April/2024, April, image 99.png"
-May 2024,No title,RM 755.85,"Purely food expenses - RM 340.39 
-Breakfast - RM 0.00
-Lunch - RM 158.10 
-              (~RM 8.32 per meal)
-Dinner - RM 182.29 
-            (~RM 10.57 per meal) 
-Average cost per day - RM 18.76 
-Etc. Expenses - RM  
-Cash Damage - RM 181.00
-Rental - RM 300.00 
-Electric bill(s) - RM 107.08  
-Water bill - RM 8.38
-Petrol - RM 0.00","2024/May/2024, May, image 99.png"
-June 2024,No title,RM 724.54,"Purely food expenses - RM 285.16 
-Breakfast - RM 0.00
-Lunch - RM 136.40 
-              (~RM 8.02 per meal)
-Dinner - RM 148.76 
-            (~RM 9.92 per meal) 
-Average cost per day - RM 17.82 
-Etc. Expenses - RM  6.92
-
-(26) Mr. DIY Stuff - Rm 6.92
- 
-
-Cash Damage - RM 
-Rental - RM 300.00 
-Electric bill(s) - RM 83.50  
-Water bill - RM 0.00 
-Petrol - RM 48.96","2024/June/2024, June, image 99.png"
-July 2024,No title,RM 681.00,"Purely food expenses - RM 68.97 
-Breakfast - RM 0.00
-Lunch - RM 39.27 
-              (~RM 9.82 per meal)
-Dinner - RM 29.70 
-            (~RM 9.90 per meal)
-Average cost per day - RM 19.71
-Etc. Expenses - RM 
-
-(1) Toll x2 - RM 7.00  
-(1) Plumber - RM 7.50  
-(17) WiFi Relocation - RM 103.38 
-
-Cash Damage - RM 
-Rental - RM 350.00 
-Electric bill(s) - RM 35.46  
-Water bill - RM 18.88
-(7) Mutiara - RM 5.88
-(25) Lakefront - RM 13.00 
-Petrol - RM 89.81 
-
-(2) - 47.85
-(23) - 41.96","2024/July/2024, July, image 99.png"
-August 2024,No title,RM 646.15,"Oh yeah I'm changing to utilities tab instead of the 2, since I'm technically only paying to 1 person now in 1 go.
+      <ul>
+<li>Purely food expenses - RM 147.67 </li>
+<li>Breakfast - RM 0.00 <br/>
+              (~RM 0.00 per meal)</li>
+<li>Lunch - RM 62.13 <br/>
+              (~RM 6.90 per meal)</li>
+<li>Dinner - RM 85.54 <br/>
+              (~RM 10.44 per meal)</li> <!-- Removed maggi as it's an outlier -->
+<li>Average cost per day - RM 16.41</li>
+<li>Etc. Expenses - RM 5.00 </li>
+<ul>
+<li>(17) 🅱️ina 🅱️lub Membership - RM 5.00 </li>
+</ul>
+<li>Cash Damage - RM </li> <!-- swett + all mama for now -->
+<li>Rental - RM 300.00 </li>
+<li>Electric bill(s) - RM 40.39 </li> <!-- wifi 29.46, electric 10.93 -->
+<li>Water bill - RM  </li>
+<li>Petrol - RM 0.00 </li>
+</ul>","2024/April/2024, April, image 99.png"
+May 2024,No title,RM 755.85,"<br/>
+<br/>
+<ul>
+<li>Purely food expenses - RM 340.39 </li>
+<li>Breakfast - RM 0.00</li>
+<li>Lunch - RM 158.10 <br/>
+              (~RM 8.32 per meal)</li>
+<li>Dinner - RM 182.29 <br/>
+            (~RM 10.57 per meal)</li> <!-- 10.13 with 2.66 counted -->
+<li>Average cost per day - RM 18.76</li> <!-- 18.40 with 2.66 counted -->
+<li>Etc. Expenses - RM  </li>
+<li>Cash Damage - RM 181.00</li>
+<li>Rental - RM 300.00 </li>
+<li>Electric bill(s) - RM 107.08 </li> <!-- wifi 29.46, electric 77.62 -->
+<li>Water bill - RM 8.38</li>
+<li>Petrol - RM 0.00 </li>
+</ul>","2024/May/2024, May, image 99.png"
+June 2024,No title,RM 724.54,"<br/>
+<br/>
+<ul>
+<li>Purely food expenses - RM 285.16 </li>
+<li>Breakfast - RM 0.00</li>
+<li>Lunch - RM 136.40 <br/>
+              (~RM 8.02 per meal)</li>
+<li>Dinner - RM 148.76 <br/>
+            (~RM 9.92 per meal)</li> <!-- 9.2975 including inst nood -->
+<li>Average cost per day - RM 17.82 </li>
+<li>Etc. Expenses - RM  6.92</li>
+<ul>
+<li>(26) Mr. DIY Stuff - Rm 6.92</li>
+</ul> <!-- (23) ioi parking = 11 -->
+<!-- Lakefront depo = 1162.50 + 350 + 75 + 37.50, given back 25 -->
+<li>Cash Damage - RM </li>
+<li>Rental - RM 300.00 </li>
+<li>Electric bill(s) - RM 83.50 </li> <!-- wifi 29.46, electric 54.04 -->
+<li>Water bill - RM 0.00</li> <!-- -->
+<li>Petrol - RM 48.96 </li>
+</ul>","2024/June/2024, June, image 99.png"
+July 2024,No title,RM 681.00,"<br/>
+<br/>
+<ul>
+<li>Purely food expenses - RM 68.97 </li>
+<li>Breakfast - RM 0.00</li>
+<li>Lunch - RM 39.27 <br/>
+              (~RM 9.82 per meal)</li>
+<li>Dinner - RM 29.70 <br/>
+            (~RM 9.90 per meal)</li>
+<li>Average cost per day - RM 19.71</li>
+<li>Etc. Expenses - RM </li>
+<ul>
+<li>(1) Toll x2 - RM 7.00 </li> <!-- cat laugh sfx -->
+<li>(1) Plumber - RM 7.50 </li> <!-- 30/4 -->
+<li>(17) WiFi Relocation - RM 103.38 </li>
+</ul>
+<li>Cash Damage - RM </li>
+<li>Rental - RM 350.00 </li>
+<li>Electric bill(s) - RM 35.46 </li> <!-- wifi 29.46, electric 6 -->
+<li>Water bill - RM 18.88</li>
+<ul>(7) Mutiara - RM 5.88</ul>
+<ul>(25) Lakefront - RM 13.00</ul> <!-- 12 for semiannual, 1 for monthly -->
+<li>Petrol - RM 89.81 </li>
+<ul>
+<li>(2) - 47.85</li>
+<li>(23) - 41.96</li>
+</ul>
+</ul>","2024/July/2024, July, image 99.png"
+August 2024,No title,RM 646.15,"<br/>
+<br/>
+         Oh yeah I'm changing to utilities tab instead of the 2, since I'm technically only paying to 1 person now in 1 go.<br/>
          Cash damage tab is also removed.
-      
-Purely food expenses - RM 190.71 
-Breakfast - RM 0.00
-Lunch - RM 96.00 
-              (~RM 8.73 per meal) 
-Dinner - RM 94.71 
-            (~RM 7.89 per meal)
-Average cost per day - RM 16.58 
-Etc. Expenses - RM 0.00 
-Rental - RM 350.00 
-Utilities - RM 57.44  
-Petrol - RM 48.00","2024/August/2024, August, image 99.png"
-September 2024,No title,RM 622.91 / 695.53,"The month ends, but my responsibilities not.
-
-
-Purely food expenses - RM 206.24 
-Breakfast - RM 0.00 
-Lunch - RM 133.40 
-              (~RM 8.89 per meal)
-Dinner - RM 72.84 
-            (~RM 5.60 per meal) 
-Average cost per day - RM 14.73  
-Etc. Expenses - RM 1,972.62
-
-(14) Earpads  - RM 51.94
-(14) Parking - RM 10.00
-(14) Honor 200 12/256 - RM 1799.00
-(16)Shipping Fee - RM 10.68
-(26) Trading Milk - RM 101.00
-
-Rental - RM 350.00 
-Utilities - RM 66.67  
-Petrol - RM 0.00",2024/September/Chino.png
-October 2024,No title,RM 392.32,"I spent the entire month gaming.
-         More like gaming for slight chump change, then coding at the side.
+      <ul>
+<li>Purely food expenses - RM 190.71 </li>
+<li>Breakfast - RM 0.00</li>
+<li>Lunch - RM 96.00 <br/>
+              (~RM 8.73 per meal)</li> <!-- 7.38 if counting 2x instant noodles -->
+<li>Dinner - RM 94.71 <br/>
+            (~RM 7.89 per meal)</li>
+<li>Average cost per day - RM 16.58</li> <!-- 15.26 if counting 2x instant noodles -->
+<li>Etc. Expenses - RM 0.00 </li>
+<li>Rental - RM 350.00 </li>
+<li>Utilities - RM 57.44 </li> <!-- elec 56.85, water 6.5, wifi 166.36  -->
+<li>Petrol - RM 48.00 </li>
+</ul>","2024/August/2024, August, image 99.png"
+September 2024,No title,RM 622.91 / 695.53,"The month ends, but my responsibilities not.<br/>
+<br/>
+<ul>
+<li>Purely food expenses - RM 206.24 </li>
+<li>Breakfast - RM 0.00 </li>
+<li>Lunch - RM 133.40 <br/>
+              (~RM 8.89 per meal)</li>
+<li>Dinner - RM 72.84 <br/>
+            (~RM 5.60 per meal)</li> <!-- 4.86 -->
+<li>Average cost per day - RM 14.73 </li> <!-- 13.75 -->
+<li>Etc. Expenses - RM 1,972.62</li>
+<ul>
+<li>(14) Earpads  - RM 51.94</li>
+<li>(14) Parking - RM 10.00</li>
+<li>(14) Honor 200 12/256 - RM 1799.00</li>
+<li>(16)Shipping Fee - RM 10.68</li>
+<li>(26) Trading Milk - RM 101.00</li>
+</ul>
+<li>Rental - RM 350.00 </li>
+<li>Utilities - RM 66.67 </li> <!-- elec 107.00, water 12.35, wifi 147.34  -->
+<li>Petrol - RM 0.00 </li> <!-- was 20.04, but fully covered! -->
+</ul>",2024/September/Chino.png
+October 2024,No title,RM 392.32,"I spent the entire month gaming.<br/>
+         More like gaming for slight chump change, then coding at the side.<br/>
          Ah well, prayge next month to be light on my wallet.
-      
-Purely food expenses - RM 0.00 
-Breakfast - RM 0.00
-Lunch - RM 0.00
-Dinner - RM 0.00
-Average cost per day - RM 0.00
-Etc. Expenses - RM 0.00 
-Rental - RM 350.00 
-Utilities - RM 42.32  
-Petrol - RM 0.00",2024/October/Yuno.png
-November 2024,No title,RM 654.54,"Purely food expenses - RM 255.94 
-Breakfast - RM 0.00
-Lunch - RM 128.00 
-              (~RM 8.53 per meal)
-Dinner - RM 127.94 
-            (~RM 8.00 per meal)
-Average cost per day - RM 16.51 
-Etc. Expenses - RM 0.00 
-Rental - RM 350.00 
-Utilities - RM 48.60  
-Petrol - RM 0.00",2024/November/Taiga.png
+      <ul>
+<li>Purely food expenses - RM 0.00 </li>
+<li>Breakfast - RM 0.00</li>
+<li>Lunch - RM 0.00</li>
+<li>Dinner - RM 0.00</li>
+<li>Average cost per day - RM 0.00</li>
+<li>Etc. Expenses - RM 0.00 </li>
+<li>Rental - RM 350.00 </li>
+<li>Utilities - RM 42.32 </li> <!-- elec 15.45, water 6.5, wifi 147.34  -->
+<li>Petrol - RM 0.00 </li>
+</ul>",2024/October/Yuno.png
+November 2024,No title,RM 654.54,"<br/>
+<br/>
+<ul>
+<li>Purely food expenses - RM 255.94 </li>
+<li>Breakfast - RM 0.00</li>
+<li>Lunch - RM 128.00 <br/>
+              (~RM 8.53 per meal)</li>
+<li>Dinner - RM 127.94 <br/>
+            (~RM 8.00 per meal)</li>
+<li>Average cost per day - RM 16.51 </li>
+<li>Etc. Expenses - RM 0.00 </li>
+<li>Rental - RM 350.00 </li>
+<li>Utilities - RM 48.60 </li> <!-- elec 40.55, water 6.5, wifi 147.34  -->
+<li>Petrol - RM 0.00 </li>
+</ul>",2024/November/Taiga.png
 December 2024,"A great month to be alive... Apart from the mishaps.
-            And with that, the 2024 season comes to an end.",RM 990.62,"Dec 26:
-         Quite some damage this month, from tyres to battery.
-         Surely nothing will go bad in 2025... right?
+            And with that, the 2024 season comes to an end.",RM 990.62,"Dec 26:<br/>
+         Quite some damage this month, from tyres to battery.<br/>
+         Surely nothing will go bad in 2025... right?<br/><br/>
 
-         Afterthoughts, Jan 1:
-         Started the month with what I thought to be an expensive day, only to top it out with a bang at the final day.
-         Tried new things, like being part of the SEAMUN crew, attempted 2 Interviews, & the 1st hangout with my mates.
+         Afterthoughts, Jan 1:<br/>
+         Started the month with what I thought to be an expensive day, only to top it out with a bang at the final day.<br/>
+         Tried new things, like being part of the SEAMUN crew, attempted 2 Interviews, &amp; the 1st hangout with my mates.<br/>
          Had my 2nd industrial visit as well, and also gotten to join the IT Society Committee.
-      
-Purely food expenses - RM 274.65 
-Lunch - RM 123.00 
-              (~RM 8.79 per meal)
-Dinner - RM 151.65 
-            (~RM 9.48 per meal)
-Average cost per day - RM 18.31 
-Etc. Expenses - RM 256.50 
+      <ul>
+<li>Purely food expenses - RM 274.65 </li>
+<li>Lunch - RM 123.00 <br/>
+              (~RM 8.79 per meal)</li>
+<li>Dinner - RM 151.65 <br/>
+            (~RM 9.48 per meal)</li>
+<li>Average cost per day - RM 18.31 </li>
+<li>Etc. Expenses - RM 256.50 </li>
+<ul>
+<li>(25) Laptop Battery Replacement - RM 250.00</li>
+<li>(31) MRT Day Pass - RM 6.00</li>
+<li>(31) Toilet - RM 0.50</li>
+</ul>
+<li>Rental - RM 350.00 </li>
+<li>Utilities - RM 57.19 </li> <!-- 17.75 elec , 2.60 water , wifi 147.34 -->
+<li>Petrol - RM 52.28 </li>
+</ul>",2024/December/Ebisuzawa2.png
+January 2025,Breaking bad,RM 742.87,"27 Jan: <br/>...somehow my lunch on average is more expensive now, but my dinner costs went down?<br/><br/>
 
-(25) Laptop Battery Replacement - RM 250.00
-(31) MRT Day Pass - RM 6.00
-(31) Toilet - RM 0.50
-
-Rental - RM 350.00 
-Utilities - RM 57.19  
-Petrol - RM 52.28",2024/December/Ebisuzawa2.png
-January 2025,Breaking bad,RM 742.87,"27 Jan: ...somehow my lunch on average is more expensive now, but my dinner costs went down?
-
-        Afterthoughts, Feb 1:
-        Peak step record in 24 hours: 25328
-        2 things broke, charger, and somehow some of my keys on the left area. Temporary fix would be using my old mini keyboard, but that itself is also occasionally broken.
+        Afterthoughts, Feb 1:<br/>
+        Peak step record in 24 hours: 25328<br/>
+        2 things broke, charger, and somehow some of my keys on the left area. Temporary fix would be using my old mini keyboard, but that itself is also occasionally broken.<br/>
         Truly, blue. Have this cat.
 
-      
-Purely food expenses - RM 267.73 
-Breakfast - RM 0.10 
-              (~RM 0.10 per meal)
-Lunch - RM 159.60 
-              (~RM 9.39 per meal)
-Dinner - RM 108.03
-            (~RM 7.20 per meal)
-Average cost per day - RM 16.73
-Etc. Expenses - RM 0.00  
-Rental - RM 350.00 
-Utilities - RM 74.56  
-Petrol - RM 50.58",2025/January/Cat.png
-February 2025,A nice number.,RM 555.00,"Afterthoughts, Mar 1:
-         Well more things broke, both physically and my sanity as well thanks to that cursed finals.
-         On the bright side, the end did come, for both the finals, and the trimester.
+      <ul>
+<li>Purely food expenses - RM 267.73 </li>
+<li>Breakfast - RM 0.10 <br/>
+              (~RM 0.10 per meal)</li>
+<li>Lunch - RM 159.60 <br/>
+              (~RM 9.39 per meal)</li>
+<li>Dinner - RM 108.03<br/>
+            (~RM 7.20 per meal)</li>
+<li>Average cost per day - RM 16.73</li>
+<li>Etc. Expenses - RM 0.00 </li> <!-- kaboom covered, otherwise 230 -->
+<li>Rental - RM 350.00 </li>
+<li>Utilities - RM 74.56 </li> <!-- 68.50 elec , 10.40 + 72.00 water , wifi 147.34 -->
+<li>Petrol - RM 50.58 </li> <!-- 17 -->
+</ul>",2025/January/Cat.png
+February 2025,A nice number.,RM 555.00,"Afterthoughts, Mar 1:<br/>
+         Well more things broke, both physically and my sanity as well thanks to that cursed finals.<br/>
+         On the bright side, the end did come, for both the finals, and the trimester.<br/>
          Just hope my grades stay afloat...
-      
-Purely food expenses - RM 117.79 
-Breakfast - RM 0.00 
-Lunch - RM 54.59 
-              (~RM 9.10 per meal)
-Dinner - RM 63.20 
-            (~RM 10.53 per meal)
-Average cost per day - RM 19.63 
-Etc. Expenses - RM 21.00  
-Rental - RM 350.00 
-Utilities - RM 53.81  
-Petrol - RM 12.40",2025/February/Homu.png
-March 2025,"""A Shut-In Neet""",RM 386.84,"Afterthoughts, Apr 1:
-       Well, I survived the gullotine of education, and was rewarded for my efforts.
-       No outings or anything this month, the outside world does not need me.
-       Though skills wise, I did improve quite a bit thanks to Uni societies.
+      <ul>
+<li>Purely food expenses - RM 117.79 </li>
+<li>Breakfast - RM 0.00 </li>
+<li>Lunch - RM 54.59 <br/>
+              (~RM 9.10 per meal)</li>
+<li>Dinner - RM 63.20 <br/>
+            (~RM 10.53 per meal)</li>
+<li>Average cost per day - RM 19.63 </li>
+<li>Etc. Expenses - RM 21.00 </li> <!-- add. ssd 19, parking 2 -->
+<li>Rental - RM 350.00 </li>
+<li>Utilities - RM 53.81 </li> <!-- elec 57.50, water 10.40, wifi 147.34 -->
+<li>Petrol - RM 12.40 </li>
+</ul>",2025/February/Homu.png
+March 2025,"""A Shut-In Neet""",RM 386.84,"Afterthoughts, Apr 1:<br/>
+       Well, I survived the gullotine of education, and was rewarded for my efforts.<br/>
+       No outings or anything this month, the outside world does not need me.<br/>
+       Though skills wise, I did improve quite a bit thanks to Uni societies.<br/><br/>
 
        3 more months, before society barges into my life. Not even the cage can save me.
-      
-Purely food expenses - RM 0.00 
-Average cost per day - RM 0.00 
-Etc. Expenses - RM 0.00 
-Rental - RM 350.00 
-Utilities - RM 36.84  
-Petrol - RM 0.00",2025/March/Aqua.png
-April 2025,The Calm Before the Burn,RM 774.72,"Afterthoughts, Apr 30:
-        New things were done, new people were met, and a face I'd long wanted to see finally appeared.
-        This month was packed, emotionally and physically — hit my PR at steps for one, and emptied myself thanks to a hangout.
-        Choices danced between routine comfort and curiosity-led detours — staying in the comforts of my circle, or venturing out into the unknown.
-        And all this, barely halfway into the trimester.
+      <ul>
+<li>Purely food expenses - RM 0.00 </li>
+<li>Average cost per day - RM 0.00 </li>
+<li>Etc. Expenses - RM 0.00 </li>
+<li>Rental - RM 350.00 </li>
+<li>Utilities - RM 36.84 </li> <!-- elec 0, water 0, wifi 147.34 -->
+<li>Petrol - RM 0.00 </li>
+</ul>",2025/March/Aqua.png
+April 2025,The Calm Before the Burn,RM 774.72,"Afterthoughts, Apr 30:<br/>
+        New things were done, new people were met, and a face I'd long wanted to see finally appeared.<br/>
+        This month was packed, emotionally and physically — hit my PR at steps for one, and emptied myself thanks to a hangout.<br/>
+        Choices danced between routine comfort and curiosity-led detours — staying in the comforts of my circle, or venturing out into the unknown.<br/>
+        And all this, barely halfway into the trimester.<br/><br/>
 
-        Clubs site, Codenection, academic chaos, internship hunting — everything""s converging. Tasks keep stacking, and I’m still expected to triump it all.
+        Clubs site, Codenection, academic chaos, internship hunting — everything""s converging. Tasks keep stacking, and I’m still expected to triump it all.<br/><br/>
         So be it. Let's see what my limits are.
          
-         
-
-Purely food expenses - RM 306.57 
-Breakfast - RM 0.00 
-Lunch - RM 167.00 
-              (~RM 9.28 per meal)
-Dinner - RM 139.57 
-            (~RM 8.72 per meal)
-Average cost per day - RM 18.03 
-Etc. Expenses - RM 20.84 
-
-(6) Dryer - RM 6.00
-(14) 🅱️ina 🅱️lub Membership Renewal - 3.00
-(26) MRT Daily Pass - 6.00
-(26) MRT Parking - 4.50
-(28) Bolt - 1.34
-
-Rental - RM 350.00 
-Utilities - RM 49.31  
-Petrol - RM 48.00","2025/April/2025, April, image 36.png"
-May 2025,"Life's uncertain, a rat-race of pain","RM 1,467.12","Afterthoughts, May 31:
-        Life's uncertain, a rat-race of pain — the weight just keeps stacking up high.
-        Game Jam wrapped and successful, but Hack Day looms. Club site lingers on top of me still, deadlines multiply, and the internship clock ticks louder with every passing second.
-        Several j*b applications, just a few interviews, and radio silence in the end.
-        Some days I ate alone, some days surrounded — sometimes NPC mode, sometimes present. I'm still figuring out which one I prefer.
-        Everything's moving fast. I missed meetings, went into places I don't belong in, and TCD got cancelled. Small wins — like finally getting my upgrades — felt like minor triumphs, despite the impact it bought to my spendings. This is the highest it's ever been.
+         <br/>
+<ul>
+<li>Purely food expenses - RM 306.57 </li>
+<li>Breakfast - RM 0.00 </li>
+<li>Lunch - RM 167.00 <br/>
+              (~RM 9.28 per meal)</li>
+<li>Dinner - RM 139.57 <br/>
+            (~RM 8.72 per meal)</li>
+<li>Average cost per day - RM 18.03 </li>
+<li>Etc. Expenses - RM 20.84 </li>
+<ul>
+<li>(6) Dryer - RM 6.00</li>
+<li>(14) 🅱️ina 🅱️lub Membership Renewal - 3.00</li>
+<li>(26) MRT Daily Pass - 6.00</li>
+<li>(26) MRT Parking - 4.50</li>
+<li>(28) Bolt - 1.34</li>
+</ul>
+<li>Rental - RM 350.00 </li>
+<li>Utilities - RM 49.31 </li> <!-- elec 42.75, water 7.15, wifi 147.34 -->
+<li>Petrol - RM 48.00 </li>
+</ul>","2025/April/2025, April, image 36.png"
+May 2025,"Life's uncertain, a rat-race of pain","RM 1,467.12","Afterthoughts, May 31:<br/>
+        Life's uncertain, a rat-race of pain — the weight just keeps stacking up high.<br/>
+        Game Jam wrapped and successful, but Hack Day looms. Club site lingers on top of me still, deadlines multiply, and the internship clock ticks louder with every passing second.<br/>
+        Several j*b applications, just a few interviews, and radio silence in the end.<br/>
+        Some days I ate alone, some days surrounded — sometimes NPC mode, sometimes present. I'm still figuring out which one I prefer.<br/>
+        Everything's moving fast. I missed meetings, went into places I don't belong in, and TCD got cancelled. Small wins — like finally getting my upgrades — felt like minor triumphs, despite the impact it bought to my spendings. This is the highest it's ever been.<br/><br/>
 
         It's all chaos. But I'm still standing. Somehow. All I got is to keep on praying.
-      
-Purely food expenses - RM 206.50  
-Breakfast - RM 0.00 
-Lunch - RM 110.70 
-              (~RM 9.22 per meal)
-Dinner - RM 95.80 
-            (~RM 8.71 per meal)
-Average cost per day - RM 17.96 
-Etc. Expenses - RM 852.08 
+      <ul>
+<li>Purely food expenses - RM 206.50 </li> <!-- 1,260.62 !! -->
+<li>Breakfast - RM 0.00 </li>
+<li>Lunch - RM 110.70 <br/>
+              (~RM 9.22 per meal)</li>
+<li>Dinner - RM 95.80 <br/>
+            (~RM 8.71 per meal)</li>
+<li>Average cost per day - RM 17.96 </li>
+<li>Etc. Expenses - RM 852.08 </li>
+<ul>
+<li>(6) Fiio JT1 - 207.08</li>
+<li>(14) Plumbing - 40.00</li>
+<li>(18) MSI MAG-255XFV - 599.00</li>
+<li>(30) LRT Day Pass - 6.00</li>
+</ul>
+<li>Rental - RM 350.00 </li>
+<li>Utilities - RM 58.54 </li> <!-- elec 75.75, water 11.05, wifi 147.34 -->
+<li>Petrol - RM 0.00 </li>
+</ul>",2025/May/Texas.png
+June 2025,Trimester Ends with a Blast,RM 671.04,"Afterthoughts, Jun 30:<br/>
+        Projects done, Assignments done, Internship secured, Tests done, with 2 more presentations left.<br/>
+        With all that settled, a bit of fun is of necessity. Which I did with the second iteration of CM 2025.<br/><br/>
 
-(6) Fiio JT1 - 207.08
-(14) Plumbing - 40.00
-(18) MSI MAG-255XFV - 599.00
-(30) LRT Day Pass - 6.00
-
-Rental - RM 350.00 
-Utilities - RM 58.54  
-Petrol - RM 0.00",2025/May/Texas.png
-June 2025,Trimester Ends with a Blast,RM 671.04,"Afterthoughts, Jun 30:
-        Projects done, Assignments done, Internship secured, Tests done, with 2 more presentations left.
-        With all that settled, a bit of fun is of necessity. Which I did with the second iteration of CM 2025.
-
-        Places went, connections made. Memories made, with some worthy images.
-        End of an era, as the trimester break starts, signalising my internship is starting in under a month.
+        Places went, connections made. Memories made, with some worthy images.<br/>
+        End of an era, as the trimester break starts, signalising my internship is starting in under a month.<br/><br/>
 
         One month to revitalise myself with human communication skills, before I let everyone down.
-      
-Purely food expenses - RM 250.84 
-Breakfast - RM 0.00
-Lunch - RM 126.70 
-              (~RM 9.05 per meal)
-Dinner - RM 124.14 
-            (~RM 12.41 per meal)
-Average cost per day - RM 17.92 
-Etc. Expenses - RM 12.00 
+      <ul>
+<li>Purely food expenses - RM 250.84 </li>
+<li>Breakfast - RM 0.00</li>
+<li>Lunch - RM 126.70 <br/>
+              (~RM 9.05 per meal)</li>
+<li>Dinner - RM 124.14 <br/>
+            (~RM 12.41 per meal)</li>
+<li>Average cost per day - RM 17.92</li> <!-- why was it 20.90, why did i divide 12 instead of 14 -->
+<li>Etc. Expenses - RM 12.00 </li>
+<ul>
+<li>(6) MRT Day Pass - 6.00</li> <!-- not included is an rm50 topup to card, but if i list it it'd be double listing -->
+<li>(29) MRT Day Pass - 6.00</li>
+</ul>
+<li>Rental - RM 350.00 </li>
+<li>Utilities - RM 58.20 </li> <!-- elec 73.75, water 11.70, wifi 147.34 -->
+<li>Petrol - RM 0.00 </li>
+</ul>",2025/June/Idia.png
+July 2025,"Internship arc, begins.",RM 456.93,"Afterthoughts, Jul 31:<br/>
+        Well, that break was well deserved to prepare me for this... internship.<br/><br/>
 
-(6) MRT Day Pass - 6.00 
-(29) MRT Day Pass - 6.00
+        I'm barely 4 days in. I need to survive 75 more days.<br/>
+        Good Lord. The jam, the hustle, the struggle, my missing signature cup...<br/><br/>
 
-Rental - RM 350.00 
-Utilities - RM 58.20  
-Petrol - RM 0.00",2025/June/Idia.png
-July 2025,"Internship arc, begins.",RM 456.93,"Afterthoughts, Jul 31:
-        Well, that break was well deserved to prepare me for this... internship.
-
-        I'm barely 4 days in. I need to survive 75 more days.
-        Good Lord. The jam, the hustle, the struggle, my missing signature cup...
-
-        Make this the ""wake up call"" for me to focus hard to get a cushy job.
+        Make this the ""wake up call"" for me to focus hard to get a cushy job.<br/>
         I now understand why people work at lower end jobs despite having higher end qualifications.
-      
-Purely food expenses - RM 38.50 
-Breakfast - RM 0.00
-Lunch - RM 38.50 
-              (~RM 9.62 per meal)
-Dinner - RM 0.00
-Average cost per day - RM 9.62
-Etc. Expenses - RM 18.00 
+      <ul>
+<li>Purely food expenses - RM 38.50 </li>
+<li>Breakfast - RM 0.00</li>
+<li>Lunch - RM 38.50 <br/>
+              (~RM 9.62 per meal)</li>
+<li>Dinner - RM 0.00</li>
+<li>Average cost per day - RM 9.62</li>
+<li>Etc. Expenses - RM 18.00 </li>
+<ul>
+<li>(27) Thean Hou Gong - 2.00</li>
+<li>(28) Day Parking - 4.00</li> <!-- threw 5 -->
+<li>(29) Day Parking - 4.00</li> <!-- threw 50 -->
+<li>(30) Day Parking - 4.00</li>
+<li>(31) Day Parking - 4.00</li> <!-- threw 50 to prepare for next month -->
+</ul>
+<li>Rental - RM 350.00 </li>
+<li>Utilities - RM 50.43 </li> <!-- elec 44.83, water 11.05, wifi 147.34 -->
+<li>Petrol - RM 0.00 </li>
+</ul>",2025/July/Amakusa.png
+August 2025,One third survived.,RM 801.24,"Afterthoughts, Aug 31:<br/>
+       That was, to say the least, an eye opener to how the real world works.<br/><br/>
 
-(27) Thean Hou Gong - 2.00
-(28) Day Parking - 4.00 
-(29) Day Parking - 4.00 
-(30) Day Parking - 4.00
-(31) Day Parking - 4.00 
-
-Rental - RM 350.00 
-Utilities - RM 50.43  
-Petrol - RM 0.00",2025/July/Amakusa.png
-August 2025,One third survived.,RM 801.24,"Afterthoughts, Aug 31:
-       That was, to say the least, an eye opener to how the real world works.
-
-       Traffic jams, deadlines, things that do not work, unresponsive help channels, unrelated tasks, unreasonable expectations. 
-       Also Saturday work, despite it being half day, it still sucks.
-       Two more months, but after that it is back to the depths of University, with Final Year Project creeping into me.
+       Traffic jams, deadlines, things that do not work, unresponsive help channels, unrelated tasks, unreasonable expectations. <!-- no BR here -->
+       Also Saturday work, despite it being half day, it still sucks.<br/>
+       Two more months, but after that it is back to the depths of University, with Final Year Project creeping into me.<br/><br/>
 
        Just end me already.
-      
-Purely food expenses - RM 217.54 
-Breakfast - RM 2.20
-              (~RM 2.20 per meal)
-Lunch - RM 215.34 
-              (~RM 9.79 per meal)
-Dinner - RM 0.00 
-Average cost per day - RM 9.89
-Etc. Expenses - RM 88.60 
+      <ul>
+<li>Purely food expenses - RM 217.54 </li>
+<li>Breakfast - RM 2.20<br/>
+              (~RM 2.20 per meal)</li>
+<li>Lunch - RM 215.34 <br/>
+              (~RM 9.79 per meal)</li>
+<li>Dinner - RM 0.00 </li>
+<li>Average cost per day - RM 9.89</li>
+<li>Etc. Expenses - RM 88.60 </li>
+<ul>
+<li>(1) Monthly Parking - 80.00</li> <!-- im left with 9 in credits -->
+<li>(17) 面包 rushiacry - 8.60</li> <!-- but i aint an adult y am i belanjaing D: ;.; -->
+</ul>
+<li>Rental - RM 300.00 </li> <!-- temporary discount until intern is finished -->
+<li>Utilities - RM 47.46 </li> <!-- elec 0, water 0, wifi 147.34(29.46 special discount for intern period), special water 72 -->
+<li>Petrol - RM 147.64 </li> <!-- 4(55.10), 13(45.83), 23(46.71) -->
+</ul>",2025/August/Amakusa.png
+September 2025,One third remains.,RM 760.89,"Afterthoughts, Sep 30:<br/>
+        Survived yet another month, with 1 more month remaining. An intern left, another immediately replaces him. Such replaceable are interns.<br/><br/>
 
-(1) Monthly Parking - 80.00 
-(17) 面包 rushiacry - 8.60 
+        Quite some breaks, which thankfully eased my wallet a litte, though got hit with a slightly hard dent at 14, which kinda NULL-ed what I saved.<br/>
+        Some tasks done, with more to be done, and even more to be received. My head bangs through the walls, like Satori with my bottle.<br/><br/>
 
-Rental - RM 300.00  
-Utilities - RM 47.46  
-Petrol - RM 147.64",2025/August/Amakusa.png
-September 2025,One third remains.,RM 760.89,"Afterthoughts, Sep 30:
-        Survived yet another month, with 1 more month remaining. An intern left, another immediately replaces him. Such replaceable are interns.
-
-        Quite some breaks, which thankfully eased my wallet a litte, though got hit with a slightly hard dent at 14, which kinda NULL-ed what I saved.
-        Some tasks done, with more to be done, and even more to be received. My head bangs through the walls, like Satori with my bottle.
-
-        Well, here comes the final stretch, the final push that see if all I've done is worth it, or it was for nothing.
+        Well, here comes the final stretch, the final push that see if all I've done is worth it, or it was for nothing.<br/>
         Good luck, is all I can say.
-      
-Purely food expenses - RM 170.10 
-Breakfast - RM 0.00
-Lunch - RM 170.10 
-              (~RM 9.45 per meal)
-Dinner - RM 0.00
-Average cost per day - RM 9.45
-Etc. Expenses - RM 130.00 
+      <ul>
+<li>Purely food expenses - RM 170.10 </li>
+<li>Breakfast - RM 0.00</li>
+<li>Lunch - RM 170.10 <br/>
+              (~RM 9.45 per meal)</li>
+<li>Dinner - RM 0.00</li>
+<li>Average cost per day - RM 9.45</li>
+<li>Etc. Expenses - RM 130.00 </li>
+<ul>
+<li>(Month long) Daily parking - 72.00</li> <!-- topped up 100 [3] -->
+<li>(2) LRT Back &amp; Forth - 4.20</li> <!-- remind me to top this up otherwise id be double counting -->
+<li>(6) Massimo Bred (not again) - 3.50</li>
+<li>(14) Breakfast for family - 50.30</li> <!-- Astaghfirullah -->
+</ul>
+<li>Rental - RM 300.00 </li> <!-- temporary discount until intern is finished -->
+<li>Utilities - RM 29.47 </li> <!-- elec 0, water 0, wifi 147.34(29.47 special discount for intern period) -->
+<li>Petrol - RM 131.32 </li> <!-- 2(46.02), 11(41.71), 24(43.59) -->
+</ul>",2025/September/Satori Komeiji.png
+October 2025,Freedom.,RM 708.79,"Afterthoughts, Oct 30:<br/>
+       You know those last days at work where all you want is to wrap up, hand in your card, and walk out feeling free?<br/>
+       Yeah… mine didn't go like that. Instead, it turned into a two-day sequel called ""Unpaid Overtime &amp; Unnecessary Stress: The Intern's Edition.""<br/><br/>
 
-(Month long) Daily parking - 72.00 
-(2) LRT Back & Forth - 4.20 
-(6) Massimo Bred (not again) - 3.50
-(14) Breakfast for family - 50.30 
-
-Rental - RM 300.00  
-Utilities - RM 29.47  
-Petrol - RM 131.32",2025/September/Satori Komeiji.png
-October 2025,Freedom.,RM 708.79,"Afterthoughts, Oct 30:
-       You know those last days at work where all you want is to wrap up, hand in your card, and walk out feeling free?
-       Yeah… mine didn't go like that. Instead, it turned into a two-day sequel called ""Unpaid Overtime & Unnecessary Stress: The Intern's Edition.""
-
-       Hell on Earth I would say. Ain't no sane person would step foot in there ever again.
-       1 mountain dumb got 1 mountain dumber and more retarded.
-       Had to give them a taste of their own medicine in order for them to let me go by being a ""bad boy"".
+       Hell on Earth I would say. Ain't no sane person would step foot in there ever again.<br/>
+       1 mountain dumb got 1 mountain dumber and more retarded.<br/>
+       Had to give them a taste of their own medicine in order for them to let me go by being a ""bad boy"".<br/><br/>
 
        Glad that's over, back to being a student and start the Final Year Project, along with other subjects to balance.
-      
-Purely food expenses - RM 174.35 
-Breakfast - RM RM 0.00
-Lunch - RM 174.35 
-              (~RM 9.69 per meal)
-Dinner - RM 0.00
-Average cost per day - RM 9.69
-Etc. Expenses - RM 124.10 
-
-(Month long) Daily parking - 64.00 
-(6) Grab - 6.00
-(6) LRT - 2.10
-(7) Monthly pass - 50.00
-(20) Thean Hou Gong - 2.00 
-
-Rental - RM 300.00  
-Utilities - RM 29.47  
-Petrol - RM 80.87",2025/October/Freedom.png
-November 2025,"Hard mode, 启动!",RM 757.46,"Afterthoughts, Dec 1: 
-       To say the least, it was fine. For now, that is.
+      <ul>
+<li>Purely food expenses - RM 174.35 </li>
+<li>Breakfast - RM RM 0.00</li>
+<li>Lunch - RM 174.35 <br/>
+              (~RM 9.69 per meal)</li>
+<li>Dinner - RM 0.00</li>
+<li>Average cost per day - RM 9.69</li>
+<li>Etc. Expenses - RM 124.10 </li>
+<ul>
+<li>(Month long) Daily parking - 64.00</li> <!-- topped up 20 [13] 10 [17] 5 [24], days -2 -->
+<li>(6) Grab - 6.00</li>
+<li>(6) LRT - 2.10</li>
+<li>(7) Monthly pass - 50.00</li>
+<li>(20) Thean Hou Gong - 2.00</li> <!-- gotten #25 when wishing for FYP status -->
+</ul>
+<li>Rental - RM 300.00 </li> <!-- temporary discount until intern is finished -->
+<li>Utilities - RM 29.47 </li> <!-- elec 0, water 0, wifi 147.34(29.47 special discount for intern period) -->
+<li>Petrol - RM 80.87 </li> <!-- 3(41.45), 21(39.42) -->
+</ul>",2025/October/Freedom.png
+November 2025,"Hard mode, 启动!",RM 757.46,"Afterthoughts, Dec 1: <br/>
+       To say the least, it was fine. For now, that is.<br/><br/>
          
-       From the frying pan of the internship into the fire of the new trimester.
-       How I so much miss the ""freedom"" of student life (that comes with overall higher spendings in return).
+       From the frying pan of the internship into the fire of the new trimester.<br/>
+       How I so much miss the ""freedom"" of student life (that comes with overall higher spendings in return).<br/><br/>
 
-       Landlord didn't come in the end, but did gave funds for a new wardrobe (the old one is still growing its empire).
-       Codenection was to say the least, I didn't do too much in the grand scheme of things, and an infinite glitch of Nasi Lemak.
-       Free food is the best food, even if it's the same (cold?) meal three times in a row.
+       Landlord didn't come in the end, but did gave funds for a new wardrobe (the old one is still growing its empire).<br/>
+       Codenection was to say the least, I didn't do too much in the grand scheme of things, and an infinite glitch of Nasi Lemak.<br/>
+       Free food is the best food, even if it's the same (cold?) meal three times in a row.<br/><br/>
        
-       Culinary wise, it was mostly consistent, with new foods from time to time.
-       The Prosperity Burger has returned, a greasy reminder that the year is ending.
+       Culinary wise, it was mostly consistent, with new foods from time to time.<br/>
+       The Prosperity Burger has returned, a greasy reminder that the year is ending.<br/><br/>
        
-       FYP looms, randoms in my group assignments, the fungal infection in my room may have stopped for now, but it will always return.
+       FYP looms, randoms in my group assignments, the fungal infection in my room may have stopped for now, but it will always return.<br/>
        One month left to salvage 2025. Let's prepare for 2026.
-      
-Purely food expenses - RM 292.11 
-Breakfast - RM 0.00
-Lunch - RM 139.20 
-              (~RM 8.70 per meal)
-Dinner - RM 152.91 
-            (~RM 8.50 per meal)
-Average cost per day - RM 16.23
-Etc. Expenses - RM 8.10 
+      <ul>
+<li>Purely food expenses - RM 292.11 </li>
+<li>Breakfast - RM 0.00</li>
+<li>Lunch - RM 139.20 <br/>
+              (~RM 8.70 per meal)</li>
+<li>Dinner - RM 152.91 <br/>
+            (~RM 8.50 per meal)</li>
+<li>Average cost per day - RM 16.23</li>
+<li>Etc. Expenses - RM 8.10 </li>
+<ul>
+<li>(2) Dryer - 6.00</li>
+<li>(16) Toll - 2.10</li>
+</ul>
+<li>Rental - RM 350.00 </li>
+<li>Utilities - RM 54.24 </li> <!-- elec 59.20, water 10.40, wifi 147.34 -->
+<li>Petrol - RM 53.01 </li>
+</ul>",2025/November/Codenection.png
+December 2025,"The Penultimate Year, ends.",RM 712.80,"Afterthoughts, Jan 1:<br/>
+        December didn't arrive to be kind — it arrived to be endured, a closing chapter (for the year) that refused to slow down.<br/><br/>
 
-(2) Dryer - 6.00
-(16) Toll - 2.10
+        Meals became markers of time rather than rest: eaten between deadlines, long walks, and late nights of code.<br/>
+        Some were comforting, most were functional — fuel to keep moving when stopping wasn't an option.<br/>
+        Inflation crept in quietly; stalls slipped in quality, portions fluctuated, and even food felt like it demanded negotiation.<br/><br/>
 
-Rental - RM 350.00 
-Utilities - RM 54.24  
-Petrol - RM 53.01",2025/November/Codenection.png
-December 2025,"The Penultimate Year, ends.",RM 712.80,"Afterthoughts, Jan 1:
-        December didn't arrive to be kind — it arrived to be endured, a closing chapter (for the year) that refused to slow down.
+        FYP pressure never truly left, even during supposed breaks.<br/>
+        Across all subjects, new requirements kept stacking, leaving little room to breathe.<br/>
+        Random groupmates performed decent enough to keep panic at bay — a small mercy in my opinion, thanks past me for choosing the right ones.<br/>
+        Outside of work, things with my mates felt a little turbulent lately — subtle shifts in tone, distance I couldn't fully place.<br/>
+        Still, I managed to meet some people during the picture day, despite the blazing weather and 19,619 steps. It was nice.<br/>
+        Retired at the IT Society also, but still part of the GDC. Pressure builds as the chance to be director for some events presents itself to me.<br/><br/>
 
-        Meals became markers of time rather than rest: eaten between deadlines, long walks, and late nights of code.
-        Some were comforting, most were functional — fuel to keep moving when stopping wasn't an option.
-        Inflation crept in quietly; stalls slipped in quality, portions fluctuated, and even food felt like it demanded negotiation.
+        Yet, despite all the strain — nothing collapsed. At least, not me... yet.<br/><br/>
 
-        FYP pressure never truly left, even during supposed breaks.
-        Across all subjects, new requirements kept stacking, leaving little room to breathe.
-        Random groupmates performed decent enough to keep panic at bay — a small mercy in my opinion, thanks past me for choosing the right ones.
-        Outside of work, things with my mates felt a little turbulent lately — subtle shifts in tone, distance I couldn't fully place.
-        Still, I managed to meet some people during the picture day, despite the blazing weather and 19,619 steps. It was nice.
-        Retired at the IT Society also, but still part of the GDC. Pressure builds as the chance to be director for some events presents itself to me.
-
-        Yet, despite all the strain — nothing collapsed. At least, not me... yet.
-
-        This month wasn't about enjoyment or balance — it was about not falling apart while everything pressed in at once.
-        2025 ends not with relief, but with momentum. Momentum to keep going.
-        I'm tired — uncertain about what lies ahead — but still standing.
+        This month wasn't about enjoyment or balance — it was about not falling apart while everything pressed in at once.<br/>
+        2025 ends not with relief, but with momentum. Momentum to keep going.<br/>
+        I'm tired — uncertain about what lies ahead — but still standing.<br/>
         And that, somehow, is enough. For future me.
-      
-Purely food expenses - RM 226.00 
-Breakfast - RM 0.00
-Lunch - RM 113.40 
-              (~RM 9.45 per meal)
-Dinner - RM 112.60 
-            (~RM 8.04 per meal)
-Average cost per day - RM 14.12
-Etc. Expenses - RM 17.50 
+      <ul>
+<li>Purely food expenses - RM 226.00 </li>
+<li>Breakfast - RM 0.00</li>
+<li>Lunch - RM 113.40 <br/>
+              (~RM 9.45 per meal)</li>
+<li>Dinner - RM 112.60 <br/>
+            (~RM 8.04 per meal)</li>
+<li>Average cost per day - RM 14.12</li>
+<li>Etc. Expenses - RM 17.50 </li>
+<ul>
+<li>(9) Therapeutic Xenon - 10.00</li>
+<li>(21) Bus - 1.00</li>
+<li>(21) MRT Day Pass - 6.00</li> <!-- if i knew id get lost i wouldnt buy day pass -->
+<li>(23) Parking - 0.50</li>
+</ul>
+<li>Rental - RM 350.00 </li>
+<li>Utilities - RM 58.65 </li> <!-- elec 73.33, water 13.00, wifi 147.34 -->
+<li>Petrol - RM 60.65 </li> <!-- (23) -->
+</ul>",2025/December/Houshou Marine.png
+January 2026,Cookie Off the Mould — Survive Near the Batch,RM 712.63,"Afterthoughts, Jan 31:<br/>
+        January didn’t escalate — it pressed.<br/>
+        Same demands, same places, same stalls, repeated until they felt normal, like a routine.<br/><br/>
 
-(9) Therapeutic Xenon - 10.00
-(21) Bus - 1.00
-(21) MRT Day Pass - 6.00 
-(23) Parking - 0.50
+        Days were dictated by schedules and hunger windows.<br/>
+        Meals became checkpoints: what was open, what was fast enough, what wouldn’t cost too much — financially or mentally.<br/>
+        I circled familiar options, occasionally detouring, usually returning to what worked. Not out of love, but reliability and consistency.<br/><br/>
 
-Rental - RM 350.00 
-Utilities - RM 58.65  
-Petrol - RM 60.65",2025/December/Houshou Marine.png
-January 2026,Cookie Off the Mould — Survive Near the Batch,RM 712.63,"Afterthoughts, Jan 31:
-        January didn’t escalate — it pressed.
-        Same demands, same places, same stalls, repeated until they felt normal, like a routine.
-
-        Days were dictated by schedules and hunger windows.
-        Meals became checkpoints: what was open, what was fast enough, what wouldn’t cost too much — financially or mentally.
-        I circled familiar options, occasionally detouring, usually returning to what worked. Not out of love, but reliability and consistency.
-
-        FYP stayed in the background like a low hum — never silent, never urgent enough to ignore, always present.
-        Tests came and went. Some went fine. Some crushed hope and will. I showed up, did what was required (to the best of my power), then moved on without ceremony.
-        Projects… manageable at best; juggling them all was a bit of a pain.
-        Bonus feats this month: had my first 1-on-1 lab session with the lecturer — everyone else didn’t show thanks to the barring list being finalised. A quiet, unusual milestone, a little scary and intimidating, but memorable. Please, never again.
-        Also completed my first Carousell deal — a small milestone, yet a reminder that progress comes in tiny, unexpected packages.
+        FYP stayed in the background like a low hum — never silent, never urgent enough to ignore, always present.<br/>
+        Tests came and went. Some went fine. Some crushed hope and will. I showed up, did what was required (to the best of my power), then moved on without ceremony.<br/>
+        Projects… manageable at best; juggling them all was a bit of a pain.<br/>
+        Bonus feats this month: had my first 1-on-1 lab session with the lecturer — everyone else didn’t show thanks to the barring list being finalised. A quiet, unusual milestone, a little scary and intimidating, but memorable. Please, never again.<br/>
+        Also completed my first Carousell deal — a small milestone, yet a reminder that progress comes in tiny, unexpected packages.<br/><br/>
 
 
-        Socially, I hovered — close enough to be around, distant enough to stay alone when it made sense.
-        Not isolation, just efficiency. Even comfort has a cost when time is tight. (Gym gets a nod though.)
+        Socially, I hovered — close enough to be around, distant enough to stay alone when it made sense.<br/>
+        Not isolation, just efficiency. Even comfort has a cost when time is tight. (Gym gets a nod though.)<br/><br/>
 
-        A cookie not quite made for the mould — a bit odd, raw around the edges.
-        Yet I stayed near the batch, hoping to dunk alongside the others without losing myself. I didn’t fit perfectly, but I held my shape.
-        Being forced into the cutter (and helping others) could prove valuable, but would I lose myself in the process?
+        A cookie not quite made for the mould — a bit odd, raw around the edges.<br/>
+        Yet I stayed near the batch, hoping to dunk alongside the others without losing myself. I didn’t fit perfectly, but I held my shape.<br/>
+        Being forced into the cutter (and helping others) could prove valuable, but would I lose myself in the process?<br/><br/>
 
-        January wasn’t about momentum or renewal.
-        It was about continuity — proving I can hold a line without burning out or giving in.
+        January wasn’t about momentum or renewal.<br/>
+        It was about continuity — proving I can hold a line without burning out or giving in.<br/><br/>
 
-        Still here. Still functioning.
-        February can come, and end this trimester.",2026/January/Emptiness.png
-February 2026,"Here, but not there.",RM 704.47,"February did not test me. It hunted me.
-Three projects, three presentations, one test, one interim FYP — every week another blade, every submission another countdown.
+        Still here. Still functioning.<br/>
+        February can come, and end this trimester.
+      <ul>
+<li>Purely food expenses - RM 228.90 </li>
+<li>Breakfast - RM 0.00</li>
+<li>Lunch - RM 100.90 <br/>
+              (~RM 7.76 per meal)</li>
+<li>Dinner - RM 128.00 <br/>
+            (~RM 7.53 per meal)</li>
+<li>Average cost per day - RM 13.46</li>
+<li>Etc. Expenses - RM 0.00 </li>
+<li>Rental - RM 350.00 </li>
+<li>Utilities - RM 80.85 </li> <!-- elec 75.00, water 11.05, wifi 147.34, indah water 90.00 -->
+<li>Petrol - RM 52.88 </li>
+</ul>",2026/January/Emptiness.png
+February 2026,"Here, but not there.",RM 704.47,"February did not test me. It hunted me.<br/>
+Three projects, three presentations, one test, one interim FYP — every week another blade, every submission another countdown.<br/><br/>
 
-Sleep became negotiation, food became fuel, and time moved faster the harder I tried to control it.
-I told myself it was manageable. I lied. Relation issues? Fracture over fracture.
-Created my own timetable, hoping to be self-reliant enough with the skills I’ve gained.
+Sleep became negotiation, food became fuel, and time moved faster the harder I tried to control it.<br/>
+I told myself it was manageable. I lied. Relation issues? Fracture over fracture.<br/>
+Created my own timetable, hoping to be self-reliant enough with the skills I’ve gained.<br/><br/>
 
-The killing urge did not scream — it simmered.
-A low constant buzz beneath the skin, the temptation to snap, to disappear, to drop everything and let it burn.
-But I didn’t. I glued myself together and forced one final push.
+The killing urge did not scream — it simmered.<br/>
+A low constant buzz beneath the skin, the temptation to snap, to disappear, to drop everything and let it burn.<br/>
+But I didn’t. I glued myself together and forced one final push.<br/><br/>
 
-Midway through the month, collateral damage surfaced.
-The HDD fell — RM224.40 paid in tribute so my data survives, because if I lose that, I lose proof I was ever here.
-Togawa did not come in 10 pulls unlike Decadenza (but I did get Ascalon). 115th. Pity is a cruel mechanic.
-A small anomaly on the 26th — Global #9, a goated score on Niwashi King. A reminder that I still function somewhere beyond deadlines.
+Midway through the month, collateral damage surfaced.<br/>
+The HDD fell — RM224.40 paid in tribute so my data survives, because if I lose that, I lose proof I was ever here.<br/>
+Togawa did not come in 10 pulls unlike Decadenza (but I did get Ascalon). 115th. Pity is a cruel mechanic.<br/>
+A small anomaly on the 26th — Global #9, a goated score on Niwashi King. A reminder that I still function somewhere beyond deadlines.<br/><br/>
 
-I walked into each presentation not confident, not fearless — just operational.
-And somehow, nothing collapsed. Not spectacular, not glorious. Just intact.
+I walked into each presentation not confident, not fearless — just operational.<br/>
+And somehow, nothing collapsed. Not spectacular, not glorious. Just intact.<br/><br/>
 
-Then the final stretch passed, and the trimester closed.
-Trimester break. Silence — but not freedom.
-FYP1 still lingers in the background; moderator silent as ever, supervisor thankfully responsive.
+Then the final stretch passed, and the trimester closed.<br/>
+Trimester break. Silence — but not freedom.<br/>
+FYP1 still lingers in the background; moderator silent as ever, supervisor thankfully responsive.<br/><br/>
 
-March is quieter. Not peaceful — just less violent.
-For now, I recover. I recalibrate. I hold the line.
+March is quieter. Not peaceful — just less violent.<br/>
+For now, I recover. I recalibrate. I hold the line.<br/>
 Next comes the final CGPA-counted trimester — no more margins, no more warm-ups.
-        
-Purely food expenses - RM 78.25 
-Breakfast - RM 0.00
-Lunch - RM 36.15 
-                (~RM 9.04 per meal)
-Dinner - RM 42.10 
-              (~RM 8.42 per meal)
-Average cost per day - RM 13.04
-Etc. Expenses - RM 224.40 
+        <ul>
+<li>Purely food expenses - RM 78.25 </li>
+<li>Breakfast - RM 0.00</li>
+<li>Lunch - RM 36.15 <br/>
+                (~RM 9.04 per meal)</li>
+<li>Dinner - RM 42.10 <br/>
+              (~RM 8.42 per meal)</li>
+<li>Average cost per day - RM 13.04</li>
+<li>Etc. Expenses - RM 224.40 </li>
+<ul>
+<li>(11) HDD - 224.40</li>
+</ul>
+<li>Rental - RM 350.00 </li>
+<li>Utilities - RM 51.82 </li> <!-- elec 46.64, water 12.35, wifi 147.34 -->
+<li>Petrol - RM 0.00 </li>
+</ul>",2026/February/Hirasawa.png
+March 2026,Multi faced? DID? Hypocrite?,RM 457.30,"Well, this ends the trimester break, and into the final CGPA'ed trimester (supposedly).<br/>
+        Nothing much happened, apart from more things breaking.<br/>
+        My GPU finally died, so I upgraded my PSU and case. No more excuses, no more limits.<br/><br/>
 
-(11) HDD - 224.40
+        Finished up both MyGo and Ave Mujica. Understood the lore, the collab, the art.<br/>
+        At least 500 images were made. Protect the cucumber.<br/><br/>
 
-Rental - RM 350.00 
-Utilities - RM 51.82  
-Petrol - RM 0.00",2026/February/Hirasawa.png
+        Exclusion zone grew. Timetables made without me, moves without me.<br/>
+        Even if someone tried to “hold the cracks together,” it’s only glue — temporary, fragile.<br/>
+        I realized the fractures aren’t going anywhere. Timing, presence, inconsistency — not wrong, just enough to push me out.<br/>
+        So this is it. Not part of it anymore. Different schedules, different pace. Alone, but free — and that freedom costs.<br/><br/>
+
+        Back to the trimester. Speedrunning to 8 trimesters? Hurdle after hurdle. Emails. Meets. Yes. No. Ping pong.<br/>
+        Just give me a no already, and I’ll off myself with a thanks. Don’t drag me. Graduating on time — inevitable.<br/><br/>
+
+        18 credit hours. Lock in. Push. Survive without them.<br/>
+        Trimester 2610, Final Year Project, whatever you want to call it… Give your all. Fast. No shortcuts.
+      <ul>
+<li>Purely food expenses - RM 36.50 </li>
+<li>Breakfast - RM 0.00</li>
+<li>Lunch - RM 20.00 <br/>
+              (~RM 10.00 per meal)</li>
+<li>Dinner - RM 16.50 <br/>
+            (~RM 8.25 per meal)</li>
+<li>Average cost per day - RM 18.25</li>
+<li>Etc. Expenses - RM 2,029.33 </li>
+<ul>
+<li>(10) Usb B Cable - 7.80</li>
+<li>(19) Parking - 0.53</li>
+<li>(19) TipTop IT GPU Diagnosis - 20.00</li>
+<li>(20) Lowyat - 2,000.00</li>
+<li>(20) Parking Donation - 1.00</li>
+</ul>
+<li>Rental - RM 350.00 </li>
+<li>Utilities - RM 41.47 </li> <!-- elec 12.05, water 6.50, wifi 147.34 -->
+<li>Petrol - RM 0.00 </li>
+</ul>",2026/March/Mutsumi2.png
