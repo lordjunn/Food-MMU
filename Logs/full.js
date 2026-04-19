@@ -70,6 +70,63 @@ document.addEventListener('DOMContentLoaded', function () {
     return isNaN(n) ? 0 : n;
   }
 
+  function getMonthYearFromDateText(dateText) {
+    if (!dateText || dateText === 'N/A') return null;
+
+    const cleaned = String(dateText)
+      .replace(/\([^)]*\)/g, ' ')
+      .replace(/,/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    const monthMatch = cleaned.match(/\b(jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\b/i);
+    const yearMatch = cleaned.match(/\b(20\d{2}|\d{2})\b/);
+
+    if (monthMatch && yearMatch) {
+      const monthToken = monthMatch[1].toLowerCase();
+      const monthLookup = {
+        jan: 'Jan', january: 'Jan',
+        feb: 'Feb', february: 'Feb',
+        mar: 'Mar', march: 'Mar',
+        apr: 'Apr', april: 'Apr',
+        may: 'May',
+        jun: 'Jun', june: 'Jun',
+        jul: 'Jul', july: 'Jul',
+        aug: 'Aug', august: 'Aug',
+        sep: 'Sep', sept: 'Sep', september: 'Sep',
+        oct: 'Oct', october: 'Oct',
+        nov: 'Nov', november: 'Nov',
+        dec: 'Dec', december: 'Dec',
+      };
+
+      const month = monthLookup[monthToken];
+      const year = yearMatch[1].length === 2 ? yearMatch[1] : yearMatch[1].slice(-2);
+      if (month && year) return { month, year };
+    }
+
+    const parsed = new Date(cleaned);
+    if (isNaN(parsed.getTime())) return null;
+
+    const month = parsed.toLocaleString('en-US', { month: 'short' });
+    const year = String(parsed.getFullYear()).slice(-2);
+    return { month, year };
+  }
+
+  function buildMonthlyLogHref(dateText) {
+    const monthYear = getMonthYearFromDateText(dateText);
+    if (!monthYear) return null;
+
+    const filePart = `${monthYear.month} ${monthYear.year}`;
+    const encodedFileName = `${encodeURIComponent(filePart)}.html`;
+    const isGitHubPages = window.location.hostname.toLowerCase().includes('github.io');
+
+    if (isGitHubPages) {
+      return `https://lordjunn.github.io/Food-MMU/Logs/${encodedFileName}`;
+    }
+
+    return `/Logs/${encodedFileName}`;
+  }
+
   function toPlainText(html) {
     return String(html || '')
       .replace(/<[^>]*>/g, ' ')
@@ -382,6 +439,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
       const date = item._displayDate || item.date || 'N/A';
+      const dateHref = buildMonthlyLogHref(date);
 
       if (isSummary) {
         // For summaries, extract text before <ul> and render expenses properly
@@ -421,7 +479,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </h3>
             <h3><span class="meal-type">${restaurant}</span></h3>
             <p class="menu-item-description">${desc}</p>
-            <p><strong>Date:</strong> ${date}</p>
+            <p><strong>Date:</strong> ${dateHref ? `<a class="date-link" href="${dateHref}">${date}</a>` : date}</p>
           </div>
         </div>
       `;

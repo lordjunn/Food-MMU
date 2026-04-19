@@ -163,6 +163,16 @@ body {
   color: #555;
 }
 
+.date-link {
+  color: #0069d9;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.date-link:hover {
+  color: #004ca0;
+}
+
 .menu-group-heading {
   font-size: 28px;
   font-weight: bold;
