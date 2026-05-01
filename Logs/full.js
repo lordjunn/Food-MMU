@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const scrollArea = document.getElementById('scrollArea');
 
   const defaultImage = 'https://lordjunn.github.io/Study-With-Junn/img/Sumire.png';
+  const imagePlaceholder = 'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3C/svg%3E';
 
   let currentCSV = 'menu_items2.csv';
   let currentMode = 'full';
@@ -57,9 +58,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function parsePrice(p) {
     if (!p) return 0;
-    p = p.toLowerCase().trim();
-    if (p === "free" || p === "free!") return 0;
-    const n = parseFloat(p.replace(/[^0-9.]/g, ""));
+    const raw = String(p).toLowerCase().trim();
+    if (raw === "free" || raw === "free!") return 0;
+
+    // Supports values like: RM <s>10.50</s> 10.00 (use actual paid price).
+    const nums = String(p).match(/\d+(?:\.\d+)?/g);
+    if (!nums || !nums.length) return 0;
+
+    const n = parseFloat(nums[nums.length - 1]);
     return isNaN(n) ? 0 : n;
   }
 
@@ -80,9 +86,8 @@ document.addEventListener('DOMContentLoaded', function () {
       .trim();
 
     const monthMatch = cleaned.match(/\b(jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\b/i);
-    const yearMatch = cleaned.match(/\b(20\d{2}|\d{2})\b/);
 
-    if (monthMatch && yearMatch) {
+    if (monthMatch) {
       const monthToken = monthMatch[1].toLowerCase();
       const monthLookup = {
         jan: 'Jan', january: 'Jan',
@@ -99,8 +104,25 @@ document.addEventListener('DOMContentLoaded', function () {
         dec: 'Dec', december: 'Dec',
       };
 
+      function pickYearToken(text) {
+        if (!text) return null;
+        const fourDigit = text.match(/\b20\d{2}\b/g);
+        if (fourDigit && fourDigit.length) return fourDigit[fourDigit.length - 1];
+
+        const twoDigit = text.match(/\b\d{2}\b/g);
+        if (twoDigit && twoDigit.length) return twoDigit[twoDigit.length - 1];
+
+        return null;
+      }
+
       const month = monthLookup[monthToken];
-      const year = yearMatch[1].length === 2 ? yearMatch[1] : yearMatch[1].slice(-2);
+      const monthIndex = cleaned.toLowerCase().indexOf(monthMatch[0].toLowerCase());
+      const beforeMonth = monthIndex >= 0 ? cleaned.slice(0, monthIndex) : '';
+      const afterMonth = monthIndex >= 0 ? cleaned.slice(monthIndex + monthMatch[0].length) : cleaned;
+
+      // Prefer year tokens appearing after the month to avoid treating day (dd) as year.
+      const yearToken = pickYearToken(afterMonth) || pickYearToken(beforeMonth) || pickYearToken(cleaned);
+      const year = yearToken ? (yearToken.length === 2 ? yearToken : yearToken.slice(-2)) : null;
       if (month && year) return { month, year };
     }
 
@@ -132,6 +154,35 @@ document.addEventListener('DOMContentLoaded', function () {
       .replace(/<[^>]*>/g, ' ')
       .replace(/\s+/g, ' ')
       .trim();
+  }
+
+  function parseDateToTimestamp(dateText) {
+    if (!dateText || dateText === 'N/A') return 0;
+    const cleaned = String(dateText).replace(/\([^)]*\)/g, ' ').replace(/,/g, ' ').replace(/\s+/g, ' ').trim();
+    const parsed = new Date(cleaned);
+    return isNaN(parsed.getTime()) ? 0 : parsed.getTime();
+  }
+
+  function deriveSummaryDateFromMonth(monthLabel) {
+    if (!monthLabel) return null;
+    const parts = String(monthLabel).trim().split(/\s+/);
+    if (parts.length !== 2) return null;
+
+    const [monthStr, yearStr] = parts;
+    const monthProbe = new Date(`${monthStr} 1, 2000`);
+    if (isNaN(monthProbe.getTime())) return null;
+
+    const yearNum = parseInt(yearStr, 10);
+    if (isNaN(yearNum)) return null;
+
+    const fullYear = yearStr.length === 2 ? 2000 + yearNum : yearNum;
+    const monthIndex = monthProbe.getMonth();
+    const lastDay = new Date(fullYear, monthIndex + 1, 0);
+
+    return {
+      date: lastDay.toISOString().split('T')[0],
+      displayDate: `${lastDay.getDate()} ${lastDay.toLocaleString('default', { month: 'long' })} ${lastDay.getFullYear()}`,
+    };
   }
 
   const insightMetrics = {
@@ -199,9 +250,56 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function getMetricValue(item, metricKey) {
+    if (item && item._metrics && Object.prototype.hasOwnProperty.call(item._metrics, metricKey)) {
+      return item._metrics[metricKey];
+    }
+
     const metric = insightMetrics[metricKey] || insightMetrics.total;
     const plain = toPlainText(item.description || '');
     return metric.extractor(item, plain);
+  }
+
+  function preprocessItem(item) {
+    const processed = { ...item };
+    const isSummary = !processed.dish_name;
+
+    if (isSummary && (!processed.date || processed.date === 'N/A') && processed.month_url) {
+      const derived = deriveSummaryDateFromMonth(processed.month_url);
+      if (derived) {
+        processed.date = derived.date;
+        processed._displayDate = derived.displayDate;
+      }
+    }
+
+    if (!processed._displayDate && processed.date) {
+      processed._displayDate = processed.date;
+    }
+
+    processed._plainDescription = toPlainText(processed.description || '');
+    processed._priceNum = parsePrice(processed.price || '');
+    processed._sortDateValue = parseDateToTimestamp(processed.date || processed._displayDate || '');
+
+    processed._metrics = {};
+    for (const key of Object.keys(insightMetrics)) {
+      processed._metrics[key] = insightMetrics[key].extractor(processed, processed._plainDescription);
+    }
+
+    processed._searchBlob = [
+      processed.dish_name || processed.title || '',
+      processed.restaurant_name || processed.month_url || '',
+      processed.date || '',
+      processed._plainDescription || '',
+      processed.price || '',
+    ].join(' ').toLowerCase();
+
+    const renderedDate = processed._displayDate || processed.date || 'N/A';
+    processed._monthLogHref = buildMonthlyLogHref(renderedDate);
+
+    return processed;
+  }
+
+  function preprocessItems(items) {
+    return items.map(preprocessItem);
   }
 
   function monthToDateKey(monthLabel) {
@@ -220,13 +318,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function getMetricRanking(items, metricKey, order) {
-    const metric = insightMetrics[metricKey] || insightMetrics.total;
     const summaryItems = items.filter(item => !item.dish_name);
     const rows = [];
 
     for (const item of summaryItems) {
-      const plain = toPlainText(item.description || '');
-      const value = metric.extractor(item, plain);
+      const value = getMetricValue(item, metricKey);
       if (value === null || value === undefined || isNaN(value)) continue;
       rows.push({
         month: item.month_url || 'Unknown month',
@@ -294,110 +390,129 @@ document.addEventListener('DOMContentLoaded', function () {
     return String(sortDropdown.value || '').endsWith('asc') ? 'asc' : 'desc';
   }
 
-  function applySearchAndSort() {
-    const keyword = searchBox.value.toLowerCase().trim();
-    const keywordIsNumber = !isNaN(keyword) && keyword !== "";
+  function normalizeSortBy(sortBy, mode) {
+    if (mode === 'summary' && sortBy === 'price-asc') return 'value-asc';
+    if (mode === 'summary' && sortBy === 'price-desc') return 'value-desc';
+    return sortBy;
+  }
 
-    // Extract price filters like >rm4, <rm9, >=rm5.50, <=rm10, =rm3
-    const priceFilterRegex = /(>=?|<=?|=)\s*r?m?\s*(\d+\.?\d*)/gi;
+  function parseSearchQuery(rawInput) {
+    const keyword = String(rawInput || '').toLowerCase().trim();
     const priceFilters = [];
-    let pf;
-    while ((pf = priceFilterRegex.exec(keyword)) !== null) {
-      priceFilters.push({ op: pf[1], value: parseFloat(pf[2]) });
+
+    if (!keyword) {
+      return {
+        keyword: '',
+        cleanedKeyword: '',
+        terms: [],
+        priceFilters,
+        keywordIsNumber: false,
+        keywordNumber: null,
+      };
     }
 
-    // Remove price filter tokens from the keyword to get remaining search terms
-    const cleanedKeyword = keyword.replace(/(>=?|<=?|=)\s*r?m?\s*\d+\.?\d*/gi, '').trim();
+    const priceFilterRegex = /(>=|<=|=|>|<)\s*(?:r?m\s*)?(\d+(?:\.\d+)?)/gi;
+    let match;
 
-    const quotedRegex = /"([^"]+)"|\S+/g;
-    let m, terms = [];
-    while ((m = quotedRegex.exec(cleanedKeyword)) !== null)
-      terms.push((m[1] || m[0]).trim());
-
-    let filtered = window.allFoodItems.filter(item => {
-      const fields = [
-        (item.dish_name || item.title || "").toLowerCase(),
-        (item.restaurant_name || item.month_url || "").toLowerCase(),
-        (item.date || "").toLowerCase(),
-        (item.description || "").toLowerCase(),
-        (item.price || "").toLowerCase(),
-      ];
-
-      // Check price filters
-      if (priceFilters.length > 0) {
-        const priceNum = parsePrice(item.price || "");
-        const passesPrice = priceFilters.every(f => {
-          switch (f.op) {
-            case '>':  return priceNum > f.value;
-            case '>=': return priceNum >= f.value;
-            case '<':  return priceNum < f.value;
-            case '<=': return priceNum <= f.value;
-            case '=':  return priceNum === f.value;
-            default:   return true;
-          }
-        });
-        if (!passesPrice) return false;
-        // If only price filters and no text terms, pass
-        if (terms.length === 0) return true;
+    while ((match = priceFilterRegex.exec(keyword)) !== null) {
+      const value = parseFloat(match[2]);
+      if (!isNaN(value)) {
+        priceFilters.push({ op: match[1], value });
       }
+    }
 
-      const matchesTerms = terms.length > 0
-        ? terms.every(t => fields.some(f => f.includes(t)))
-        : true;
-      const free = ["free", "free!"].includes((item.price || "").toLowerCase());
-      const priceNum = parsePrice(item.price || "");
+    const cleanedKeyword = keyword.replace(priceFilterRegex, ' ').replace(/\s+/g, ' ').trim();
+    const quotedTerms = cleanedKeyword.match(/"([^"]+)"|'([^']+)'/g) || [];
+    const phraseTerms = quotedTerms.map(term => term.slice(1, -1).trim()).filter(Boolean);
+    const remainder = cleanedKeyword.replace(/"[^"]+"|'[^']+'/g, ' ');
+    const wordTerms = remainder.split(/\s+/).map(term => term.trim()).filter(Boolean);
+    const terms = [...phraseTerms, ...wordTerms];
+    const keywordNumber = parseFloat(cleanedKeyword);
 
-      if (terms.length === 0 && priceFilters.length === 0) return true;
+    return {
+      keyword,
+      cleanedKeyword,
+      terms,
+      priceFilters,
+      keywordIsNumber: !isNaN(keywordNumber) && cleanedKeyword !== '',
+      keywordNumber: isNaN(keywordNumber) ? null : keywordNumber,
+    };
+  }
 
-      return matchesTerms ||
-             (cleanedKeyword === "free" && free) ||
-             (keywordIsNumber && priceNum === parseFloat(keyword));
+  function passesPriceFilters(item, priceFilters) {
+    if (!priceFilters.length) return true;
+    const priceNum = item._priceNum;
+
+    return priceFilters.every(f => {
+      switch (f.op) {
+        case '>': return priceNum > f.value;
+        case '>=': return priceNum >= f.value;
+        case '<': return priceNum < f.value;
+        case '<=': return priceNum <= f.value;
+        case '=': return priceNum === f.value;
+        default: return true;
+      }
     });
+  }
 
-    const sortBy = sortDropdown.value;
-    const metricSortActive = currentMode === 'summary' && (sortBy === 'price-asc' || sortBy === 'price-desc');
+  function filterItems(items, query, mode, sortBy, metricKey) {
+    const metricSortActive = mode === 'summary' && (sortBy === 'value-asc' || sortBy === 'value-desc');
 
-    if (metricSortActive) {
-      const metricKey = getSelectedInsightMetric();
-      filtered = filtered.filter(item => {
+    return items.filter(item => {
+      if (metricSortActive) {
         if (item.dish_name) return false;
         const value = getMetricValue(item, metricKey);
-        return value !== null && value !== undefined && !isNaN(value);
-      });
-    }
+        if (value === null || value === undefined || isNaN(value)) return false;
+      }
 
-    if (currentMode === 'summary') {
-      const metricKey = getSelectedInsightMetric();
-      if (sortBy === "date-asc") {
-        filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
+      if (!query.terms.length && !query.priceFilters.length) return true;
+      if (!passesPriceFilters(item, query.priceFilters)) return false;
+      if (!query.terms.length) return true;
+
+      const matchesTerms = query.terms.every(t => item._searchBlob.includes(t));
+      const free = ['free', 'free!'].includes((item.price || '').toLowerCase());
+
+      return matchesTerms ||
+        (query.cleanedKeyword === 'free' && free) ||
+        (query.keywordIsNumber && item._priceNum === query.keywordNumber);
+    });
+  }
+
+  function sortItems(items, mode, sortBy, metricKey) {
+    const sorted = items.slice();
+
+    if (mode === 'summary') {
+      if (sortBy === 'date-asc') {
+        sorted.sort((a, b) => a._sortDateValue - b._sortDateValue);
       }
-      if (sortBy === "date-desc") {
-        filtered.sort((a, b) => new Date(b.date) - new Date(a.date));
+      if (sortBy === 'date-desc') {
+        sorted.sort((a, b) => b._sortDateValue - a._sortDateValue);
       }
-      if (sortBy === "price-asc") {
-        filtered.sort((a, b) => {
+      if (sortBy === 'value-asc') {
+        sorted.sort((a, b) => {
           const av = getMetricValue(a, metricKey);
           const bv = getMetricValue(b, metricKey);
           if (av !== bv) return av - bv;
-          return new Date(a.date) - new Date(b.date);
+          return a._sortDateValue - b._sortDateValue;
         });
       }
-      if (sortBy === "price-desc") {
-        filtered.sort((a, b) => {
+      if (sortBy === 'value-desc') {
+        sorted.sort((a, b) => {
           const av = getMetricValue(a, metricKey);
           const bv = getMetricValue(b, metricKey);
           if (av !== bv) return bv - av;
-          return new Date(b.date) - new Date(a.date);
+          return b._sortDateValue - a._sortDateValue;
         });
       }
-    } else {
-      if (sortBy === "date-asc")  filtered.sort((a,b)=>new Date(a.date)-new Date(b.date));
-      if (sortBy === "date-desc") filtered.sort((a,b)=>new Date(b.date)-new Date(a.date));
-      if (sortBy === "price-asc") filtered.sort((a,b)=>parsePrice(a.price)-parsePrice(b.price));
-      if (sortBy === "price-desc")filtered.sort((a,b)=>parsePrice(b.price)-parsePrice(a.price));
+      return sorted;
     }
 
-    return filtered;
+    if (sortBy === 'date-asc') sorted.sort((a, b) => a._sortDateValue - b._sortDateValue);
+    if (sortBy === 'date-desc') sorted.sort((a, b) => b._sortDateValue - a._sortDateValue);
+    if (sortBy === 'price-asc') sorted.sort((a, b) => a._priceNum - b._priceNum);
+    if (sortBy === 'price-desc') sorted.sort((a, b) => b._priceNum - a._priceNum);
+
+    return sorted;
   }
 
   let clusterizeInstance = null;
@@ -413,33 +528,15 @@ document.addEventListener('DOMContentLoaded', function () {
       const isSummary = !item.dish_name;
       const name = item.dish_name || item.title;
       const restaurant = isSummary ? (item.month_url || "Summary") : item.restaurant_name;
+      const summaryMonthHref = isSummary ? buildMonthlyLogHref(restaurant) : null;
       const price = item.price || "N/A";
       let desc = item.description || "";
       if (!isSummary) {
           desc = desc.replace(/\n/g, "<br>");
       }
       const img = (item.image && item.image !== "No image") ? item.image : defaultImage;
-
-
-      if (isSummary && (!item.date || item.date === 'N/A') && item.month_url) {
-        const parts = item.month_url.trim().split(' ');
-        if (parts.length === 2) {
-          const [monthStr, yearStr] = parts;
-          const dateObj = new Date(`${monthStr} 1, ${yearStr}`);
-          const lastDay = new Date(dateObj.getFullYear(), dateObj.getMonth() + 1, 0);
-
-          // Store sortable ISO date
-          item.date = lastDay.toISOString().split('T')[0];
-
-          // Also store display-friendly date
-          const day = lastDay.getDate();
-          const month = lastDay.toLocaleString('default', { month: 'long' });
-          const year = lastDay.getFullYear();
-          item._displayDate = `${day} ${month} ${year}`;
-        }
-      }
       const date = item._displayDate || item.date || 'N/A';
-      const dateHref = buildMonthlyLogHref(date);
+      const dateHref = item._monthLogHref;
 
       if (isSummary) {
         // For summaries, extract text before <ul> and render expenses properly
@@ -455,13 +552,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         return `
           <div class="menu-item">
-            ${img !== defaultImage && img !== "No image" ? `<img class="menu-item-image" src="${img}" alt="${name}">` : ''}
+              ${img !== defaultImage && img !== "No image" ? `<img class="menu-item-image" data-src="${img}" src="${imagePlaceholder}" alt="${name}" loading="lazy" decoding="async">` : ''}
             <div class="menu-item-text" style="flex-grow: 1;">
               <h3 class="menu-item-heading">
                 <span class="menu-item-name">${name}</span>
                 <span class="menu-item-price">${price}</span>
               </h3>
-              <h3><span class="meal-type">${restaurant}</span></h3>
+              <h3><span class="meal-type">${summaryMonthHref ? `<a class="summary-month-link" href="${summaryMonthHref}">${restaurant}</a>` : restaurant}</span></h3>
               ${summaryText ? `<div class="summary-text-box">${summaryText}</div>` : ''}
               ${expensesText ? `<div class="summary-expenses">${expensesText}</div>` : ''}
             </div>
@@ -471,7 +568,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       return `
         <div class="menu-item">
-          <img class="menu-item-image" src="${img}" alt="${name}">
+          <img class="menu-item-image" data-src="${img}" src="${imagePlaceholder}" alt="${name}" loading="lazy" decoding="async">
           <div class="menu-item-text">
             <h3 class="menu-item-heading">
               <span class="menu-item-name">${name}</span>
@@ -494,16 +591,75 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       clusterizeInstance.update(htmlArray);
     }
+
+    requestAnimationFrame(() => hydrateVisibleImages());
+  }
+
+  function hydrateVisibleImages() {
+    const images = menuGroup.querySelectorAll('img[data-src]');
+
+    if (!images.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+      images.forEach(img => {
+        if (img.dataset.src) img.src = img.dataset.src;
+        img.removeAttribute('data-src');
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        const img = entry.target;
+        const realSrc = img.dataset.src;
+        if (realSrc) {
+          img.src = realSrc;
+          img.removeAttribute('data-src');
+        }
+        obs.unobserve(img);
+      }
+    }, {
+      root: scrollArea,
+      rootMargin: '200px 0px',
+    });
+
+    images.forEach(img => observer.observe(img));
   }
 
   const cachedData = {};
 
+  function syncInsightsIfOpen(filteredItems) {
+    if (currentMode !== 'summary') return;
+    if (insightsPanel.style.display !== 'block') return;
+
+    const metricKey = insightMetricDropdown.value;
+    const order = getInsightOrderFromMainSort();
+    const ranking = getMetricRanking(filteredItems, metricKey, order);
+    renderMetricInsights(ranking, metricKey, order);
+    showInsightButton.textContent = 'Hide Insight';
+    lastInsightKey = `${metricKey}|${order}`;
+  }
+
+  function renderCurrentView() {
+    const query = parseSearchQuery(searchBox.value);
+    const metricKey = getSelectedInsightMetric();
+    const sortBy = normalizeSortBy(sortDropdown.value, currentMode);
+    const filtered = filterItems(window.allFoodItems || [], query, currentMode, sortBy, metricKey);
+    const sorted = sortItems(filtered, currentMode, sortBy, metricKey);
+
+    renderItems(sorted);
+    resultCountText.textContent = `${sorted.length} results found`;
+    refreshInsightsControlsVisibility();
+    syncInsightsIfOpen(sorted);
+
+    return sorted;
+  }
+
   function loadCSVData(csv) {
     if (cachedData[csv]) {
       window.allFoodItems = cachedData[csv];
-      const filtered = applySearchAndSort();
-      renderItems(filtered);
-      resultCountText.textContent = `${filtered.length} results found`;
+      renderCurrentView();
       return;
     }
 
@@ -516,36 +672,20 @@ document.addEventListener('DOMContentLoaded', function () {
           (row.title && (row.date || row.month_url))
         );
 
-        cachedData[csv] = items;
-        window.allFoodItems = items;
-
-        const filtered = applySearchAndSort();
-        renderItems(filtered);
-        resultCountText.textContent = `${filtered.length} results found`;
+        const prepared = preprocessItems(items);
+        cachedData[csv] = prepared;
+        window.allFoodItems = prepared;
+        renderCurrentView();
       }
     });
   }
 
   searchBox.addEventListener("input", debounce(() => {
-    const filtered = applySearchAndSort();
-    renderItems(filtered);
-    resultCountText.textContent = `${filtered.length} results found`;
+    renderCurrentView();
   }, 500));
 
   sortDropdown.addEventListener("change", () => {
-    const filtered = applySearchAndSort();
-    renderItems(filtered);
-    resultCountText.textContent = `${filtered.length} results found`;
-
-    refreshInsightsControlsVisibility();
-
-    if (currentMode === 'summary' && insightsPanel.style.display === 'block') {
-      const metricKey = insightMetricDropdown.value;
-      const order = getInsightOrderFromMainSort();
-      const ranking = getMetricRanking(filtered, metricKey, order);
-      renderMetricInsights(ranking, metricKey, order);
-      lastInsightKey = `${metricKey}|${order}`;
-    }
+    renderCurrentView();
   });
 
   toggleButton.addEventListener("click", () => {
@@ -571,7 +711,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
   showInsightButton.addEventListener("click", () => {
     if (currentMode !== 'summary') return;
-    const filtered = applySearchAndSort();
     const metricKey = insightMetricDropdown.value;
     const order = getInsightOrderFromMainSort();
     const currentKey = `${metricKey}|${order}`;
@@ -584,26 +723,15 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    const ranking = getMetricRanking(filtered, metricKey, order);
-    renderMetricInsights(ranking, metricKey, order);
+    insightsPanel.style.display = 'block';
     showInsightButton.textContent = 'Hide Insight';
     lastInsightKey = currentKey;
+    renderCurrentView();
   });
 
   insightMetricDropdown.addEventListener("change", () => {
     if (currentMode !== 'summary') return;
-
-    const filtered = applySearchAndSort();
-    renderItems(filtered);
-    resultCountText.textContent = `${filtered.length} results found`;
-
-    if (insightsPanel.style.display === 'block') {
-      const metricKey = insightMetricDropdown.value;
-      const order = getInsightOrderFromMainSort();
-      const ranking = getMetricRanking(filtered, metricKey, order);
-      renderMetricInsights(ranking, metricKey, order);
-      lastInsightKey = `${metricKey}|${order}`;
-    }
+    renderCurrentView();
   });
 
   document.getElementById("backHomeButton").addEventListener("click", () =>

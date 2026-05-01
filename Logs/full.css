@@ -132,6 +132,11 @@ body {
   object-fit: cover;
   margin-right: 2em;
   border-radius: 8px;
+  background: #f3eef9;
+}
+
+.menu-item-image[src^="data:image/svg+xml"] {
+  background: linear-gradient(135deg, #f3eef9 0%, #ece3f7 100%);
 }
 
 .menu-item-text { flex-grow: 1; }
@@ -152,9 +157,24 @@ body {
   color: #8c00ff;
 }
 
+.menu-item-price s {
+  color: #7d7d7d;
+  opacity: 0.85;
+  margin-right: 0.3em;
+}
+
 .meal-type {
   font-size: 18px;
   color: #777;
+}
+
+.summary-month-link,
+.summary-month-link:visited,
+.summary-month-link:hover,
+.summary-month-link:active,
+.summary-month-link:focus {
+  color: inherit;
+  text-decoration: none;
 }
 
 .menu-item-description {
@@ -163,14 +183,13 @@ body {
   color: #555;
 }
 
-.date-link {
-  color: #0069d9;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-.date-link:hover {
-  color: #004ca0;
+.date-link,
+.date-link:visited,
+.date-link:hover,
+.date-link:active,
+.date-link:focus {
+  color: inherit;
+  text-decoration: none;
 }
 
 .menu-group-heading {

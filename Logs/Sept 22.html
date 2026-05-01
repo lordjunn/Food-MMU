@@ -12,39 +12,24 @@
 </head>
 
 <body>
-  <div class="container">
-      <ul id="navMenu">
-          <li><a href="index.html">Index</a></li>
-          <li><a>Food</a>
-              <ul>
-                <li><a href="Starbees.html">Starbees</a></li>
-                <li><a href="HTC.html">HTC</a></li>
-                <li><a href="Komatra.html">Komatra</a></li>
-                <li><a href="Deens.html">Deens Cafe</a></li>
-              </ul>
-          </li>
-      </ul></div>
+  <div id="header-config"
+    data-year="2022"
+    data-month="Sep"
+    data-days="21"
+    data-reasons=""
+    data-text="
+    &quot;This is me 1 month after being in MMU&quot;.<br>
+    ">
+</div>
+<!-- This will hold the dynamically generated header -->
+<div id="header-container"></div>
 
-      <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            Food Archive - September 2022
-          </h2>
-          <br>
-          <p>Days in MMU: 21 days.
-          </p>      
-      </div>
-    </div>
+  
+
+      
 
     <div class="container">
-      <div class="menu">
-        <h2 class="menu-group-heading">
-          September 2022
-        </h2>
-        <br>
-        <p>"This is me 1 month after being in MMU".<br>
-        </p>      
-      </div>
+      
     
       <div class="menu">
       <h2 class="menu-group-heading">
@@ -1060,9 +1045,7 @@
      </div>
     
       <div class="menu">
-      <h2 class="menu-group-heading">
-       September 2022 Spendings
-      </h2>
+        <div id="footer-container"></div>
       <div class="menu-group">
     
         <div class="menu-item">
@@ -1095,7 +1078,10 @@
     
     </div>
 
-  </div>
+    <canvas id="mealChart" width="400" height="200"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="text/javascript" src="months.js"></script>
+</div>
 </body>
 
 </html>

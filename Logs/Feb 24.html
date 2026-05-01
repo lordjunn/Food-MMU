@@ -12,45 +12,26 @@
 </head>
 
 <body>
-  <div class="container">
-      <ul id="navMenu">
-          <li><a href="../index.html">Index</a></li>
-          <li><a>Food</a>
-              <ul>
-                <li><a href="Starbees.html">Starbees</a></li>
-                <li><a href="HTC.html">HTC</a></li>
-                <li><a href="Dapo Sahang.html">Dapo Sahang</a></li>
-                <li><a href="Deens.html">Deens Cafe</a></li>
-              </ul>
-          </li>
-      </ul></div>
+  <div id="header-config"
+    data-year="2024"
+    data-month="Feb"
+    data-days="9"
+    data-reasons="
+    CNY Online week - 5/2 - 11/2,
+    Study week - 12/2 - 18/2,
+    Trimester break - 23/2 - 24/3
+    "
+    data-text="">
+</div>
+<!-- This will hold the dynamically generated header -->
+<div id="header-container"></div>
 
-      <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            Food Archive - February 2024
-          </h2>
-          <br>
-          <p>Days in MMU: 9 days<br>
-            Reasons:
-            <ul>
-              <li>CNY Online week - 5/2 - 11/2</li>
-              <li>Study week - 12/2 - 18/2</li>
-              <li>Trimester break - 23/2 - 24/3</li>
-            </ul>
-          </p>
-      </div>
-    </div>
+  
+
+      
 
     <div class="container">
-        <div class="menu">
-          <h2 class="menu-group-heading">
-            Feb 2024
-          </h2>
-          <br>
-          <p><br>
-          </p>
-        </div>
+        
 
 
 
@@ -338,9 +319,7 @@
 </div>
 
 <div class="menu">
-  <h2 class="menu-group-heading">
-   Feb 2024 Spendings
-  </h2>
+    <div id="footer-container"></div>
   <div class="menu-group">
 
     <div class="menu-item">
@@ -383,6 +362,9 @@
 
 
 
+  <canvas id="mealChart" width="400" height="200"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script type="text/javascript" src="months.js"></script>
 </div>
 </body>
 
