@@ -58,11 +58,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function parsePrice(p) {
     if (!p) return 0;
-    const raw = String(p).toLowerCase().trim();
-    if (raw === "free" || raw === "free!") return 0;
+
+    // Strip HTML tags so strike-throughs don't confuse detection
+    const stripped = String(p).replace(/<[^>]*>/g, ' ').replace(/,/g, ' ').toLowerCase().trim();
+
+    // If the rendered text contains 'free' treat it as 0 (covers 'Free' or 'Free!').
+    if (/\bfree\b/.test(stripped)) return 0;
 
     // Supports values like: RM <s>10.50</s> 10.00 (use actual paid price).
-    const nums = String(p).match(/\d+(?:\.\d+)?/g);
+    const nums = stripped.match(/\d+(?:\.\d+)?/g);
     if (!nums || !nums.length) return 0;
 
     const n = parseFloat(nums[nums.length - 1]);
