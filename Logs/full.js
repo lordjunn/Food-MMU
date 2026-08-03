@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const showInsightButton = document.getElementById('showInsightButton');
   const insightsPanel = document.getElementById('insightsPanel');
   const scrollArea = document.getElementById('scrollArea');
+  const menuGroupHeading = document.querySelector('.menu-group-heading');
 
   const defaultImage = 'https://lordjunn.github.io/Study-With-Junn/img/Sumire.png';
   const imagePlaceholder = 'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1 1"%3E%3C/svg%3E';
@@ -29,6 +30,13 @@ document.addEventListener('DOMContentLoaded', function () {
       ascOpt.textContent = 'Sort by Price (Lowest)';
       descOpt.textContent = 'Sort by Price (Highest)';
     }
+  }
+
+  function updateHeadingForMode() {
+    if (!menuGroupHeading) return;
+    menuGroupHeading.textContent = currentMode === 'summary'
+      ? 'All Monthly Logs'
+      : 'All Food Logs';
   }
 
   function shouldShowInsightsControls() {
@@ -236,10 +244,6 @@ document.addEventListener('DOMContentLoaded', function () {
     cashDamage: {
       label: 'Cash Damage',
       extractor: (item, plain) => extractMetricFromText(plain, /cash\s*damage\s*-\s*rm\s*([0-9][0-9,]*(?:\.[0-9]+)?)/i),
-    },
-    totalDamage: {
-      label: 'Total Damage',
-      extractor: (item, plain) => extractMetricFromText(plain, /total\s*damage\s*-\s*rm\s*([0-9][0-9,]*(?:\.[0-9]+)?)/i),
     },
   };
 
@@ -698,6 +702,7 @@ document.addEventListener('DOMContentLoaded', function () {
       currentMode = "summary";
       toggleButton.textContent = "Show Full Log";
       updateSortDropdownLabelsForMode();
+      updateHeadingForMode();
       refreshInsightsControlsVisibility();
     } else {
       currentCSV = "menu_items2.csv";
@@ -708,6 +713,7 @@ document.addEventListener('DOMContentLoaded', function () {
       showInsightButton.textContent = 'Show Insight';
       lastInsightKey = null;
       updateSortDropdownLabelsForMode();
+      updateHeadingForMode();
       refreshInsightsControlsVisibility();
     }
     loadCSVData(currentCSV);
@@ -743,5 +749,6 @@ document.addEventListener('DOMContentLoaded', function () {
   );
 
   updateSortDropdownLabelsForMode();
+  updateHeadingForMode();
   loadCSVData(currentCSV);
 });
