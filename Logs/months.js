@@ -73,20 +73,31 @@ if (headerContainer) {
     </li>
   `;
 
-  // Build the archive submenu links dynamically, skipping July 2022
+  // Build the archive submenu links dynamically
   let archiveLinks = '';
+
+  // 1. Previous month link (skips July 2022)
   if (!(prevMonth === "Jul" && prevYear === 2022)) {
     archiveLinks += `
       <li><a href="${prevMonth} ${prevYear.toString().slice(-2)}.html">
         ${monthMap[prevMonth]} ${prevYear}
       </a></li>`;
   }
-  if (!(nextMonth === "Jul" && nextYear === 2022)) {
+
+  // 2. Next month link (Points to V2 on Aug 2026, otherwise generates next month)
+  if (currentMonth === "Aug" && currentYear === 2026) {
+    archiveLinks += `
+      <li><a href="https://lordjunn.github.io/Dine-With-Junn/2026-09.html" target="_blank">
+        September 26 (V2) ↗
+      </a></li>`;
+  } else if (!(nextMonth === "Jul" && nextYear === 2022)) {
     archiveLinks += `
       <li><a href="${nextMonth} ${nextYear.toString().slice(-2)}.html">
         ${monthMap[nextMonth]} ${nextYear}
       </a></li>`;
   }
+
+  // 3. Full Archive link
   archiveLinks += `<li><a href="full.html">Full Archive</a></li>`;
 
   const navMenuHTML = `
