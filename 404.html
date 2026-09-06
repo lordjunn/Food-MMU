@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Meal Not Found | Dine with Junn</title>
+  
+  <!-- Font matching your blog -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: #f7f7f9;
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .error-card {
+      background: #ffffff;
+      max-width: 520px;
+      width: 100%;
+      border-radius: 12px;
+      padding: 36px 28px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      border: 1px solid #eaeaea;
+    }
+
+    .error-image {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+    }
+
+    h1 {
+      font-size: 26px;
+      color: rgb(36, 0, 62);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 24px;
+    }
+
+    .divider {
+      height: 2px;
+      background: #8c00ff;
+      opacity: 0.2;
+      margin: 20px 0;
+    }
+
+    /* --- V1 Signature Sharp Button Styling --- */
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn {
+      flex: 1;
+      display: block;
+      padding: 10px 0;
+      font-size: 14px;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 0px; /* Sharp corners like #navMenu */
+      transition: background 0.15s, color 0.15s;
+    }
+
+    /* Matches your #navMenu a */
+    .btn-secondary {
+      background: #666666;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+    }
+
+    .btn-secondary:hover {
+      background: #cccccc;
+      color: #333333;
+    }
+
+    /* Highlighted V2 Button (Sharp Deep Purple) */
+    .btn-primary {
+      background: rgb(36, 0, 62);
+      color: #ffffff;
+      border: 1px solid #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: #4b0082;
+      color: #ffffff;
+    }
+
+
+    @media (max-width: 480px) {
+      .btn-row {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="error-card">
+    <!-- Uses absolute URL so it never breaks regardless of where 404 is triggered -->
+    <img 
+      class="error-image" 
+      src="https://lordjunn.github.io/Study-With-Junn/img/Sumire.png" 
+      alt="Lost"
+    >
+
+    <h1>404: Meal Not Found</h1>
+    
+    <p>
+      Whatever you were looking for doesn't exist at this address.<br>
+      Did you mistype a restaurant or check for a month beyond August 2026?
+    </p>
+
+    <div class="divider"></div>
+
+    <div class="button-group">
+      <div class="btn-row">
+        <a href="https://lordjunn.github.io/Food-MMU/index.html" class="btn btn-secondary">
+          Index
+        </a>
+        <a href="https://lordjunn.github.io/Food-MMU/Logs/full.html" class="btn btn-secondary">
+          Full Archive
+        </a>
+      </div>
+
+      <a href="https://lordjunn.github.io/Dine-With-Junn/" class="btn btn-primary" target="_blank">
+        Dine with Junn V2 (Career Era) ↗
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
