@@ -880,7 +880,7 @@ They take your whole meal
           So long as you do not get beaten up.
           ""Fake nasi pattaya"" - dad","2023/January/2023, January, image 16.png"
 13 January 2023 (Friday),Braised Chicken Rice,HSH,RM 7.50,"(Lunch, food)",Good.,"2023/January/2023, January, image 17.png"
-13 January 2023 (Friday),3 Layer Tea,BBC,<s>RM 4.00</s> Free,"(Lunch, drink)",Much love to Seen Herrscher of Procrastination for the treat.,"2023/January/2023, January, image 18.png"
+13 January 2023 (Friday),3 Layer Tea,BBC,<s>RM 4.00</s> Free,"(Lunch, drink)",Much love to <s>Seen</s> Herrscher of Procrastination for the treat.,"2023/January/2023, January, image 18.png"
 16 January 2023 (Monday),Mixed Rice,Mama Homecook Mixed Rice,RM 7.30,(Lunch),"Free chinese tea? Good.
               Thanks to group mate for sending me and back.","2023/January/2023, January, image 19.png"
 16 January 2023 (Monday),Nasi Goreng Kampung,Komatra,RM 7.00,(Dinner),"CAN CATS STOP RAIDING ME??
@@ -1268,8 +1268,13 @@ Tambah Nasi - RM 1.00
           Edit @ 10/9/2026: Renamed from ""Nasi Goreng Kampung Tambah Nasi"" to ""Nasi Goreng Kampung"" to streamline naming scheme, also for Laravel foodie site to properly update.","2023/May/2023, May, image 24.png"
 18 May 2023 (Thursday),Nasi Campur,Dapo Sahang,RM 5.50,(Lunch),"Curry at home is better.
           The red chicken is small af.","2023/May/2023, May, image 25.png"
-18 May 2023 (Thursday),Nasi Goreng Seafood Tambah Nasi,Dapo Sahang,RM 9.00,(Dinner),"Its better without adding rice.
-          Slightly more than 2 prawns, while its just 3 squids.","2023/May/2023, May, image 26.png"
+18 May 2023 (Thursday),Nasi Goreng Seafood,Dapo Sahang,RM 9.00,(Dinner),"Its better without adding rice.
+          Slightly more than 2 prawns, while its just 3 squids.
+          
+Nasi Goreng Seafood - RM 8.00
+Tambah Nasi - RM 1.00
+
+          Edit @ 10/9/2026: Renamed from ""Nasi Goreng Seafood Tambah Nasi"" to ""Nasi Goreng Seafood"" to streamline naming scheme, also for Laravel foodie site to properly update.","2023/May/2023, May, image 26.png"
 19 May 2023 (Friday),Nasi Campur,Dapo Sahang,RM 5.50,(Lunch),"A little sambal on the edge.
           Teh o ais is somehow free they said, so I took it.","2023/May/2023, May, image 27.png"
 22 May 2023 (Monday),Nasi Campur,Dapo Sahang,RM 5.50,(Lunch),A little ckt was taken.,"2023/May/2023, May, image 28.png"
@@ -1311,14 +1316,16 @@ Fried egg - RM 1.80
           Expiry date: 16:44, 18/3/2023","2023/May/2023, May, image 41.png"
 30 May 2023 (Tuesday),Nasi Campur,Dapo Sahang,RM 5.50,(Lunch),"Both the yellow and white version has their unique tastes.
           Former is dry, latter is wet.","2023/May/2023, May, image 42.png"
-30 May 2023 (Tuesday),Nasi Goreng Biasa Tambah Nasi,Dapo Sahang,RM 6.00,(Dinner),"Additional modifier:
-          
-No spicy
-          
-        On the bright side, they actually have this customisation.
-        It wont burn my mouth now.
+30 May 2023 (Tuesday),Nasi Goreng Biasa,Dapo Sahang,RM 6.00,(Dinner),"Additional modifier: No spicy
+          On the bright side, they actually have this customisation.
+          It wont burn my mouth now.
 
-        Flip side is... Am I really going to cope with this?","2023/May/2023, May, image 43.png"
+          Flip side is... Am I really going to cope with this?
+          
+Nasi Goreng Biasa - RM 5.00
+Tambah Nasi - RM 1.00
+
+          Edit @ 10/9/2026: Renamed from ""Nasi Goreng Biasa Tambah Nasi"" to ""Nasi Goreng Biasa"" to streamline naming scheme, also for Laravel foodie site to properly update.","2023/May/2023, May, image 43.png"
 31 May 2023 (Wednesday),Nasi Campur,HTC,RM 8.00,(Lunch),"Damn I'm full.
       
 Rice - RM 2.00
@@ -1328,7 +1335,7 @@ Vegetable - RM 1.00","2023/May/2023, May, image 44.png"
 
           ""Can I have an empty cup?"" <i>proceeds to pour own water into said cup, cheapskate.</i>","2023/May/2023, May, image 45h.png"
 1 June 2023 (Thursday),CKT + Maggi + Fried egg,Vendor #1,RM 6.00,(Lunch),"""Sapot lokal""
-proceeds to not support business week kids
+<s>proceeds to not support business week kids</s>
 
 Char Kuey Teow - 1 scoop
 Maggi - 1 scoop
@@ -1354,7 +1361,7 @@ Base burger - RM 4.50
           But all was worth it.
           Won the battle, lost the war.
           ""Unbowed, unbent, unbroken""
-Pls do not order so little next time, its basically kids meal v2.
+<s>Pls do not order so little next time, its basically kids meal v2.</s>
           Total cash damage logs below:
           
 Entrace to PWTC - RM 10.00
@@ -1451,8 +1458,13 @@ Corn Cheese Crackers
 22 June 2023 (Thursday),Numee,Spicy,Free,(Dinner 2),"How to ruin perfectly fine noodles 101, goreng without proper goreng materials.
           Took a mimi after.","2023/June/2023, June, image 34.png"
 23 June 2023 (Friday),Nasi Campur,Dapo Sahang,RM 7.00,(Lunch),Uh. What. Why are you getting expensive.,"2023/June/2023, June, image 35.png"
-23 June 2023 (Friday),Nasi Goreng Seafood Tambah Nasi,Dapo Sahang,RM 9.00,(Dinner),"I'm banning this thing, the rice is wet.
-          I should've topped up 1 more ringgit for actual decent food.","2023/June/2023, June, image 36.png"
+23 June 2023 (Friday),Nasi Goreng Seafood,Dapo Sahang,RM 9.00,(Dinner),"I'm banning this thing, the rice is wet.
+          I should've topped up 1 more ringgit for actual decent food.
+          
+Nasi Goreng Seafood - RM 8.00
+Tambah Nasi - RM 1.00
+
+          Edit @ 10/9/2026: Renamed from ""Nasi Goreng Seafood Tambah Nasi"" to ""Nasi Goreng Seafood"" to streamline naming scheme, also for Laravel foodie site to properly update.","2023/June/2023, June, image 36.png"
 24 June 2023 (Saturday),Kra Paw Chicken Rice,Boat Noodle,RM 19.90,(Lunch),"1st time trying, I'm not a fan of the noodles.
           Mall food do be expensive, this is a whole day at mmu.
 
@@ -1470,7 +1482,7 @@ Presumed movie top up - RM 10 <!-- 27/7/2026: im confused on this one as i cant 
           
 MRT on the way back - RM 3.90 <!-- 27/7/2026: im confused on this one but imma assume is more of paying for someone -->
     
-          ...well unless it's worth enough with people sponsoring some of ur trip
+          ...well unless it's worth enough <s>with people sponsoring some of ur trip</s>
 <small>i paid for this thing</small>","2023/June/2023, June, image 38.png"
 3 July 2023 (Monday),Mixed Rice,Mama Homecook Mixed Rice,RM 8.80,(Lunch),"Did they just take away my plate when I just went to refill tea?
                     I'm not even done with my chicken skin...","2023/July/2023, July, image 1.png"
@@ -1600,7 +1612,9 @@ Tambah Nasi - RM 1.00
 6 September 2023 (Wednesday),Nasi Campur,Deens Cafe,RM 9.00,(Lunch),"No way Junn in deens?!?!?!?
                     Slighty more expensive vs HTC, the chicken has less ""mamak taste"".","2023/September/2023, September, image 5.png"
 6 September 2023 (Wednesday),Kuey Teow Goreng Biasa,Restoran Al Bidayah,RM 6.50,(Dinner),The maggi goreng seems mid.,"2023/September/2023, September, image 6.png"
-7 September 2023 (Thursday),Dry Kuey Tiao (spicy),Home Sweet Home,RM 7.00,(Lunch),It's... not spicy??,"2023/September/2023, September, image 7.png"
+7 September 2023 (Thursday),Dry Kuey Tiao (spicy),HSH,RM 7.00,(Lunch),"It's... not spicy??
+
+                    Edit @ 10/9/2026: Standardised restaurant tag from ""Home Sweet Home"" to ""HSH"" to streamline naming scheme, also for Laravel foodie site to properly update.","2023/September/2023, September, image 7.png"
 7 September 2023 (Thursday),Nasi Goreng Pattaya,Restoran Al Bidayah,RM 9.00,(Dinner),...Nasi goreng cina wrapped with egg.,"2023/September/2023, September, image 8.png"
 8 September 2023 (Friday),Roti Telur,Restoran Al Bidayah,RM 3.00,(Breakfast),"This is like the 4th day in a row here, I ran out of breakfast food and I don't wanna drive home hungry.
                     Dhal tastes kinda burnt, everything else is fine.","2023/September/2023, September, image 9.png"
@@ -1762,7 +1776,7 @@ Soy sauce?
 8 Nov 2023 (Wednesday),Thai Style Creamy Butter Pork Rice,Hinz Kitchen,RM 10.90,(Dinner),"Playing safe, didn't wanna add rice.
 <small>干我也被传染了是吗</small>","2023/November/2023, November, image 12.png"
 9 Nov 2023 (Thursday),Yang Zhou Fried Rice,Fu Jee Ulu Yam Loh Mee,RM 9.00,(Lunch),"So I DID get sick, didn't finish it, probably 33% - 50% done.
-<small>Proceeds to skip dinner due to sleeping</small>","2023/November/2023, November, image 13.png"
+<small><s>Proceeds to skip dinner due to sleeping</s></small>","2023/November/2023, November, image 13.png"
 10 Nov 2023 (Friday),Maggi cup,Instant Noodles,"""Free""",(Lunch),"Daze~
                     Apparently not eating for over 18(?) hours does ""wonders"" to me.","2023/November/2023, November, image 14.png"
 20 Nov 2023 (Monday),Nasi Campur,Dapo Sahang,RM 6.00,(Lunch),Maybe I shouldn't had took the kangkung.,"2023/November/2023, November, image 15.png"
@@ -1816,7 +1830,7 @@ Soy sauce?
 Sweet sour chicken
 
                     Overall good.","2023/November/2023, November, image 32.png"
-28 Nov 2023 (Tuesday),Nasi Goreng Kampung,Warung Hanna Crystalville,RM 8.00,(Dinner),"I was going to go out with the MMU bois, but Odin leashed told me we have the roleplay to do.
+28 Nov 2023 (Tuesday),Nasi Goreng Kampung,Warung Hanna Crystalville,RM 8.00,(Dinner),"I was going to go out with the MMU bois, but Odin <s>leashed</s> told me we have the roleplay to do.
                     And in a funni twist, housemates decided to go there with my car.
                     Real.
 <small>How do I drive better at night?</small>
@@ -1893,10 +1907,14 @@ Supposedly Buttermilk chicken
 
       3 chicken pieces, 1 that's mid wing. That is enough pieces.
       You can scoop an entire spoonful of vege.","2023/December/2023, December, image 12.png"
-13 Dec 2023 (Wednesday),Nasi Goreng Biasa Tambah Nasi,Famous Bistro Cafe,RM 7.00,(Dinner),"Quite filling, just a few minor complaints.
+13 Dec 2023 (Wednesday),Nasi Goreng Biasa,Famous Bistro Cafe,RM 7.00,(Dinner),"Quite filling, just a few minor complaints:
+          - HOTTTTTTTT (temperature, not spice)
+          - No meat at all?
           
-HOTTTTTTTT (temperature, not spice)
-No meat at all?","2023/December/2023, December, image 13.png"
+Nasi Goreng Biasa - RM 6.00
+Tambah Nasi - RM 1.00
+
+          Edit @ 10/9/2026: Renamed from ""Nasi Goreng Biasa Tambah Nasi"" to ""Nasi Goreng Biasa"" to streamline naming scheme, also for Laravel foodie site to properly update.","2023/December/2023, December, image 13.png"
 14 Dec 2023 (Thursday),Grand Opening Food,Chennai Spice Express,Free!,(Lunch Plate 1),"Congratulations for your opening!!
       
 Biryani Rice
@@ -2088,7 +2106,7 @@ Pour the remaining packets in
 18 Apr 2024 (Thursday),AD 79,Burger King,RM 11.95,(Dinner),"Contains:
                   
 Double Whopper Jr.
-Chocolate Sundae Vanilla Soft Serve
+<s>Chocolate Sundae</s> Vanilla Soft Serve
 Coke
 
                   
@@ -2140,7 +2158,7 @@ Tambah Nasi - RM 1.50","2024/April/2024, April, image 16.png"
                   And today somehow they had choco sundaes.
                   
 BK Chick'N Crisp
-Onion Rings Fries
+<s>Onion Rings</s> Fries
 Coke Zero
   
                 Today I learnt that the Fries are the exact same price as the Onion Rings, at least when referring here.","2024/April/2024, April, image 18.png"
@@ -3128,7 +3146,7 @@ At least 2 or 3 scoops of rice
                     The rice could be better.
 
                     ...okay maybe I could order just rice &amp; telur dadar. That soup is likely unnecessary, but still a good drink.
-                    3 nuggets added on for prosperity reasons as a ""backup source of food"".
+                    3 nuggets added on <s>for prosperity reasons</s> as a ""backup source of food"".
                     
 Rice - 2.00
 Telur Dadar - 2.00
@@ -3349,7 +3367,7 @@ At least 3 or 4 scoops of rice
 15 Apr 2025 (Tuesday),Nasi Ayam Penyet,Sky Malaysia,RM 9.00,(Lunch),"Last seen 5 Feb 2025.
                     My chicken has a different colour &amp; pattern compared to the other 3.
                     Still a good meal nonetheless.","2025/April/2025, April, image 11.png"
-15 Apr 2025 (Tuesday),Nasi Kerabu + Ayam Goreng Berempah,RMY Solutions,RM 9.00,(Dinner),"Was thinking of supporting them again, they may have messed up my order.
+15 Apr 2025 (Tuesday),Nasi Kerabu,RMY Solutions,RM 9.00,(Dinner),"Was thinking of supporting them again, they may have messed up my order.
                     Asked for separation of sauce, not found.
                     
 Nasi Kerabu - 5.00
@@ -3364,7 +3382,9 @@ Curry - went into rice, otherwise good
 Brown things - some sort of thing I had before... don't know the name but it's sweet and commonly found in kuihs.
 Chili - spicy still.
                     
-                  I can get better food for the price, but this is not too heaty I guess.","2025/April/2025, April, image 12.png"
+                  I can get better food for the price, but this is not too heaty I guess.
+
+                  Edit @ 10/9/2026: Renamed from ""Nasi Kerabu + Ayam Goreng Berempah"" to ""Nasi Kerabu"" to streamline naming scheme, also for Laravel foodie site to properly update.","2025/April/2025, April, image 12.png"
 16 Apr 2025 (Wednesday),Mixed Rice,Mama Homecook Mixed Rice,RM 8.00,(Lunch),"No Thai Dory Fish found, so I gambled for this as I'm at the end of the queue already.
                     ""8.8."" Have you included the discount for Chinese Club Membership? <i>shows the new card</i> ""Oh, 8.""
 
@@ -3403,7 +3423,7 @@ Chili - spicy still.
 1 scoop Kangkung
 Spoonfuls of mixed pork curry + buttermilk sauce
 
-This should be one if not the most expensive meal I had here.
+<s>This should be one if not the most expensive meal I had here.</s>
                 Oh hell nah I had more expensive experiences, but this is the most expensive in 2025 <i>for now</i>.","2025/April/2025, April, image 21.png"
 23 Apr 2025 (Wednesday),Nasi Lemak Ayam Bawang,Dapur Chilli,RM 10.00,(Dinner),"The bawang is fine by itself, but directly eating it doesn't feel like anything much.
                     The chicken breast (I chose) is a little dry, but that's to be expected.
@@ -4331,7 +4351,7 @@ Regular rice
                 Can't fault me for thinking ""did I take something less?"" when I was given those prices.","2025/October/2025, October, image 17.png"
 27 Oct 2025 (Monday),Roasted Pork Rice,Double D Restaurant Puchong,RM 11.00,(Lunch),"Due to some people delaying my lunch I'm forced to jump ship.
                 Oh, it's 11. Didn't know. They ran out of char siew. Oh well.","2025/October/2025, October, image 18.png"
-03 Nov 2025 (Monday),Nasi Kandar,AS Nasi Kandar,RM 7.50,(Lunch),"Somehow Sky Malaysia is closed due to Health Inspectors Boss Wedding (congratulations), so this shall be the first meal to welcome me back.
+03 Nov 2025 (Monday),Nasi Kandar,AS Nasi Kandar,RM 7.50,(Lunch),"Somehow Sky Malaysia is closed due to <s>Health Inspectors</s> Boss Wedding (congratulations), so this shall be the first meal to welcome me back.
                 
 Limau Ais: expected taste
 Chicken: chose thigh, is ok
@@ -4531,7 +4551,7 @@ Part 2:
 
                 Keli will take a while, and it's more expensive. Does it give more meat vs quarter chicken?
 <small>4 people didn't take their greens. Angy.</small>","2025/November/2025, November, image 24.png"
-13 Nov 2025 (Thursday),Nasi Kerabu + Ayam Goreng Berempah,RMY Solutions,RM 9.00,(Dinner),"My bois seem to want to eat this, it is the same stall as I went months ago.
+13 Nov 2025 (Thursday),Nasi Kerabu,RMY Solutions,RM 9.00,(Dinner),"My bois seem to want to eat this, it is the same stall as I went months ago.
                 Has it improved? It listened to my asing, so that's good.
                 Price is the same, with 5 base, and 4 for the spiced fried chicken, thigh.
                 
@@ -4543,7 +4563,12 @@ Blue rice: could be better, some parts are slightly on harder end, not cake thou
 Everything else is commendable as the previous entry, and I used the lime to make lime water.
 
                 She mentioned most cina order less sauce (me separate, does that count?)
-                Koyori: ""I am not like the others"" (paraphrased)","2025/November/2025, November, image 25.png"
+                Koyori: ""I am not like the others"" (paraphrased)
+                
+Nasi Kerabu - RM 5.00
+Ayam Goreng Berempah - RM 4.00
+
+                Edit @ 10/9/2026: Renamed from ""Nasi Kerabu + Ayam Goreng Berempah"" to ""Nasi Kerabu"" to streamline naming scheme, also for Laravel foodie site to properly update.","2025/November/2025, November, image 25.png"
 17 Nov 2025 (Monday),Nasi Goreng Biasa,AS Nasi Kandar,RM 6.00,(Dinner),"There was a slight debate in me whether to eat Kahwin, or this. This restaurant is rarer for me to eat for dinner.
                 I assume the rotis are for breakfast, so let's have this one.
                 
@@ -5062,17 +5087,19 @@ Yellow cabbage: 1 big scoop
 Chili thing: from another chicken
 
                 Good thing there's not much cake. Herrsher said the strat is to take the inners, not the top, nor the sides.","2026/January/2026, January, image 23.png"
-21 Jan 2026 (Wednesday),Nasi Kerabu + Ayam Goreng,RMY Solutions,RM 8.00,(Dinner),"After a quite nice test, I came back to finish laundry before the boys came back.
+21 Jan 2026 (Wednesday),Nasi Kerabu,RMY Solutions,RM 8.00,(Dinner),"After a quite nice test, I came back to finish laundry before the boys came back.
                 This is the fastest meal I could think of.
                 
 Nasi Kerabu - 5.00
-Ayam Goreng - 4.00 3.00
+Ayam Goreng - <s>4.00</s> 3.00
 Chili based thing - absolute goat, albeit will choke on spiciness if not careful
 The browner one - yum, coconut based
 The red ish one - ew.
 
                 Lady said it's because it's small chicken, hence why it's +3 and not the usual +4.
-                Yes I ate it before, with my friends even back in the day.","2026/January/2026, January, image 24.png"
+                Yes I ate it before, with my friends even back in the day.
+
+                Edit @ 10/9/2026: Renamed from ""Nasi Kerabu + Ayam Goreng"" to ""Nasi Kerabu"" to streamline naming scheme, also for Laravel foodie site to properly update.","2026/January/2026, January, image 24.png"
 22 Jan 2026 (Thursday),Nasi Campur,Dapo Sahang,RM 7.00,(Lunch),"Gambled, and it seems there's still enough food despite only arriving at a little after 12.
                 Just be wary of the long queue that easens up as time passes.
                 
