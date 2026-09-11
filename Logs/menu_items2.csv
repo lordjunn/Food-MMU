@@ -910,10 +910,15 @@ Vegetable - RM 2.00","2023/January/2023, January, image 21.png"
 18 January 2023 (Wednesday),Nasi Ayam,Komatra,RM 6.50,(Lunch),"Today is quiet, no cats to be found.
           POS066941
           12:09","2023/January/2023, January, image 24.png"
-30 January 2023 (Monday),Dry Wantan Noodles (Add 1/2 noodles),HSH,RM 8.00,(Lunch),"Maybe I was too hungry, adding noodles didn't do my stomach justice.
+30 January 2023 (Monday),Dry Wantan Noodles,HSH,RM 8.00,(Lunch),"Maybe I was too hungry, adding noodles didn't do my stomach justice.
               It felt as if I ate, sure, but still feeling I can fit more in me.
 
-              11:22","2023/January/2023, January, image 25.png"
+              11:22
+
+Dry Wantan Noodles - RM 6.50
+Add 1/2 noodles - RM 1.50
+
+          Edit @ 11/9/2026: Renamed from ""Dry Wantan Noodles (Add 1/2 noodles)"" to ""Dry Wantan Noodles"" to streamline naming scheme, also for Laravel foodie site to properly update.","2023/January/2023, January, image 25.png"
 30 January 2023 (Monday),Nasi Goreng Kampung,HTC,RM 6.00,(Dinner),"Hearing Komatra still on holiday, I forced myself to lepak out of hostel.
               Somehow I went during their almost closing time?
               It was kinda empty.
@@ -1083,10 +1088,15 @@ Chicken - RM 5.00
 Vegetable - RM 1.00","2023/March/2023, March, image 8.png"
 23 March 2023 (Thursday),Nasi Campur,Dapo Sahang,RM 7.00,(Dinner),"They aren't serving made to order foods until later, so I cope with this.
           Quite alot of rice taken.","2023/March/2023, March, image 9.png"
-24 March 2023 (Friday),Dry Wantan Noodles (Add 1/2 noodles),HSH,RM 8.00,(Lunch),"Me when giving with cash even though they do not accept it:
+24 March 2023 (Friday),Dry Wantan Noodles,HSH,RM 8.00,(Lunch),"Me when giving with cash even though they do not accept it:
           (They only accept exact amount, aka no change.)
 
-          I should try adding a whole noodle next time.","2023/March/2023, March, image 10.png"
+          I should try adding a whole noodle next time.
+
+Dry Wantan Noodles - RM 6.50
+Add 1/2 noodles - RM 1.50
+
+          Edit @ 11/9/2026: Renamed from ""Dry Wantan Noodles (Add 1/2 noodles)"" to ""Dry Wantan Noodles"" to streamline naming scheme, also for Laravel foodie site to properly update.","2023/March/2023, March, image 10.png"
 28 March 2023 (Tuesday),Chicken Shawarma Large,Chef Yas,RM 10.00,(Lunch),"First time trying this, the wait time is slightly long.
           Food at the least is good.","2023/March/2023, March, image 11.png"
 28 March 2023 (Tuesday),Nasi Campur,Dapo Sahang,RM 6.00,(Dinner),"Did I take less rice, or is this chicken cheaper?","2023/March/2023, March, image 12.png"
@@ -1097,7 +1107,12 @@ Chicken - RM 5.00
 Vegetable - RM 1.00","2023/March/2023, March, image 13.png"
 29 March 2023 (Wednesday),Nasi Campur,Dapo Sahang,RM 5.00,(Dinner),"This pricing does not make sense.
           Do you get profit? Is this menu rahmah?","2023/March/2023, March, image 14.png"
-30 March 2023 (Thursday),Dry Wantan Noodles (Add 1/2 noodles),HSH,RM 8.00,(Lunch),"Splittily splattily, all the oil on my laptop.","2023/March/2023, March, image 15.png"
+30 March 2023 (Thursday),Dry Wantan Noodles,HSH,RM 8.00,(Lunch),"Splittily splattily, all the oil on my laptop.
+
+Dry Wantan Noodles - RM 6.50
+Add 1/2 noodles - RM 1.50
+
+          Edit @ 11/9/2026: Renamed from ""Dry Wantan Noodles (Add 1/2 noodles)"" to ""Dry Wantan Noodles"" to streamline naming scheme, also for Laravel foodie site to properly update.","2023/March/2023, March, image 15.png"
 30 March 2023 (Thursday),Nasi Campur,Dapo Sahang,RM 5.50,(Dinner),"Finally, not cabbage.
           I slightly prefer cabbage still.","2023/March/2023, March, image 16.png"
 31 March 2023 (Friday),Nasi Campur,HTC,RM 8.50,(Lunch),"I take back my statement. Probably chicken too big.
@@ -1333,7 +1348,7 @@ Chicken - RM 5.00
 Vegetable - RM 1.00","2023/May/2023, May, image 44.png"
 31 May 2023 (Wednesday),Salted Egg Milky Sauce Pork,Fu Jee Ulu Yam Loh Mee,RM 12.00,(Dinner),"Finally ordered BABI after several months, last seen 8 Nov 22.
 
-          ""Can I have an empty cup?"" <i>proceeds to pour own water into said cup, cheapskate.</i>","2023/May/2023, May, image 45h.png"
+          ""Can I have an empty cup?"" <i>proceeds to pour own water into said cup, cheapskate.</i>","2023/May/2023, May, image 45.png"
 1 June 2023 (Thursday),CKT + Maggi + Fried egg,Vendor #1,RM 6.00,(Lunch),"""Sapot lokal""
 <s>proceeds to not support business week kids</s>
 
@@ -1504,7 +1519,7 @@ Tambah Nasi - RM 1.00
 Rice - RM 1.5?
 Chicken - RM 6?
 Vegetable - RM 1.5?","2023/August/2023, August, image 1.png"
-7 August 2023 (Monday),"""叫菜吃饭""",Warung Hanna Crystalville,RM 16.00,(Dinner),"I have no idea how to call this thing honestly.
+7 August 2023 (Monday),叫菜吃饭,Warung Hanna Crystalville,RM 16.00,(Dinner),"I have no idea how to call this thing honestly.
           
 Rice
 Omlette
@@ -1512,7 +1527,9 @@ Ayam Kunyit
 Kailan x2
 Steam lemon chicken
 
-          Slightly on the higher end, must be because of the fish.","2023/August/2023, August, image 2.png"
+          Slightly on the higher end, must be because of the fish.
+
+          Edit @ 11/9/2026: Renamed from ""\""叫菜吃饭\"""" to ""叫菜吃饭"" to streamline naming scheme (removed accidental quotation marks), also for Laravel foodie site to properly update.","2023/August/2023, August, image 2.png"
 8 August 2023 (Tuesday),Mamee x2,Instant Noodles,N/A,(Lunch),"One person goes to cook water, so another person thought they were eating noodles.
           I see the other person eating noodles, so I was thinking no one was going to go out.
           Ends up it was a 10/10 misunderstanding, at least I save some $.","2023/August/2023, August, image 3.png"
@@ -1520,7 +1537,12 @@ Steam lemon chicken
 9 August 2023 (Wednesday),Nasi Campur,Dapo Sahang,RM 6.00,(Lunch),"It has been like forever since I had you, and your price just slightly changed.
           How nice.","2023/August/2023, August, image 5.png"
 9 August 2023 (Wednesday),Nasi Goreng Kampung,Restoran Al Bidayah,RM 7.00,(Dinner),"It's just +RM 1 vs Dapo, and it is out of campus, not complaining it does taste better kinda.","2023/August/2023, August, image 6.png"
-10 August 2023 (Thursday),Dry Wantan Noodles (Add 1/2 noodles),HSH,RM 8.00,(Lunch),"Didn't have enough exact cash, so TnG it is.","2023/August/2023, August, image 7.png"
+10 August 2023 (Thursday),Dry Wantan Noodles,HSH,RM 8.00,(Lunch),"Didn't have enough exact cash, so TnG it is.
+
+Dry Wantan Noodles - RM 6.50
+Add 1/2 noodles - RM 1.50
+
+          Edit @ 11/9/2026: Renamed from ""Dry Wantan Noodles (Add 1/2 noodles)"" to ""Dry Wantan Noodles"" to streamline naming scheme, also for Laravel foodie site to properly update.","2023/August/2023, August, image 7.png"
 10 August 2023 (Thursday),Aroii Thai,Food delivery,RM 5.00,(Dinner),"Fuck it spilled, round 2 it is then.
           Also this egg thing, is less worth than the minced chicken? 
           As I can finish it before I finish the rice.","2023/August/2023, August, image 8.png"
@@ -1747,11 +1769,13 @@ Fried rice
 Iced tea
 
           Edit @ 10/9/2026: Renamed from ""Aroi Thai"" to ""Aroii Thai"" to streamline naming scheme (it's spelt Aroii Thai per Google search), also for Laravel foodie site to properly update.","2023/November/2023, November, image 3.png"
-2 Nov 2023 (Thursday),"""叫菜吃饭""",Warung Hanna Crystalville,RM 12.00,(Dinner),"5 people from us, 4 from block D, 2 from Dpulze, and 1 from Arc.
+2 Nov 2023 (Thursday),叫菜吃饭,Warung Hanna Crystalville,RM 12.00,(Dinner),"5 people from us, 4 from block D, 2 from Dpulze, and 1 from Arc.
                     12 people.
 
                     Screw the scam rain and the paint smell.
-<small>I took like 2 pictures, both of them has Kens hand photobombing it reeee</small>","2023/November/2023, November, image 4.png"
+<small>I took like 2 pictures, both of them has Kens hand photobombing it reeee</small>
+
+                    Edit @ 11/9/2026: Renamed from ""\""叫菜吃饭\"""" to ""叫菜吃饭"" to streamline naming scheme (removed accidental quotation marks), also for Laravel foodie site to properly update.","2023/November/2023, November, image 4.png"
 3 Nov 2023 (Friday),Mixed Rice,Mama Homecook Mixed Rice,RM 9.00,(Lunch),Knew it was the extra curry vegetables hiking the price.,"2023/November/2023, November, image 5.png"
 3 Nov 2023 (Friday),Yang Zhou Fried Rice,Fu Jee Ulu Yam Loh Mee,RM 9.00,(Dinner),"Nothing much to say here, apart from its gonna be at least 13 more weeks of having dinner for this trimester.","2023/November/2023, November, image 6.png"
 6 Nov 2023 (Monday),1pc Chickenjoy with Rice,Jollibee,RM 12.90,(Lunch),"Ayam Penyet? No space to seat. So we <!-- Nousagi Endy --> went to IoI City Mall.
@@ -1864,9 +1888,11 @@ Nestum Oat Fried Chicken (麦片鸡, ryan)
           Etc. expenses for the day:
           
 MRT Day pass - RM 5.00","2023/December/2023, December, image 1.png"
-03 Dec 2023 (Sunday),Char Kuey Teow Big,Restoran D.U. Cafe (新百乐茶餐室),RM 11.00,(Dinner),"Huh, never thought it'd be THAT expensive, since the ones I usually order costs like 9.
+03 Dec 2023 (Sunday),Char Kuey Teow (Big),Restoran D.U. Cafe (新百乐茶餐室),RM 11.00,(Dinner),"Huh, never thought it'd be THAT expensive, since the ones I usually order costs like 9.
           Granted, the pork lard was ample, chinese sausages were there, and there was at least 3 small prawns.
-<small>Wait, where's the cockles.</small>","2023/December/2023, December, image 2.png"
+<small>Wait, where's the cockles.</small>
+
+          Edit @ 11/9/2026: Renamed from ""Char Kuey Teow Big"" to ""Char Kuey Teow (Big)"" to streamline naming scheme, also for Laravel foodie site to properly update.","2023/December/2023, December, image 2.png"
 06 Dec 2023 (Wednesday),Nugget??,Instant Noodles,Free?,(Lunch part 1),"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
           
           Cooking is hard, first off, slightly messed up the rice but managed to save it,
@@ -1977,9 +2003,14 @@ Hot Green Tea - RM 3.50","2023/December/2023, December, image 18.png"
           Chicken has some add ons, could be considered 2 medium scoops.
           Beware of chili for this one, as it's spicy.
 <small>I forgot the price for this as I wrote it at 16 Jan but I'd assume its the regular pricing for this.</small>","2024/January/2024, January, image 17.png"
-12 Jan 2024 (Friday),Thai Style Creamy Butter Pork Rice (Add Rice),Hinz Kitchen,RM 12.90,(Dinner),"Okay, maybe adding rice is a slight mistake, but I managed to finish it in time, just not as fast as my mates.
+12 Jan 2024 (Friday),Thai Style Creamy Butter Pork Rice,Hinz Kitchen,RM 12.90,(Dinner),"Okay, maybe adding rice is a slight mistake, but I managed to finish it in time, just not as fast as my mates.
 
-          Price breakdown being 10.9 + 2.","2024/January/2024, January, image 18.png"
+          Price breakdown being 10.9 + 2.
+
+Thai Style Creamy Butter Pork Rice - RM 10.90
+Add Rice - RM 2.00
+
+          Edit @ 11/9/2026: Renamed from ""Thai Style Creamy Butter Pork Rice (Add Rice)"" to ""Thai Style Creamy Butter Pork Rice"" to streamline naming scheme, also for Laravel foodie site to properly update.","2024/January/2024, January, image 18.png"
 15 Jan 2024 (Monday),Mixed Rice,Mama Homecook Mixed Rice,RM 8.00,(Lunch),I won't recommend this presumed marmite chicken.,"2024/January/2024, January, image 19.png"
 15 Jan 2024 (Monday),Nasi Goreng Thai,Famous Bistro Cafe,RM 10.50,(Dinner),"So this is Thai Fried Rice.
           Kinda special for them to include Tumeric Chicken? Not sure, never had it before apart from knowing the pineapple version existed.
@@ -2066,10 +2097,15 @@ Do not pour used oil into cooked noodles pot (freedom)","2024/February/2024, Feb
               Can I swap the egg into an omelette though?","2024/February/2024, February, image 11.png"
 22 Feb 2024 (Thursday),Mixed Rice,Mama Homecook Mixed Rice,RM 8.00,(Lunch),"Does he not get charged extra for asking more rice?
 <small>Oh my a thing fell off</small>","2024/February/2024, February, image 12.png"
-22 Feb 2024 (Thursday),Creamy Butter Pork Rice (Add rice),Hinz Kitchen,RM 12.90,(Dinner),"With more rice, its a little hard to ""calculate"" how much meat to serve with a scoop of rice.
+22 Feb 2024 (Thursday),Creamy Butter Pork Rice,Hinz Kitchen,RM 12.90,(Dinner),"With more rice, its a little hard to ""calculate"" how much meat to serve with a scoop of rice.
               As opposed with a regular serving of rice.
 
-              Final meal of this trimester.","2024/February/2024, February, image 13.png"
+              Final meal of this trimester.
+
+Creamy Butter Pork Rice - RM 10.90
+Add Rice - RM 2.00
+
+          Edit @ 11/9/2026: Renamed from ""Creamy Butter Pork Rice (Add rice)"" to ""Creamy Butter Pork Rice"" to streamline naming scheme, also for Laravel foodie site to properly update.","2024/February/2024, February, image 13.png"
 16 Apr 2024 (Tuesday),Mixed Rice,Mama Homecook Mixed Rice,RM 10.00,(Lunch),"Maybe I took too much meat?
                   Granted, it's pork, so of course ""the prices will be higher"".","2024/April/2024, April, image 1.png"
 16 Apr 2024 (Tuesday),Taiwan Sausage Fried Rice,Hinz Kitchen,RM 10.50,(Dinner),"Ya know the problem with Hinz:
