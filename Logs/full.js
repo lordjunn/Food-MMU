@@ -523,11 +523,14 @@ document.addEventListener('DOMContentLoaded', function () {
     return sorted;
   }
 
-  let clusterizeInstance = null;
+  let imageObserver = null;
 
   function renderItems(items) {
     if (!items.length) {
-      if (clusterizeInstance) clusterizeInstance.clear();
+      if (imageObserver) {
+        imageObserver.disconnect();
+        imageObserver = null;
+      }
       menuGroup.innerHTML = "<p>No items found.</p>";
       return;
     }
@@ -590,15 +593,7 @@ document.addEventListener('DOMContentLoaded', function () {
       `;
     });
 
-    if (!clusterizeInstance) {
-      clusterizeInstance = new Clusterize({
-        rows: htmlArray,
-        scrollElem: scrollArea,
-        contentElem: menuGroup
-      });
-    } else {
-      clusterizeInstance.update(htmlArray);
-    }
+    menuGroup.innerHTML = htmlArray.join('');
 
     requestAnimationFrame(() => hydrateVisibleImages());
   }
@@ -608,6 +603,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!images.length) return;
 
+    if (imageObserver) {
+      imageObserver.disconnect();
+      imageObserver = null;
+    }
+
     if (!('IntersectionObserver' in window)) {
       images.forEach(img => {
         if (img.dataset.src) img.src = img.dataset.src;
@@ -616,7 +616,7 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    const observer = new IntersectionObserver((entries, obs) => {
+    imageObserver = new IntersectionObserver((entries, obs) => {
       for (const entry of entries) {
         if (!entry.isIntersecting) continue;
         const img = entry.target;
@@ -629,10 +629,10 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }, {
       root: scrollArea,
-      rootMargin: '200px 0px',
+      rootMargin: '300px 0px',
     });
 
-    images.forEach(img => observer.observe(img));
+    images.forEach(img => imageObserver.observe(img));
   }
 
   const cachedData = {};
@@ -689,14 +689,17 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   searchBox.addEventListener("input", debounce(() => {
+    if (scrollArea) scrollArea.scrollTop = 0;
     renderCurrentView();
   }, 500));
 
   sortDropdown.addEventListener("change", () => {
+    if (scrollArea) scrollArea.scrollTop = 0;
     renderCurrentView();
   });
 
   toggleButton.addEventListener("click", () => {
+    if (scrollArea) scrollArea.scrollTop = 0;
     if (currentMode === "full") {
       currentCSV = "menu_endings.csv";
       currentMode = "summary";
@@ -741,6 +744,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   insightMetricDropdown.addEventListener("change", () => {
     if (currentMode !== 'summary') return;
+    if (scrollArea) scrollArea.scrollTop = 0;
     renderCurrentView();
   });
 

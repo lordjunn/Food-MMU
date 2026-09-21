@@ -110,8 +110,8 @@ body {
   
 }
 
-/* CLUSTER CONTENT GRID */
-.menu-group, .clusterize-content {
+/* MENU GRID */
+.menu-group {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2em;
@@ -124,6 +124,9 @@ body {
   padding: 1.5em;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  content-visibility: auto;
+  contain-intrinsic-size: 320px;
+  contain-intrinsic-size: auto 320px;
 }
 
 .menu-item-image {
@@ -323,4 +326,23 @@ body {
 
 .summary-text-box::-webkit-scrollbar-thumb:hover {
   background: #999;
+}
+
+.menu-item-description a {
+  color: #8c00ff;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.menu-item-description a:hover {
+  color: #ac2fff;
+}
+
+.menu-item-description img {
+  width: 50%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  margin: 0.5em 0;
 }
